@@ -10,13 +10,13 @@ comments: true
 
 <!--more-->
 
-## Hexo
+### Hexo
 
 Hexo是一款基于Node.js的静态博客框架，易于安装与部署，可以快速的搭建一个个人博客，并且可以托管在Github上，是搭建博客的不二之选。Hexo有自己的官方网站和文档 ([hexo.io](https://hexo.io))，可以了解到它的更多细节，同时它也是Github上的一个开源项目，参见：[Github/Hexo](https://github.com/hexojs/hexo),Hexo同时拥有众多的主题和插件，博主可以为自己的博客定义非常多个性的元素。
 
 ![image](https://ws1.sinaimg.cn/large/005tkHc2gy1fzf5d8wfxcj30hu07aabf.jpg)
 
-## Node.js
+### Node.js
 
 Hexo是基于Node.js的，所以需要安装Node.js，可以在官网下载到Node.js，下载地址：[Node.js](https://nodejs.org/zh-cn/download/)
 
@@ -26,7 +26,7 @@ Hexo是基于Node.js的，所以需要安装Node.js，可以在官网下载到No
 
 ![image](https://ws3.sinaimg.cn/large/005tkHc2gy1fzf5db5cbkj3072034dfl.jpg)
 
-## Git
+### Git
 
 因为会用到Github上的一些开源项目，博客系统也要托管到Github上，所以需要安装上Git用来做项目的同步，Git也可以去官网下载，下载地址：[Git](https://git-scm.com/download)
 
@@ -40,7 +40,7 @@ Git安装完成之后，右键菜单会多出bash终端的选项
 
 ![image](https://ws3.sinaimg.cn/large/005tkHc2gy1fzf5d8mre8j30h603p0sq.jpg)
 
-## 安装Hexo
+### 安装Hexo
 
 环境安装配置好之后，就可以开始安装Hexo了，安装过程非常简单。在资源管理器中右键，打开bash终端，创建文件夹，并定位到文件夹位置。
 
@@ -58,7 +58,7 @@ Git安装完成之后，右键菜单会多出bash终端的选项
 
 到这里Hexo的安装已经完成了
 
-## 启动Hexo
+### 启动Hexo
 
 安装完成之后，接下来介绍几个简单的命令，用以编辑和启动Hexo。
 
@@ -81,7 +81,7 @@ Hexo启动成功即可访问Hexo绑定的IP和端口查看博客了，默认的U
 
 访问到如图所示页面即表示Hexo已成功部署并启动了。
 
-## Hexo文件结构
+### Hexo文件结构
 
 用资源管理器打开博客目录，查看文件结构
 
@@ -99,7 +99,7 @@ _config.yml：Hexo的主配置文件
 #每个主题里面也有一个_config.yml，我们称之为主题配置文件，之后会讲到
 ```
 
-## 发表文章
+### 发表文章
 
 ```bash
 #发表新文章
@@ -116,7 +116,7 @@ Hexo的文章编写是基于Markdown语法的，Markdown不过多介绍，想了
 
 ![image](https://ws2.sinaimg.cn/large/005tkHc2gy1fzf5d8ptsvj30ix0cn749.jpg)
 
-## 部署到Github
+### 部署到Github
 
 安装 [hexo-deployer-git](https://github.com/hexojs/hexo-deployer-git)。
 
@@ -142,7 +142,7 @@ deploy:
 
 配置完成之后运行命令`hexo d`即可进行部署。
 
-## 更换主题
+### 更换主题
 
 Hexo默认的主题并不美观，得益于Hexo庞大的主题库，我们可以使用自己喜欢的主题样式，并添加自定义的一些功能，这里我选用的是[NexT](https://theme-next.iissnan.com/)，这套主题简洁明了，非常不错。
 
@@ -166,6 +166,6 @@ theme: next
 
 更多详细的主题配置请参阅NexT的官方文档：[主题配置](https://theme-next.iissnan.com/theme-settings.html)
 
-## 总结
+### 总结
 
 Hexo的简单搭建部署就是这样，其他更多的一些设置会在之后的文章中补充。
