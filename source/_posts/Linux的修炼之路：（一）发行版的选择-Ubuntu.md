@@ -1,5 +1,5 @@
 ---
-title: Linux的修炼之路：(一)发行版的选择-Ubuntu
+title: Linux的修炼之路：（一）发行版的选择-Ubuntu
 tags: [Linux,Ubuntu]
 comments: true
 date: 2019-04-22 23:31:13
