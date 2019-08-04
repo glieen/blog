@@ -58,3 +58,12 @@ Java作为一门发展了多年的编程语言，拥有众多的开发者，我�
 14. `short s = 1;s = s +1;`存在语法错误，整形在做运算时会将类型提升为int型，再赋值给s就需要做强制类型转换。`+=`，`-=`，`*=`，`/=`，`++`，`--`这几类运算隐含了强制类型转换，所以`short s = 1;s += 1;`是正确的；
 
 15. `Math.round(11.5)`结果为12，`Math.round(-11.5)`结果为-11，`Math.round(-11.6)`结果为-12，`Math.round()`方法可以看作先将数值`+0.5`再向下舍入。
+
+16. ```java
+    double a = 0.8 - 0.7;
+    double b = 0.6 - 0.5;
+    double c = 0.5 - 0.4;
+    System.out.println(a == b);//false
+    System.out.println(b == c);//true
+    ```
+    Java中的小数运算是不精确的，使用时应当注意，如果要采用精确的小数运算，推荐使用BigDecimal类。
