@@ -2,7 +2,7 @@
 title: Linux的修炼之路：（二）Ubuntu的安装
 tags: [Linux,Ubuntu]
 comments: true
-date: 2019-04-23 23:31:13
+date: 2019-10-09 23:31:13
 categories: Linux
 ---
 发行版已经确定，接下来就是系统的安装工作，因为是准备安装Windows和Ubuntu双系统，所以很多操作可以先在Windows下完成，比如修改分区，制作启动盘等。
