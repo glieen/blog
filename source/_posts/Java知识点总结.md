@@ -95,14 +95,14 @@ Java作为一门发展了多年的编程语言，拥有众多的开发者，我�
     System.out.println(Arrays.asList(integers).size());// 3
     ```
     
-19. 当方法的参数是基础数据类型时，调用方法传入对应的包装类，会调用对应包装类的拆箱方法`xxxValue（）`，如果传入的参数为null，则会报空指针异常。
+19. 当方法的参数是基础数据类型时，调用方法传入对应的包装类，会调用对应包装类的拆箱方法`xxxValue（）`，如果传入的参数为null，则会报空指针异常；
 
-    ```java
-    Double d = null;
-    method(d);// NullPointerException
-    public void method(double d) {
-    	// do something
-    }
-    ```
+	```java
+	Double d = null;
+	method(d);// NullPointerException
+	public void method(double d) {
+		// do something
+	}
+	```
 
-    
+20. 接口可以继承多个接口，类只能继承一个类，可以实现多个接口。
