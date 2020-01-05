@@ -3,7 +3,7 @@
 ### 初始化Hexo
 
 ```bash
-$ Hexo init HexoBlog
+$ hexo init HexoBlog
 ```
 
 ### 拉取配置文件
