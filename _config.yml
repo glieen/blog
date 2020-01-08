@@ -7,7 +7,7 @@ title: Glieen's Blog
 subtitle: Love life,love coding,and love myself.
 description: Glieen's Blog,record and share.
 keywords: Glieen,Blog,Java,Hexo
-author: Glieen Guo
+author: Glieen
 language: zh-CN
 timezone:
 
@@ -15,7 +15,10 @@ timezone:
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: https://glieen.cn
 root: /
-permalink: :year/:month/:day/:title/
+permalink: post/:abbrlink.html
+abbrlink:
+  alg: crc16
+  rep: dec
 permalink_defaults:
 
 # Directory

@@ -1,9 +1,12 @@
 ---
 title: Java高级特性-反射
-date: 2018-07-24 15:48:28
-tags: [Java,基础知识]
+tags:
+  - Java
+  - 基础知识
 categories: Java
 comments: true
+abbrlink: 62397
+date: 2018-07-24 15:48:28
 ---
 
 在Java开发中，反射是一个经常用到的技术，几乎所有的框架都有使用反射机制，反射作为Java的一种高级特性，在实际生产中被大量应用，掌握它就显得尤为必要了。
@@ -81,7 +84,7 @@ public class ClassTest {
 
 从运行结果可以看到，我们都能得到`Person` 的`Class`对象。
 
-![image](https://ws1.sinaimg.cn/large/005tkHc2gy1fzf5p44tt7j30dn02wjrb.jpg)
+![image](https://tva4.sinaimg.cn/large/005tkHc2gy1fzf5p44tt7j30dn02wjrb.jpg)
 
 实际使用当中，最常用的是第三种方法，该方法可以实现类的动态加载，在使用时才加载该类。
 
@@ -120,7 +123,7 @@ public class ReflectTest {
 
 运行结果：
 
-![image](https://ws2.sinaimg.cn/large/005tkHc2gy1fzf5p49bsej30rv0bnt9o.jpg)
+![image](https://tvax4.sinaimg.cn/large/005tkHc2gy1fzf5p49bsej30rv0bnt9o.jpg)
 
 由运行结果我们可以看到，`Person`类的构造方法，成员变量和成员方法都获取到了，**值得注意的是**，`getConstructors()`、`getFields()`和`getMethods()`只能得到类中公有的成员属性，如果想得到私有的成员属性，需要调用`getDeclaredConstructors()`、`getDeclaredFields()`和`getDeclaredMethods()`方法。
 
@@ -171,7 +174,7 @@ public class ReflectTest {
 
 运行结果：
 
-![image](https://ws2.sinaimg.cn/large/005tkHc2gy1fzf5p4i6xrj30f801va9x.jpg)
+![image](https://tva4.sinaimg.cn/large/005tkHc2gy1fzf5p4i6xrj30f801va9x.jpg)
 
 反射不仅可以调用普通方法，私有方法，构造函数也是可以调用的，需要注意的是调用私有方法之前应当使用`method.setAccessible(true)`改变方法可见性，否则调用时会抛出异常。
 
@@ -184,11 +187,3 @@ public class ReflectTest {
 ### 总结
 
 反射作为Java最核心机制之一，已经被普遍使用于各大框架和项目之中，理解并掌握反射将会使得编写和阅读代码更加高效。
-
-*运行环境*
-
-*JDK：1.8*
-
-*IDE：IntelliJ IDEA 2017.3.5*
-
-*如有错误，还请指正*

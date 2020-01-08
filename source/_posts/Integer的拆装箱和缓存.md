@@ -1,16 +1,19 @@
 ---
 title: Integer的拆装箱和缓存
 comments: true
-date: 2018-08-31 17:49:32
-tags: [Java,基础知识]
+tags:
+  - Java
+  - 基础知识
 categories: Java
+abbrlink: 52411
+date: 2018-08-31 17:49:32
 ---
 
 Integer作为基础类型int的包装类，提供了非常多的功能，增强了基础类型的一些方法使用，但是在使用的时候还是有一些问题需要注意的。
 
 <!-- more -->
 
-## true还是false？
+### true还是false？
 
 咱们先看下面这段代码：
 

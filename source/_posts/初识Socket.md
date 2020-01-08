@@ -1,9 +1,12 @@
 ---
 title: 初识Socket
-tags: [Socket]
+tags:
+  - Socket
 comments: true
+categories:
+  - Java
+abbrlink: 42501
 date: 2019-01-24 16:00:58
-categories: [Java]
 ---
 
 在网络编程中，我们经常提及socket，什么是socket呢？我们经常把socket翻译为套接字，socket是在应用层和传输层之间的一个抽象层，它把TCP/IP层复杂的操作抽象为几个简单的接口供应用层调用以实现进程在网络中通信。
@@ -96,9 +99,9 @@ public class Client {
 
 ### 测试结果
 
-![image](https://ws1.sinaimg.cn/large/005tkHc2gy1fzmhpu7sivj30g204c3yl.jpg)
+![image](https://tva2.sinaimg.cn/large/005tkHc2gy1fzmhpu7sivj30g204c3yl.jpg)
 
-![image](https://ws2.sinaimg.cn/large/005tkHc2gy1fzmhq9ydikj30gw06imxk.jpg)
+![image](https://tvax4.sinaimg.cn/large/005tkHc2gy1fzmhq9ydikj30gw06imxk.jpg)
 
 ![image](https://wx3.sinaimg.cn/large/005tkHc2gy1fzmhqjnnvrj30dv05wmxh.jpg)
 

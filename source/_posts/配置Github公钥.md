@@ -1,9 +1,11 @@
 ---
 title: 配置Github公钥
-tags: [Git]
+tags:
+  - Git
 comments: true
-date: 2019-02-14 16:44:33
 categories: Git
+abbrlink: 57365
+date: 2019-02-14 16:44:33
 ---
 
 大多数 Git 服务器都会选择使用 SSH 公钥来进行授权,系统中的每个用户都必须提供一个公钥用于授权，没有的话就要生成一个。生成公钥的过程在所有操作系统上都差不多。
@@ -25,7 +27,7 @@ SSH公钥默认储存在用户的家路径的`.ssh`目录下，Windows为`C:\Use
 3. 会有三次提示操作，第一次是确认生成密钥的目录，默认是家路径下的 `.ssh`目录，第二次和第三次是提示输入密码和确认密码，可以为空；
 4. 生成成功。
 
-![image](https://ws1.sinaimg.cn/large/005tkHc2gy1g062genf7hj30sr0j5jvn.jpg)
+![image](https://tvax4.sinaimg.cn/large/005tkHc2gy1g062genf7hj30sr0j5jvn.jpg)
 
 生成后的公钥大概就是这个样子：
 
@@ -41,5 +43,5 @@ ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDiupK6UEUhjsa/E7+lRx1WJpEE+arG6YiWJ5cdFCyH
 
 ![image](https://wx3.sinaimg.cn/large/005tkHc2gy1g062nognw0j30mo07e3yz.jpg)
 
-![image](https://ws1.sinaimg.cn/large/005tkHc2gy1g062s45um3j30pp06omy7.jpg)
+![image](https://tvax4.sinaimg.cn/large/005tkHc2gy1g062s45um3j30pp06omy7.jpg)
 

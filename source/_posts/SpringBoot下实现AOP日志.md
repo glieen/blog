@@ -1,9 +1,13 @@
 ---
 title: SpringBoot下实现AOP日志
-tags: [Spring,SpringBoot,AOP]
+tags:
+  - Spring
+  - SpringBoot
+  - AOP
 comments: true
-date: 2019-01-17 15:00:04
 categories: Spring
+abbrlink: 37216
+date: 2019-01-17 15:00:04
 ---
 
 Spring两大核心为IoC和AOP，本篇文章旨在记录下在SpringBoot下如何整合使用AOP，适用场景为Web项目中对请求做切面来记录日志。

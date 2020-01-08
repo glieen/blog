@@ -1,9 +1,12 @@
 ---
 title: 修改Ubuntu解锁界面的背景图片
-tags: [Ubuntu,Linux]
+tags:
+  - Ubuntu
+  - Linux
 comments: true
-date: 2019-01-17 10:26:53
 categories: Linux
+abbrlink: 8472
+date: 2019-01-17 10:26:53
 ---
 
 因为学习Linux已经在Vmware装上Ubuntu有一段时间了，因为我装的是桌面版Ubuntu，所以是有GUI界面的，前几天逛知乎看到一篇修改Ubuntu解锁界面背景图片的文章，照着文章做了下，效果不错，所以在这里记录下来并分享给大家。
@@ -12,7 +15,7 @@ categories: Linux
 
 默认的解锁界面简洁干净
 
-![image](https://ws2.sinaimg.cn/large/005tkHc2gy1fzf5jnd1ysj30uo0h7102.jpg)
+![image](https://tvax3.sinaimg.cn/large/005tkHc2gy1fzf5jnd1ysj30uo0h7102.jpg)
 
 ### 准备
 

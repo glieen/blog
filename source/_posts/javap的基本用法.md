@@ -1,9 +1,11 @@
 ---
 title: javap的基本用法
-tags: [javap]
+tags:
+  - javap
 comments: true
-date: 2019-01-17 15:38:27
 categories: JVM
+abbrlink: 7273
+date: 2019-01-17 15:38:27
 ---
 
 有时候需要深入了解类的运行方式和流程，或者查看一个类中的属性成员，我们可以使用反编译来进行查看，JDK自带了一个反编译工具javap，可以反编译，也可以查看Java编译器生成的字节码，用于分解class文件，本文简单介绍一下javap的基本方法。

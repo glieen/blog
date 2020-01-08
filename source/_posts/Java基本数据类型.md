@@ -1,10 +1,12 @@
 ---
 title: Java基本数据类型
-date: 2018-08-31 10:59:52
-tags: [Java,基础知识]
+tags:
+  - Java
+  - 基础知识
 categories: Java
 comments: true
-
+abbrlink: 31202
+date: 2018-08-31 10:59:52
 ---
 
 Java是一种强类型语言，在声明变量的时必须指定数据类型。Java数据类型分为基本数据类型和引用类型，基本数据类型分为8种，也是我们编程中使用最频繁的类型，本篇文章简要介绍Java的八大数据类型。

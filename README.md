@@ -34,7 +34,15 @@ $ npm install hexo-generator-searchdb --save
 参考地址：[Github:hexo-tag-aplayer](https://github.com/MoePlayer/hexo-tag-aplayer)
 
 ```bash
-$ npm install --save hexo-tag-aplayer
+$ npm install hexo-tag-aplayer --save
+```
+
+### 安装URL生成插件
+
+参考地址：[Github:hexo-abbrlink](https://github.com/rozbo/hexo-abbrlink)
+
+```bash
+$ npm install hexo-abbrlink --save
 ```
 
 ### 安装Github自动部署插件

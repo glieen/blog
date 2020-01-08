@@ -1,9 +1,12 @@
 ---
 title: MySQL压缩版安装记录
-tags: [MySQL,数据库]
+tags:
+  - MySQL
+  - 数据库
 comments: true
-date: 2019-02-14 14:52:17
 categories: MySQL
+abbrlink: 4936
+date: 2019-02-14 14:52:17
 ---
 
 作为程序员，免不了与数据库打交道，MySQL作为一款最流行的关系型数据库，更是使用的非常之多，这篇文章主要记录MySQL压缩版在Windows下的安装和简单配置过程。
@@ -69,7 +72,7 @@ default-storage-engine=INNODB
 
 以管理员权限打开命令提示符，执行命令：`mysqld install`，提示`Service successfully installed`即安装成功。
 
-![image](https://ws4.sinaimg.cn/large/005tkHc2gy1g05ziy4v4xj30f0028mwz.jpg)
+![image](https://tva1.sinaimg.cn/large/005tkHc2gy1g05ziy4v4xj30f0028mwz.jpg)
 
 *卸载MySQL的命令为：`mysqld remove`*
 
@@ -77,7 +80,7 @@ default-storage-engine=INNODB
 
 以管理员权限打开命令提示符，执行命令：`net start mysql`，提示`MySQL服务已经启动成功`即表示MySQL已经正常启动。
 
-![image](https://ws4.sinaimg.cn/large/005tkHc2gy1g05zl8og02j30em05wt8p.jpg)
+![image](https://tvax4.sinaimg.cn/large/005tkHc2gy1g05zl8og02j30em05wt8p.jpg)
 
 ### 登录MySQL
 
@@ -89,7 +92,7 @@ default-storage-engine=INNODB
 
 以命令提示符登录MySQL，执行命令：`set password for root@localhost = password("root");`结尾分号不能省略，表示修改`root`用户的密码为`root`，修改之后，下次登录则需键入新的密码。
 
-![image](https://ws2.sinaimg.cn/large/005tkHc2gy1g05zyvwslsj30ig0id3za.jpg)
+![image](https://tva2.sinaimg.cn/large/005tkHc2gy1g05zyvwslsj30ig0id3za.jpg)
 
 ### 修改远程访问权限
 

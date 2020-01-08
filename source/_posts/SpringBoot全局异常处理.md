@@ -1,9 +1,13 @@
 ---
 title: SpringBoot全局异常处理
-tags: [Spring,SpringBoot,异常]
+tags:
+  - Spring
+  - SpringBoot
+  - 异常
 comments: true
-date: 2019-01-17 17:25:02
 categories: Spring
+abbrlink: 53229
+date: 2019-01-17 17:25:02
 ---
 
 异常是Java开发中经常会遇到的问题，异常如果不妥善的处理将会对开发带来非常大的困扰，所以在代码中我们经常能看到`try-catch`代码块手动处理异常，这对业务代码会产生干扰，而SpringBoot提供了全局的异常处理机制，简单而且优雅，本文就简要介绍一下SpringBoot全局异常处理的配置。
@@ -150,7 +154,7 @@ public class HelloController {
 
 ![image](https://wx1.sinaimg.cn/large/005tkHc2gy1fzfij9qvgqj30rh0aijrt.jpg)
 
-![image](https://ws3.sinaimg.cn/large/005tkHc2gy1fzfimpxulqj31bc04j0t3.jpg)
+![image](https://tvax2.sinaimg.cn/large/005tkHc2gy1fzfimpxulqj31bc04j0t3.jpg)
 
 ### 总结
 

@@ -1,10 +1,13 @@
 ---
 title: Java知识点总结
-tags: [Java,基础知识]
+tags:
+  - Java
+  - 基础知识
 comments: true
 top: true
-date: 2018-11-17 11:37:32
 categories: Java
+abbrlink: 38675
+date: 2018-11-17 11:37:32
 ---
 
 Java作为一门发展了多年的编程语言，拥有众多的开发者，我亦是其中之一，Java有众多的特性和知识点，为避免遗忘，我将我所了解的记录在此，知识点无先后顺序，本文长期维护更新，拓展新的知识点。

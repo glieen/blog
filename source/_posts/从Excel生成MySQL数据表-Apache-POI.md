@@ -1,9 +1,12 @@
 ---
 title: 从Excel生成MySQL数据表(Apache POI)
-tags: [Excle,POI]
+tags:
+  - Excle
+  - POI
 comments: true
-date: 2019-02-27 18:07:19
 categories: 记录
+abbrlink: 37360
+date: 2019-02-27 18:07:19
 ---
 
 通常在开发项目的时候，会先生成数据字段的Excel表，然后在MySQL中创建对应的数据表，字段少的时候还不是很麻烦，但是遇到字段特别多的表时，手写SQL效率会非常低下，像Navicat等图形化工具支持从Excle导入，但是操作繁琐而且容易出错，这时候就需要一些工具来帮我们生成数据表了。
@@ -111,9 +114,9 @@ public class Excel2MySQL {
 
 运行结果：
 
-![image](https://wx1.sinaimg.cn/large/005tkHc2ly1g0t8hfi8igj30e305274k.jpg)
+![image](https://tvax4.sinaimg.cn/large/005tkHc2ly1g0t8hfi8igj30e305274k.jpg)
 
-![image](https://wx1.sinaimg.cn/large/005tkHc2ly1g0t8jrqzz9j30hy0dymxj.jpg)
+![image](https://tva1.sinaimg.cn/large/005tkHc2ly1g0t8jrqzz9j30hy0dymxj.jpg)
 
 SQL语句成功打印，数据表成功创建。
 

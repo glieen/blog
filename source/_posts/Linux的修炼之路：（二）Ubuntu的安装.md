@@ -1,9 +1,12 @@
 ---
 title: Linux的修炼之路：（二）Ubuntu的安装
-tags: [Linux,Ubuntu]
+tags:
+  - Linux
+  - Ubuntu
 comments: true
-date: 2019-10-09 23:31:13
 categories: Linux
+abbrlink: 21868
+date: 2019-10-09 23:31:13
 ---
 发行版已经确定，接下来就是系统的安装工作，因为是准备安装Windows和Ubuntu双系统，所以很多操作可以先在Windows下完成，比如修改分区，制作启动盘等。
 
@@ -82,7 +85,7 @@ categories: Linux
 
    ![Screenshot from 2019-10-10 20-04-35](https://tva1.sinaimg.cn/large/005tkHc2ly1g7tif394w6j30nu0neace.jpg)
    *分区方式：单击选择要修改的分区，点击左下角的“+”，然后设置分区大小和分区格式，点击确定即可。*
-   ![Screenshot from 2019-10-10 20-06-58](https://tvax2.sinaimg.cn/large/005tkHc2ly1g7timqck0bj30hw07mwfn.jpg)
+   ![Screenshot from 2019-10-10 20-06-58](https://tva3.sinaimg.cn/large/005tkHc2ly1g7timqck0bj30hw07mwfn.jpg)
    
 8. 选择时区，中国的话默认选择上海就可以了；
 
