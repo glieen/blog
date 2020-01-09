@@ -53,6 +53,14 @@ $ npm install hexo-abbrlink --save
 $ npm install hexo-deployer-git --save
 ```
 
+### 安装字数统计插件
+
+参考地址：[Github:hexo-symbols-count-time](https://github.com/theme-next/hexo-symbols-count-time)
+
+```bash
+$ npm install hexo-symbols-count-time --save
+```
+
 ### 文章置顶插件
 
 参考地址：[Github:hexo-generator-index-pin-top](https://github.com/netcan/hexo-generator-index-pin-top)
