@@ -5,8 +5,7 @@ db.json
 node_modules/
 public/
 .deploy*/
+package-lock.json
+package.json
 themes/
-/package.json
-/package-lock.json
-/.idea/
-.deploy_git/
+_config.yml
