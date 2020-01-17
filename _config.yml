@@ -102,8 +102,10 @@ theme: next
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repository: git@github.com:glieen/hexoblog.git
+  repository: https://github.com/glieen/HexoBlog.git
   branch: master
+  ignore_pattern:
+    public: post-image|about-image
 # Search
 search:
   path: search.xml
