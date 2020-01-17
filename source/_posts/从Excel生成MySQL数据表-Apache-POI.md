@@ -114,9 +114,9 @@ public class Excel2MySQL {
 
 运行结果：
 
-![image](https://tvax4.sinaimg.cn/large/005tkHc2ly1g0t8hfi8igj30e305274k.jpg)
+![1](https://tvax4.sinaimg.cn/large/005tkHc2ly1g0t8hfi8igj30e305274k.jpg)
 
-![image](https://tva1.sinaimg.cn/large/005tkHc2ly1g0t8jrqzz9j30hy0dymxj.jpg)
+![2](https://tva1.sinaimg.cn/large/005tkHc2ly1g0t8jrqzz9j30hy0dymxj.jpg)
 
 SQL语句成功打印，数据表成功创建。
 

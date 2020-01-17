@@ -99,11 +99,11 @@ public class Client {
 
 ### 测试结果
 
-![image](https://tva2.sinaimg.cn/large/005tkHc2gy1fzmhpu7sivj30g204c3yl.jpg)
+![1](https://tva2.sinaimg.cn/large/005tkHc2gy1fzmhpu7sivj30g204c3yl.jpg)
 
-![image](https://tvax4.sinaimg.cn/large/005tkHc2gy1fzmhq9ydikj30gw06imxk.jpg)
+![2](https://tvax4.sinaimg.cn/large/005tkHc2gy1fzmhq9ydikj30gw06imxk.jpg)
 
-![image](https://wx3.sinaimg.cn/large/005tkHc2gy1fzmhqjnnvrj30dv05wmxh.jpg)
+![3](https://wx3.sinaimg.cn/large/005tkHc2gy1fzmhqjnnvrj30dv05wmxh.jpg)
 
 ### 多线程处理
 

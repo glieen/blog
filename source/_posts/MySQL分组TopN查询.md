@@ -84,7 +84,7 @@ FROM
 ``` mysql
 SELECT
 	t1.course,
-	t1. NAME,
+	t1.name,
 	t1.score
 FROM
 	test t1
@@ -99,7 +99,7 @@ INNER JOIN (
 ) t2 ON t1.course = t2.course
 AND t1.score = t2.max;
 +--------+--------+-------+
-| course | NAME   | score |
+| course |name   | score |
 +--------+--------+-------+
 | 语文   | 王五   |    93 |
 | 数学   | 王五   |    99 |
@@ -112,7 +112,7 @@ AND t1.score = t2.max;
 ``` mysql
 SELECT
 	t1.course,
-	t1. NAME,
+	t1.name,
 	t1.score
 FROM
 	test t1
@@ -142,14 +142,14 @@ WHERE
 ``` mysql
 SELECT
 	t1.course,
-	t1. NAME,
+	t1.name,
 	t1.score
 FROM
 	test t1
 LEFT JOIN test t2 ON t1.course = t2.course
 AND t1.score < t2.score
 GROUP BY
-	t1. NAME,
+	t1.name,
 	t1.score
 HAVING
 	COUNT(t2.id) < 2
@@ -157,7 +157,7 @@ ORDER BY
 	t1.course,
 	t1.score DESC;
 +--------+--------+-------+
-| course | NAME   | score |
+| course |name   | score |
 +--------+--------+-------+
 | 数学   | 王五   |    99 |
 | 数学   | 张三   |    77 |

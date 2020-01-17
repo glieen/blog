@@ -1,17 +1,18 @@
 # 我的个人博客：[Glieen's Blog](https://glieen.cn)
 
-### 初始化Hexo
-
-```bash
-$ hexo init HexoBlog
-```
 
 ### 拉取源文件
 
 ```bash
 $ git clone -b source https://github.com/glieen/HexoBlog.git source
+```
+### 初始化Hexo
+
+```bash
+$ hexo init HexoBlog
 $ rm -f HexoBlog/source/_posts/hello-world.md
-$ cp -rf source/* HexoBlog
+$ cp -rTf source HexoBlog
+$ rm -rf source
 ```
 
 ### 安装NexT主题
@@ -21,6 +22,14 @@ $ cp -rf source/* HexoBlog
 ```bash
 $ cd HexoBlog
 $ git clone https://github.com/theme-next/hexo-theme-next themes/next
+```
+### 启用主题
+
+修改`_config.yml`
+
+``` yml
+# theme: landscape
+theme: next
 ```
 
 ### 安装文章搜索插件
@@ -60,7 +69,7 @@ $ npm install hexo-symbols-count-time --save
 参考地址：[Github:hexo-generator-index-pin-top](https://github.com/netcan/hexo-generator-index-pin-top)
 
 ```bash
-$ npm uninstall hexo-generator-index
+$ npm uninstall hexo-generator-index --save
 $ npm install hexo-generator-index-pin-top --save
 ```
 

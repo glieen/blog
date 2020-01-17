@@ -16,7 +16,7 @@ date: 2019-02-14 16:44:33
 
 SSH公钥默认储存在用户的家路径的`.ssh`目录下，Windows为`C:\Users\用户名\.ssh`目录，Linux为`~/.ssh`目录，下图为Windows下的文件列表。
 
-![image](https://wx1.sinaimg.cn/large/005tkHc2gy1g06257oya9j30jy08p3yw.jpg)
+![1](https://wx1.sinaimg.cn/large/005tkHc2gy1g06257oya9j30jy08p3yw.jpg)
 
 `id_rsa`为私钥文件，`id_rsa.pub`为公钥文件。
 
@@ -27,7 +27,7 @@ SSH公钥默认储存在用户的家路径的`.ssh`目录下，Windows为`C:\Use
 3. 会有三次提示操作，第一次是确认生成密钥的目录，默认是家路径下的 `.ssh`目录，第二次和第三次是提示输入密码和确认密码，可以为空；
 4. 生成成功。
 
-![image](https://tvax4.sinaimg.cn/large/005tkHc2gy1g062genf7hj30sr0j5jvn.jpg)
+![2](https://tvax4.sinaimg.cn/large/005tkHc2gy1g062genf7hj30sr0j5jvn.jpg)
 
 生成后的公钥大概就是这个样子：
 
@@ -41,7 +41,7 @@ ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDiupK6UEUhjsa/E7+lRx1WJpEE+arG6YiWJ5cdFCyH
 2. 点击`New SSH Key`，Title可以随意命名，将公钥文件`id_rsa.pub`里的内容复制并粘贴到Key文本框中，点击`Add SSH Key`即可成功添加；
 3. 打开bash终端，输入：`ssh git@github.com`可以测试是否配置成功。
 
-![image](https://wx3.sinaimg.cn/large/005tkHc2gy1g062nognw0j30mo07e3yz.jpg)
+![3](https://wx3.sinaimg.cn/large/005tkHc2gy1g062nognw0j30mo07e3yz.jpg)
 
-![image](https://tvax4.sinaimg.cn/large/005tkHc2gy1g062s45um3j30pp06omy7.jpg)
+![4](https://tvax4.sinaimg.cn/large/005tkHc2gy1g062s45um3j30pp06omy7.jpg)
 

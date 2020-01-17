@@ -1,5 +1,5 @@
 ---
-title: Linux的修炼之路：（一）发行版的选择-Ubuntu
+title: Linux的修炼之路（一）发行版的选择
 tags:
   - Linux
   - Ubuntu
@@ -24,6 +24,6 @@ date: 2019-04-22 23:31:13
 
 ### Ubuntu
 
-![image](https://wx4.sinaimg.cn/large/005tkHc2ly1g2bvixwadxj31hc0u0b29.jpg)
+![1](https://wx4.sinaimg.cn/large/005tkHc2ly1g2bvixwadxj31hc0u0b29.jpg)
 
 目前使用的是Ubuntu18.04桌面版，这是在我美化之后的效果，个人还是非常喜欢的。

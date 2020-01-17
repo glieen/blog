@@ -39,7 +39,7 @@ ed2k://|file|cn_windows_10_consumer_editions_version_1809_updated_jan_2019_x64_d
 
 3. 打开Rufus，选择设备，通常会自动选定插入的U盘，选择镜像文件，分区类型选择GPT，目标系统类型选择UFEFI，其他设置默认，如图所示：
 
-   ![image](https://tvax3.sinaimg.cn/large/005tkHc2gy1fzf5ko8tg2j30bq0g6jrz.jpg)
+   ![1](https://tvax3.sinaimg.cn/large/005tkHc2gy1fzf5ko8tg2j30bq0g6jrz.jpg)
 
 4. 点击开始，工具即开始制作启动盘，**提醒：制作启动盘会清除U盘中的所有数据，请提前备份！**
 
@@ -53,15 +53,15 @@ ed2k://|file|cn_windows_10_consumer_editions_version_1809_updated_jan_2019_x64_d
 
 1. 关闭安全启动，进入BIOS，找到Secure Boot选项，将其设置为关闭；
 
-   ![image](https://tva3.sinaimg.cn/large/005tkHc2gy1fzf5kojgmaj31770ku1iu.jpg)
+   ![2](https://tva3.sinaimg.cn/large/005tkHc2gy1fzf5kojgmaj31770ku1iu.jpg)
 
 2. 开启UEFI模式，在BIOS中找到Boot下的UEFI设置，将其设置为打开；
 
-   ![image](https://wx1.sinaimg.cn/large/005tkHc2gy1fzf5koya3tj315x0jcb1f.jpg)
+   ![3](https://wx1.sinaimg.cn/large/005tkHc2gy1fzf5koya3tj315x0jcb1f.jpg)
 
 3. 将U盘设置为第一启动项，U盘是以UEFI开头的就对了，把它移动到第一的位置；
 
-   ![image](https://tva3.sinaimg.cn/large/005tkHc2gy1fzf5kpbgu4j316s0ks4qp.jpg)
+   ![4](https://tva3.sinaimg.cn/large/005tkHc2gy1fzf5kpbgu4j316s0ks4qp.jpg)
 
 4. 保存设置并重启电脑。
 
@@ -69,35 +69,35 @@ ed2k://|file|cn_windows_10_consumer_editions_version_1809_updated_jan_2019_x64_d
 
 1. 如果上面的步骤都没有问题的话，那电脑重启应该可以进入到Win PE的安装界面了，像下面这样。
 
-   ![image](https://tva1.sinaimg.cn/large/005tkHc2gy1fzf5kprckfj31530n64qp.jpg)
+   ![5](https://tva1.sinaimg.cn/large/005tkHc2gy1fzf5kprckfj31530n64qp.jpg)
 
 2. 点击下一步开始安装
 
-   ![image](https://tvax2.sinaimg.cn/large/005tkHc2gy1fzf5kq7sayj313w0mfb29.jpg)
+   ![6](https://tvax2.sinaimg.cn/large/005tkHc2gy1fzf5kq7sayj313w0mfb29.jpg)
 
 3. 点击现在安装，进入到激活
 
-   ![image](https://wx1.sinaimg.cn/large/005tkHc2gy1fzf5kqq9ppj312s0ma7wh.jpg)
+   ![7](https://wx1.sinaimg.cn/large/005tkHc2gy1fzf5kqq9ppj312s0ma7wh.jpg)
 
 4. 这里选择我没有产品密钥，装完系统之后再进行激活（KMS你懂的），进入操作系统版本选择
 
-   ![image](https://tvax2.sinaimg.cn/large/005tkHc2gy1fzf5kr5t7qj312e0lfkjl.jpg)
+   ![8](https://tvax2.sinaimg.cn/large/005tkHc2gy1fzf5kr5t7qj312e0lfkjl.jpg)
 
 5. 这里我选择家庭版为例，然后单击下一步，进入许可条款
 
-   ![image](https://tva3.sinaimg.cn/large/005tkHc2gy1fzf5krm6a1j31160k47wh.jpg)
+   ![9](https://tva3.sinaimg.cn/large/005tkHc2gy1fzf5krm6a1j31160k47wh.jpg)
 
 6. 我接受许可条款打勾，单击下一步，进入安装选项
 
-   ![image](https://tva2.sinaimg.cn/large/005tkHc2gy1fzf5ks27j4j30yp0js4qp.jpg)
+   ![10](https://tva2.sinaimg.cn/large/005tkHc2gy1fzf5ks27j4j30yp0js4qp.jpg)
 
 7. 因为是安装全新的系统，所以这里选择自定义，进入安装磁盘选择
 
-   ![image](https://tvax3.sinaimg.cn/large/005tkHc2gy1fzf5kshan5j311h0l2x6p.jpg)
+   ![11](https://tvax3.sinaimg.cn/large/005tkHc2gy1fzf5kshan5j311h0l2x6p.jpg)
 
 8. 到这里是最容易遇到问题的地方了，可能遇到所选磁盘不是GPT格式的分区，磁盘容量大小不足等等问题，只要你以上步骤都正确操作，硬盘是没有问题且大小合适的，那么接下来一系列步骤应该能解决大多数安装遇到的问题，按下键盘上的`Shift+F10`打开命令提示行
 
-   ![image](https://tvax4.sinaimg.cn/large/005tkHc2gy1fzf5ksy7npj31720mue81.jpg)
+   ![12](https://tvax4.sinaimg.cn/large/005tkHc2gy1fzf5ksy7npj31720mue81.jpg)
 
 9. 根据提示输入以下的代码
 
@@ -122,21 +122,21 @@ ed2k://|file|cn_windows_10_consumer_editions_version_1809_updated_jan_2019_x64_d
 
    下面是具体的操作过程截图，**慎重操作，注意备份数据**
 
-   ![image](https://tva2.sinaimg.cn/large/005tkHc2gy1fzf5kmifgcj30xc0orhdt.jpg)
+   ![13](https://tva2.sinaimg.cn/large/005tkHc2gy1fzf5kmifgcj30xc0orhdt.jpg)
 
    操作完成之后右上角叉叉或者输入命令`exit`退出命令行
 
 10. 再次回到安装磁盘选择，点击刷新，就可以看到重新分区后的磁盘列表了
 
-    ![image](https://tva3.sinaimg.cn/large/005tkHc2gy1fzf5kmz9xlj314z0n84qq.jpg)
+    ![14](https://tva3.sinaimg.cn/large/005tkHc2gy1fzf5kmz9xlj314z0n84qq.jpg)
 
 11. 选择为系统准备的分区，如图，我会选择`驱动器1分区2`然后单击下一步，系统开始安装，即将大功告成
 
-    ![image](https://tva1.sinaimg.cn/large/005tkHc2gy1fzf5knjkswj31800oekjl.jpg)
+    ![15](https://tva1.sinaimg.cn/large/005tkHc2gy1fzf5knjkswj31800oekjl.jpg)
 
 12. 等待进度条读完，然后会提示重启系统完成安装，点击重启就可以了，**重启的时候记得把U盘给拔下来**，系统可能会重启多次，重启完成之后会进入系统的启动设置，这些都是一些基础的设置，设置完成后就能进入系统
 
-    ![image](https://tva4.sinaimg.cn/large/005tkHc2gy1fzf5knxosxj31hc0u04qp.jpg)
+    ![16](https://tva4.sinaimg.cn/large/005tkHc2gy1fzf5knxosxj31hc0u04qp.jpg)
 
 13. 开始体验全新的Windows 10吧！！！
 

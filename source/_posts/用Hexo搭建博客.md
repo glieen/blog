@@ -16,47 +16,47 @@ date: 2018-08-21 15:43:27
 
 Hexo是一款基于Node.js的静态博客框架，易于安装与部署，可以快速的搭建一个个人博客，并且可以托管在Github上，是搭建博客的不二之选。Hexo有自己的官方网站和文档 ([hexo.io](https://hexo.io))，可以了解到它的更多细节，同时它也是Github上的一个开源项目，参见：[Github/Hexo](https://github.com/hexojs/hexo),Hexo同时拥有众多的主题和插件，博主可以为自己的博客定义非常多个性的元素。
 
-![image](https://tvax2.sinaimg.cn/large/005tkHc2gy1fzf5d8wfxcj30hu07aabf.jpg)
+![1](https://tvax2.sinaimg.cn/large/005tkHc2gy1fzf5d8wfxcj30hu07aabf.jpg)
 
 ### Node.js
 
 Hexo是基于Node.js的，所以需要安装Node.js，可以在官网下载到Node.js，下载地址：[Node.js](https://nodejs.org/zh-cn/download/)
 
-![image](https://tva2.sinaimg.cn/large/005tkHc2gy1fzf5dazkvkj30xc0ke3zo.jpg)
+![2](https://tva2.sinaimg.cn/large/005tkHc2gy1fzf5dazkvkj30xc0ke3zo.jpg)
 
 注意安装Node.js的时候要配置好环境变量以及NPM，安装完成之后在命令行输入： `node -v`和`npm -v`，能正确显示它们的版本号即成功了。
 
-![image](https://tvax4.sinaimg.cn/large/005tkHc2gy1fzf5db5cbkj3072034dfl.jpg)
+![3](https://tvax4.sinaimg.cn/large/005tkHc2gy1fzf5db5cbkj3072034dfl.jpg)
 
 ### Git
 
 因为会用到Github上的一些开源项目，博客系统也要托管到Github上，所以需要安装上Git用来做项目的同步，Git也可以去官网下载，下载地址：[Git](https://git-scm.com/download)
 
-![image](https://tva2.sinaimg.cn/large/005tkHc2gy1fzf5d8hjdjj30b40b4weq.jpg)
+![4](https://tva2.sinaimg.cn/large/005tkHc2gy1fzf5d8hjdjj30b40b4weq.jpg)
 
 Git安装完成之后，右键菜单会多出bash终端的选项
 
-![image](https://wx2.sinaimg.cn/large/005tkHc2gy1fzf5d8807gj306e0cb0t0.jpg)
+![5](https://wx2.sinaimg.cn/large/005tkHc2gy1fzf5d8807gj306e0cb0t0.jpg)
 
 进入终端输入：`git --version`，正确显示git 的版本号即安装成功
 
-![image](https://tvax2.sinaimg.cn/large/005tkHc2gy1fzf5d8mre8j30h603p0sq.jpg)
+![6](https://tvax2.sinaimg.cn/large/005tkHc2gy1fzf5d8mre8j30h603p0sq.jpg)
 
 ### 安装Hexo
 
 环境安装配置好之后，就可以开始安装Hexo了，安装过程非常简单。在资源管理器中右键，打开bash终端，创建文件夹，并定位到文件夹位置。
 
-![image](https://wx3.sinaimg.cn/large/005tkHc2gy1fzf5daljnlj30ca063q2x.jpg)
+![7](https://wx3.sinaimg.cn/large/005tkHc2gy1fzf5daljnlj30ca063q2x.jpg)
 
 
 
 运行`npm install -g hexo-cli`安装Hexo脚手架
 
-![image](https://tva4.sinaimg.cn/large/005tkHc2gy1fzf5dah33wj30xu08daan.jpg)
+![8](https://tva4.sinaimg.cn/large/005tkHc2gy1fzf5dah33wj30xu08daan.jpg)
 
 运行`hexo init`初始化Hexo框架
 
-![image](https://tva4.sinaimg.cn/large/005tkHc2gy1fzf5da0widj30wl0ki40r.jpg)
+![9](https://tva4.sinaimg.cn/large/005tkHc2gy1fzf5da0widj30wl0ki40r.jpg)
 
 到这里Hexo的安装已经完成了
 
@@ -75,11 +75,11 @@ hexo clean
 hexo new [post] "postName"
 ```
 
-![image](https://tvax3.sinaimg.cn/large/005tkHc2gy1fzf5da92xhj30pg0no0vc.jpg)
+![10](https://tvax3.sinaimg.cn/large/005tkHc2gy1fzf5da92xhj30pg0no0vc.jpg)
 
 Hexo启动成功即可访问Hexo绑定的IP和端口查看博客了，默认的URL是：[http://localhost:4000](http://localhost:4000)
 
-![image](https://tva3.sinaimg.cn/large/005tkHc2gy1fzf5d9rglwj31460ptqae.jpg)
+![11](https://tva3.sinaimg.cn/large/005tkHc2gy1fzf5d9rglwj31460ptqae.jpg)
 
 访问到如图所示页面即表示Hexo已成功部署并启动了。
 
@@ -87,7 +87,7 @@ Hexo启动成功即可访问Hexo绑定的IP和端口查看博客了，默认的U
 
 用资源管理器打开博客目录，查看文件结构
 
-![image](https://tvax2.sinaimg.cn/large/005tkHc2gy1fzf5d8d23zj306t07tjr9.jpg)
+![12](https://tvax2.sinaimg.cn/large/005tkHc2gy1fzf5d8d23zj306t07tjr9.jpg)
 
 
 
@@ -108,15 +108,15 @@ _config.yml：Hexo的主配置文件
 hexo new [post] "postName"
 ```
 
-![image](https://wx4.sinaimg.cn/large/005tkHc2gy1fzf5daoig5j30kv02uaa0.jpg)
+![13](https://wx4.sinaimg.cn/large/005tkHc2gy1fzf5daoig5j30kv02uaa0.jpg)
 
 Hexo的文章编写是基于Markdown语法的，Markdown不过多介绍，想了解更多Markdown的知识，前往[维基百科-Markdown](https://zh.wikipedia.org/wiki/Markdown)。这里介绍一款非常好用的Markdown编辑器：[Typora](https://typora.io/)，可以前往官网下载，支持多平台运行，实时预览。用Typora打开刚刚新建的md文件，即可对文章进行编辑操作。
 
-![image](https://tva3.sinaimg.cn/large/005tkHc2gy1fzf5d8ptsvj30ix0cn749.jpg)
+![14](https://tva3.sinaimg.cn/large/005tkHc2gy1fzf5d8ptsvj30ix0cn749.jpg)
 
 编辑完成之后重新编译并启动Hexo即可查看刚发布的文章了。
 
-![image](https://tva3.sinaimg.cn/large/005tkHc2gy1fzf5d968q6j31170h0wjk.jpg)
+![15](https://tva3.sinaimg.cn/large/005tkHc2gy1fzf5d968q6j31170h0wjk.jpg)
 
 ### 部署到Github
 
@@ -164,7 +164,7 @@ theme: next
 
 到此，NexT 主题安装完成。下一步我们将验证主题是否正确启用。在切换主题之后、验证之前， 我们最好使用 `hexo clean` 来清除 Hexo 的缓存。编译并启动Hexo即可看到应用主题后的样式。
 
-![image](https://tva3.sinaimg.cn/large/005tkHc2gy1fzf5das2kcj30pc0o7q3g.jpg)
+![16](https://tva3.sinaimg.cn/large/005tkHc2gy1fzf5das2kcj30pc0o7q3g.jpg)
 
 更多详细的主题配置请参阅NexT的官方文档：[主题配置](https://theme-next.iissnan.com/theme-settings.html)
 
