@@ -1,12 +1,27 @@
 # 我的个人博客：[Glieen's Blog](https://glieen.cn)
 
+### 脚本安装
 
-### 拉取源文件
+#### curl
+
+``` bash
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/glieen/hexoblog/source/install.sh)"
+```
+
+#### wget
+
+``` bash
+sh -c "$(wget -O- https://raw.githubusercontent.com/glieen/hexoblog/source/install.sh)"
+```
+
+### 手动安装
+
+#### 拉取源文件
 
 ```bash
 git clone -b source https://github.com/glieen/HexoBlog.git source
 ```
-### 初始化Hexo
+#### 初始化Hexo
 
 ```bash
 hexo init HexoBlog
@@ -14,7 +29,7 @@ hexo init HexoBlog
 rm -f HexoBlog/source/_posts/hello-world.md
 ```
 
-### 安装NexT主题
+#### 安装NexT主题
 
 参考地址：[Github:hexo-theme-next](https://github.com/theme-next/hexo-theme-next)
 
@@ -25,7 +40,7 @@ cp -rTf source HexoBlog
 rm -rf source
 cd HexoBlog
 ```
-### 安装文章搜索插件
+#### 安装文章搜索插件
 
 参考地址：[Github:hexo-generator-searchdb](https://github.com/theme-next/hexo-generator-searchdb)
 
@@ -33,7 +48,7 @@ cd HexoBlog
 npm install hexo-generator-searchdb --save
 ```
 
-### 安装URL生成插件
+#### 安装URL生成插件
 
 参考地址：[Github:hexo-abbrlink](https://github.com/rozbo/hexo-abbrlink)
 
@@ -41,7 +56,7 @@ npm install hexo-generator-searchdb --save
 npm install hexo-abbrlink --save
 ```
 
-### 安装Github自动部署插件
+#### 安装Github自动部署插件
 
 参考地址：[Github:hexo-deployer-git](https://github.com/hexojs/hexo-deployer-git)
 
@@ -49,7 +64,7 @@ npm install hexo-abbrlink --save
 npm install hexo-deployer-git --save
 ```
 
-### 安装字数统计插件
+#### 安装字数统计插件
 
 参考地址：[Github:hexo-symbols-count-time](https://github.com/theme-next/hexo-symbols-count-time)
 
@@ -57,7 +72,7 @@ npm install hexo-deployer-git --save
 npm install hexo-symbols-count-time --save
 ```
 
-### 文章置顶插件
+#### 文章置顶插件
 
 参考地址：[Github:hexo-generator-index-pin-top](https://github.com/netcan/hexo-generator-index-pin-top)
 
@@ -66,14 +81,14 @@ npm uninstall hexo-generator-index --save
 npm install hexo-generator-index-pin-top --save
 ```
 
-### 导入背景变幻线依赖文件
+#### 导入背景变幻线依赖文件
 
 参考地址：[Github:theme-next-canvas-nest](https://github.com/theme-next/theme-next-canvas-nest)
 
 ```bash
 git clone https://github.com/theme-next/theme-next-canvas-nest themes/next/source/lib/canvas-nest
 ```
-### 安装音乐播放器插件（可选）
+#### 安装音乐播放器插件（可选）
 
 参考地址：[Github:hexo-tag-aplayer](https://github.com/MoePlayer/hexo-tag-aplayer)
 

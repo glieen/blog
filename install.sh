@@ -1,6 +1,16 @@
 #!/bin/bash
-sudo npm install -g hexo-cli
+if !(command -v git >/dev/null 2>&1)
+then
+  echo 'git not exists,please install git'
+  exit 0
+fi
+if !(command -v npm >/dev/null 2>&1)
+then
+  echo 'npm not exists,please install npm'
+  exit 0
+fi
 echo 'Hexo install begin'
+sudo npm install -g hexo-cli
 rm -rf source HexoBlog
 git clone -b source https://github.com/glieen/HexoBlog.git source
 hexo init HexoBlog
