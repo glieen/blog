@@ -4,15 +4,14 @@
 ### 拉取源文件
 
 ```bash
-$ git clone -b source https://github.com/glieen/HexoBlog.git source
+git clone -b source https://github.com/glieen/HexoBlog.git source
 ```
 ### 初始化Hexo
 
 ```bash
-$ hexo init HexoBlog
-$ rm -f HexoBlog/source/_posts/hello-world.md
-$ cp -rTf source HexoBlog
-$ rm -rf source
+hexo init HexoBlog
+# 删除默认文章
+rm -f HexoBlog/source/_posts/hello-world.md
 ```
 
 ### 安装NexT主题
@@ -20,24 +19,18 @@ $ rm -rf source
 参考地址：[Github:hexo-theme-next](https://github.com/theme-next/hexo-theme-next)
 
 ```bash
-$ cd HexoBlog
-$ git clone https://github.com/theme-next/hexo-theme-next themes/next
+git clone https://github.com/theme-next/hexo-theme-next HexoBlog/themes/next
+# 覆盖配置文件
+cp -rTf source HexoBlog
+rm -rf source
+cd HexoBlog
 ```
-### 启用主题
-
-修改`_config.yml`
-
-``` yml
-# theme: landscape
-theme: next
-```
-
 ### 安装文章搜索插件
 
 参考地址：[Github:hexo-generator-searchdb](https://github.com/theme-next/hexo-generator-searchdb)
 
 ```bash
-$ npm install hexo-generator-searchdb --save
+npm install hexo-generator-searchdb --save
 ```
 
 ### 安装URL生成插件
@@ -45,7 +38,7 @@ $ npm install hexo-generator-searchdb --save
 参考地址：[Github:hexo-abbrlink](https://github.com/rozbo/hexo-abbrlink)
 
 ```bash
-$ npm install hexo-abbrlink --save
+npm install hexo-abbrlink --save
 ```
 
 ### 安装Github自动部署插件
@@ -53,7 +46,7 @@ $ npm install hexo-abbrlink --save
 参考地址：[Github:hexo-deployer-git](https://github.com/hexojs/hexo-deployer-git)
 
 ```bash
-$ npm install hexo-deployer-git --save
+npm install hexo-deployer-git --save
 ```
 
 ### 安装字数统计插件
@@ -61,7 +54,7 @@ $ npm install hexo-deployer-git --save
 参考地址：[Github:hexo-symbols-count-time](https://github.com/theme-next/hexo-symbols-count-time)
 
 ```bash
-$ npm install hexo-symbols-count-time --save
+npm install hexo-symbols-count-time --save
 ```
 
 ### 文章置顶插件
@@ -69,8 +62,8 @@ $ npm install hexo-symbols-count-time --save
 参考地址：[Github:hexo-generator-index-pin-top](https://github.com/netcan/hexo-generator-index-pin-top)
 
 ```bash
-$ npm uninstall hexo-generator-index --save
-$ npm install hexo-generator-index-pin-top --save
+npm uninstall hexo-generator-index --save
+npm install hexo-generator-index-pin-top --save
 ```
 
 ### 导入背景变幻线依赖文件
@@ -78,14 +71,14 @@ $ npm install hexo-generator-index-pin-top --save
 参考地址：[Github:theme-next-canvas-nest](https://github.com/theme-next/theme-next-canvas-nest)
 
 ```bash
-$ git clone https://github.com/theme-next/theme-next-canvas-nest themes/next/source/lib/canvas-nest
+git clone https://github.com/theme-next/theme-next-canvas-nest themes/next/source/lib/canvas-nest
 ```
 ### 安装音乐播放器插件（可选）
 
 参考地址：[Github:hexo-tag-aplayer](https://github.com/MoePlayer/hexo-tag-aplayer)
 
 ```bash
-$ npm install hexo-tag-aplayer --save
+npm install hexo-tag-aplayer --save
 ```
 
 ### Hexo简单命令

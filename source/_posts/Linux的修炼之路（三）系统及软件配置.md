@@ -8,9 +8,27 @@ abbrlink: 59832
 date: 2020-01-16 15:55:15
 ---
 
-因为种种原因（因为太懒，不想折腾了），迫使我放弃了桌面版Ubuntu的使用，最终转投了Deepin的怀抱，在本地化方面，Deepin应该是做的算是极好了，开箱即用，少了很多恼人的配置，虽然是开箱即用，但是改装的软件和工具还是得自己去装。
+Ubuntu装好之后，折腾之路才刚刚开始，因为不是开箱即用，还需要做一定的配置，装一些软件和工具，才能用的顺手。
 
 <!-- more -->
 
 ### 切换软件源
+
+``` bash
+
+```
+
+
+
+``` text
+deb http://mirrors.163.com/ubuntu/ bionic main restricted universe multiverse
+deb http://mirrors.163.com/ubuntu/ bionic-security main restricted universe multiverse  deb http://mirrors.163.com/ubuntu/ bionic-updates main restricted universe multiverse
+deb http://mirrors.163.com/ubuntu/ bionic-proposed main restricted universe multiverse
+deb http://mirrors.163.com/ubuntu/ bionic-backports main restricted universe multiverse
+deb-src http://mirrors.163.com/ubuntu/ bionic main restricted universe multiverse
+deb-src http://mirrors.163.com/ubuntu/ bionic-security main restricted universe multiverse
+deb-src http://mirrors.163.com/ubuntu/ bionic-updates main restricted universe multiverse
+deb-src http://mirrors.163.com/ubuntu/ bionic-proposed main restricted universe multiverse
+deb-src http://mirrors.163.com/ubuntu/ bionic-backports main restricted universe multiverse 
+```
 
