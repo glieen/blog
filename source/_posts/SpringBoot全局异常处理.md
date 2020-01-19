@@ -61,7 +61,7 @@ public class MainApplication {
 
 启动`MainApplication`，打开Postman（Postman是一个非常方便的接口测试工具），访问地址`localhost:8080/hello?name=Glieen`，成功返回响应数据。
 
-![1](https://wx1.sinaimg.cn/large/005tkHc2gy1fzfi261jarj30qy09naae.jpg)
+![1](https://i.loli.net/2020/01/19/f4p8asuiWcTqvmF.jpg)
 
 ### 创建异常响应实体类
 
@@ -152,7 +152,7 @@ public class HelloController {
 
 使用Postman再次访问该接口`localhost:8080/hello?name=Glieen`，程序将自定义的异常实体类以json形式返回，包含提示信息和请求地址，同时在控制台输出日志信息，异常被成功捕捉并处理。
 
-![2](https://wx1.sinaimg.cn/large/005tkHc2gy1fzfij9qvgqj30rh0aijrt.jpg)
+![2](https://i.loli.net/2020/01/19/Xc2lQzFthnejVHD.jpg)
 
 ![3](https://tvax2.sinaimg.cn/large/005tkHc2gy1fzfimpxulqj31bc04j0t3.jpg)
 

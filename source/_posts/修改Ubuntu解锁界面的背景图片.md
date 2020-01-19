@@ -68,6 +68,6 @@ $ reboot
 
 重启系统即可看到修改后的效果了，如果对css有更多的了解，还可以定制喜欢的样式。
 
-![2](https://wx3.sinaimg.cn/large/005tkHc2gy1fzf5jmuo7rj31hc0u0hdu.jpg)
+![2](https://i.loli.net/2020/01/19/slXUkEAMhGKOYZo.jpg)
 
 > 原文链接：[Ubuntu18.04 更改登录界面默认背景图](https://zhuanlan.zhihu.com/p/36470249)

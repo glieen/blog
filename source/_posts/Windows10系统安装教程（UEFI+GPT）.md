@@ -57,7 +57,7 @@ ed2k://|file|cn_windows_10_consumer_editions_version_1809_updated_jan_2019_x64_d
 
 2. 开启UEFI模式，在BIOS中找到Boot下的UEFI设置，将其设置为打开；
 
-   ![3](https://wx1.sinaimg.cn/large/005tkHc2gy1fzf5koya3tj315x0jcb1f.jpg)
+   ![3](https://i.loli.net/2020/01/19/wTjuyZ8c3lRthfe.jpg)
 
 3. 将U盘设置为第一启动项，U盘是以UEFI开头的就对了，把它移动到第一的位置；
 
@@ -77,7 +77,7 @@ ed2k://|file|cn_windows_10_consumer_editions_version_1809_updated_jan_2019_x64_d
 
 3. 点击现在安装，进入到激活
 
-   ![7](https://wx1.sinaimg.cn/large/005tkHc2gy1fzf5kqq9ppj312s0ma7wh.jpg)
+   ![7](https://i.loli.net/2020/01/19/f8HGrYty6kxL9Rh.jpg)
 
 4. 这里选择我没有产品密钥，装完系统之后再进行激活（KMS你懂的），进入操作系统版本选择
 

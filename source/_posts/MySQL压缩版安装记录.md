@@ -29,15 +29,15 @@ MySQL版本：MySQL 5.7.22 64位ZIP压缩版
 
 将安装包解压到指定位置（为避免不必要的麻烦，位置路径请不要包含中文和空格字符），我这里是解压到`F:\Software\MySQL57`路径下，目录结构如下图所示。
 
-![1](https://wx1.sinaimg.cn/large/005tkHc2gy1g05yym2lzqj30pi0eeabr.jpg)
+![1](https://i.loli.net/2020/01/19/mbJljN4G8z1AthK.jpg)
 
 打开Windows的系统变量设置，将MySQL下的bin目录配置进系统的Path变量，注意变量之间使用分号（;）间隔，这样就省去了每次都输入完整路径的麻烦。
 
-![2](https://wx3.sinaimg.cn/large/005tkHc2gy1g05z2wds2wj30ij05awel.jpg)
+![2](https://i.loli.net/2020/01/19/HMqkmgQwT7IlNif.jpg)
 
 以管理员权限打开命令提示符，输入`mysql -V`，正确显示MySQL的版本号即配置成功。
 
-![3](https://wx2.sinaimg.cn/large/005tkHc2gy1g05z6mnt18j30rl0eft90.jpg)
+![3](https://i.loli.net/2020/01/19/eDbQtNcWvIGoYMP.jpg)
 
 ### 创建MySQL默认配置文件
 
@@ -66,7 +66,7 @@ default-storage-engine=INNODB
 
 以管理员权限打开命令提示符，执行命令：`mysqld --initialize-insecure --user=mysql`，执行完这个命令后，MySQL会在安装目录下创建一个data文件夹，且创建好默认数据库，登录的用户名为`root`，密码为空。
 
-![4](https://wx2.sinaimg.cn/large/005tkHc2gy1g05zhq4xipj30ms01zglg.jpg)
+![4](https://i.loli.net/2020/01/19/j3GyJQ9o8iD5xrf.jpg)
 
 ### 安装MySQL
 
@@ -86,7 +86,7 @@ default-storage-engine=INNODB
 
 打开命令提示符，执行命令：`mysql -u root -p`，密码默认为空，直接回车即可，表示以`root`用户登录MySQL。
 
-![7](https://wx4.sinaimg.cn/large/005tkHc2gy1g060md7wctj30iw08l0sy.jpg)
+![7](https://i.loli.net/2020/01/19/jeUn2kig54qQl9Y.jpg)
 
 ### 修改用户密码
 
@@ -98,7 +98,7 @@ default-storage-engine=INNODB
 
 以命令提示符登录MySQL，执行以下两个命令：`grant all privileges on *.* to 'root'@'%' identified by 'password';`和`flush privileges;`，第一个“\*”表示所有数据库，第二个“\*”表示所有数据表，root表示允许远程登录的用户名，%表示任意IP，password表示远程登录使用的密码，`flush privileges`是让权限立即生效。
 
-![9](https://wx4.sinaimg.cn/large/005tkHc2gy1g060i660b7j30kg0bndg8.jpg)
+![9](https://i.loli.net/2020/01/19/AnGcjt4Y3qIfdmU.jpg)
 
 ### 总结
 

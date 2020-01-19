@@ -36,7 +36,7 @@ Hexo是基于Node.js的，所以需要安装Node.js，可以在官网下载到No
 
 Git安装完成之后，右键菜单会多出bash终端的选项
 
-![5](https://wx2.sinaimg.cn/large/005tkHc2gy1fzf5d8807gj306e0cb0t0.jpg)
+![5](https://i.loli.net/2020/01/19/dcsJGbLk1BMrWDl.jpg)
 
 进入终端输入：`git --version`，正确显示git 的版本号即安装成功
 
@@ -46,7 +46,7 @@ Git安装完成之后，右键菜单会多出bash终端的选项
 
 环境安装配置好之后，就可以开始安装Hexo了，安装过程非常简单。在资源管理器中右键，打开bash终端，创建文件夹，并定位到文件夹位置。
 
-![7](https://wx3.sinaimg.cn/large/005tkHc2gy1fzf5daljnlj30ca063q2x.jpg)
+![7](https://i.loli.net/2020/01/19/rRFZEWs31t6UY8C.jpg)
 
 
 
@@ -108,7 +108,7 @@ _config.yml：Hexo的主配置文件
 hexo new [post] "postName"
 ```
 
-![13](https://wx4.sinaimg.cn/large/005tkHc2gy1fzf5daoig5j30kv02uaa0.jpg)
+![13](https://i.loli.net/2020/01/19/Th3YJMOborKpFfV.jpg)
 
 Hexo的文章编写是基于Markdown语法的，Markdown不过多介绍，想了解更多Markdown的知识，前往[维基百科-Markdown](https://zh.wikipedia.org/wiki/Markdown)。这里介绍一款非常好用的Markdown编辑器：[Typora](https://typora.io/)，可以前往官网下载，支持多平台运行，实时预览。用Typora打开刚刚新建的md文件，即可对文章进行编辑操作。
 

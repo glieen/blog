@@ -24,6 +24,6 @@ date: 2019-04-22 23:31:13
 
 ### Ubuntu
 
-![1](https://wx4.sinaimg.cn/large/005tkHc2ly1g2bvixwadxj31hc0u0b29.jpg)
+![1.jpg](https://i.loli.net/2020/01/19/lXgtweJqYVrP7TD.jpg)
 
 目前使用的是Ubuntu18.04桌面版，这是在我美化之后的效果，个人还是非常喜欢的。
