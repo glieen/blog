@@ -1,10 +1,9 @@
 ---
 title: 从Excel生成MySQL数据表(Apache POI)
 tags:
-  - Excle
   - POI
 comments: true
-categories: 记录
+categories: Java
 abbrlink: 37360
 date: 2019-02-27 18:07:19
 ---

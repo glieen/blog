@@ -2,7 +2,6 @@
 title: Windows10系统安装教程（UEFI+GPT）
 tags:
   - Windows
-  - 系统
 comments: true
 categories: 教程
 abbrlink: 43608

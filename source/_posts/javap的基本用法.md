@@ -2,6 +2,7 @@
 title: javap的基本用法
 tags:
   - javap
+  - Java
 comments: true
 categories: JVM
 abbrlink: 7273

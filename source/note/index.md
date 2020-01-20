@@ -34,6 +34,7 @@ date: 2018-08-03 16:02:24
 - [坚果云](https://www.jianguoyun.com/)（文件同步/版本控制）
 - [网易云音乐](https://music.163.com/)（音乐播放器）
 - [VirtualBox](https://www.virtualbox.org/)（虚拟机环境）
+- [PicGo](https://github.com/Molunerfinn/PicGo)（图床上传工具）
 
 #### Windows
 
@@ -60,6 +61,7 @@ date: 2018-08-03 16:02:24
 - [压缩图](https://www.yasuotu.com/)（图片在线处理）
 - [SmallPDF](https://smallpdf.com/cn/)（PDF在线处理）
 - [SM.MS](https://sm.ms/)（免费图床）
+- [ProcessOn](https://www.processon.com/)（在线流程图/思维导图）
 - [临时邮箱](https://linshiyouxiang.net/)（一次性邮箱）
 - [接码号](https://jiemahao.com/)（临时手机号码）
 - [电影天堂](http://www.btbtdy.me/)（在线电影）

@@ -3,8 +3,7 @@ title: 初识Socket
 tags:
   - Socket
 comments: true
-categories:
-  - Java
+categories: Java
 abbrlink: 42501
 date: 2019-01-24 16:00:58
 ---

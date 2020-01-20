@@ -2,7 +2,6 @@
 title: Windows10专业版激活教程
 tags:
   - Windows
-  - 系统
 comments: true
 categories: 教程
 abbrlink: 38255
