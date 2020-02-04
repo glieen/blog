@@ -25,12 +25,12 @@ IntelliJ IDEA无疑是现在最好用的Java开发集成环境，自动补全和
 
 ### 获取补丁
 
-我已经将补丁上传到GIthub上了，可以点击直接下载：[获取补丁](https://raw.githubusercontent.com/glieen/HexoBlog/source/source/file/jetbrains-agent.jar
+我已经将补丁上传到GIthub上了，可以点击直接下载：[获取补丁](https://raw.githubusercontent.com/glieen/HexoBlog/source/source/files/jetbrains-agent.jar
 )，下载补丁之后，将补丁放在任何可以找到的目录，建议放在IDEA的配置目录下。
 
 ### 引入补丁
 
-启动IDEA，在IDEA的欢迎界面，依次选择`Configure`->`Edit Custom VM Options...`，修改IDEA的配置文件。
+启动IDEA，在IDEA的欢迎界面s，依次选择`Configure`->`Edit Custom VM Options...`，修改IDEA的配置文件。
 
 ![3](https://i.loli.net/2020/02/05/g9jAGYTMRDn1LeS.png)
 
