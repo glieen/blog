@@ -15,7 +15,7 @@ timezone: ''
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: https://glieen.cn
 root: /
-permalink: post/:abbrlink.html
+permalink: posts/:abbrlink.html
 abbrlink:
   alg: crc16
   rep: dec
@@ -105,7 +105,7 @@ deploy:
   repository: https://github.com/glieen/HexoBlog.git
   branch: master
   ignore_pattern:
-    public: post-image|about-image
+    public: post-image|about-image|files
 # Search
 search:
   path: search.xml
