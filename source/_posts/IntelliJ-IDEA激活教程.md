@@ -3,8 +3,7 @@ title: IntelliJ IDEA激活教程
 tags:
   - IDEA
 comments: true
-categories:
-  - 教程
+categories: 教程
 abbrlink: 29543
 date: 2020-02-04 10:57:05
 ---
@@ -13,26 +12,27 @@ IntelliJ IDEA无疑是现在最好用的Java开发集成环境，自动补全和
 
 <!-- more -->
 
-> 本教程仅用于学习，还请支持正版软件
+> 本教程仅用于学习，还请支持正版软件，感谢为破解付出努力的大神
+> 
 
-![1](https://i.loli.net/2020/02/04/vFcBAzPwknKRu3x.png)
+![29543-1.png](https://i.loli.net/2020/02/19/AHjMToliPsw1fk6.png)
 
 ### 激活码失效
 
 在`IDEA 2019.2`版本之前，还可以通过修改`hosts`文件，使用网上的激活码或者使用网友自行搭建的激活服务器进行激活，但是在更新到`IDEA 2019.2`之后，之前的各种激活都集体失效了，此时出现了新的激活方法，通过激活补丁的方式进行激活，理论上可以激活到2089年，如下图所示。
 
-![2](https://i.loli.net/2020/02/05/7WXEq3SUNmDrwyl.png)
+![29543-2.png](https://i.loli.net/2020/02/19/UkKhAEi2aTsm1pJ.png)
 
 ### 获取补丁
 
-我已经将补丁上传到GIthub上了，可以点击直接下载：[获取补丁](https://raw.githubusercontent.com/glieen/HexoBlog/source/source/files/jetbrains-agent.jar
+我已经将补丁上传到Github上，可以点击直接下载：[获取补丁](https://raw.githubusercontent.com/glieen/HexoBlog/source/source/files/jetbrains-agent.jar
 )，下载补丁之后，将补丁放在任何可以找到的目录，建议放在IDEA的配置目录下。
 
 ### 引入补丁
 
-启动IDEA，在IDEA的欢迎界面s，依次选择`Configure`->`Edit Custom VM Options...`，修改IDEA的配置文件。
+启动IDEA，在IDEA的欢迎界面，依次选择`Configure`->`Edit Custom VM Options...`，修改IDEA的配置文件。
 
-![3](https://i.loli.net/2020/02/05/g9jAGYTMRDn1LeS.png)
+![29543-3.png](https://i.loli.net/2020/02/19/LUnNpHSbo6uR1iK.png)
 
 将以下内容加入到配置文件中，然后保存，如下图所示。
 
@@ -41,17 +41,17 @@ IntelliJ IDEA无疑是现在最好用的Java开发集成环境，自动补全和
 -javaagent:C:\Users\Glieen\.IntelliJIdea2019.3\config\jetbrains-agent.jar
 ```
 
-![4](https://i.loli.net/2020/02/05/3FDd4pCZYlzB5Tu.png)
+![29543-4.png](https://i.loli.net/2020/02/19/NSJfE7XZyYAOWCv.png)
 
 ### 激活
 
 在IDEA的欢迎界面，依次选择`Configure`->`Manage License...`，打开激活界面。
 
-![5](https://i.loli.net/2020/02/05/9Wtm4M8Q1jdsnUJ.png)
+![29543-5.png](https://i.loli.net/2020/02/19/yq65SWAbpBYLw7N.png)
 
 如果已存在激活码，点击`Remove License`，先移除激活码。
 
-![6](https://i.loli.net/2020/02/05/PxOyZJb6oUhnH19.png)
+![29543-6.png](https://i.loli.net/2020/02/19/gXcH35CVu2Ryl1I.png)
 
 将以下任意一个激活码填入，点击`Activate`即可成功激活。
 
@@ -69,4 +69,4 @@ A82DEE284F-eyJsaWNlbnNlSWQiOiJBODJERUUyODRGIiwibGljZW5zZWVOYW1lIjoiaHR0cHM6Ly96a
 KNBB2QUUR1-eyJsaWNlbnNlSWQiOiJLTkJCMlFVVVIxIiwibGljZW5zZWVOYW1lIjoiZ2hib2tlIiwiYXNzaWduZWVOYW1lIjoiIiwiYXNzaWduZWVFbWFpbCI6IiIsImxpY2Vuc2VSZXN0cmljdGlvbiI6IiIsImNoZWNrQ29uY3VycmVudFVzZSI6ZmFsc2UsInByb2R1Y3RzIjpbeyJjb2RlIjoiSUkiLCJmYWxsYmFja0RhdGUiOiIyMDg5LTA3LTA3IiwicGFpZFVwVG8iOiIyMDg5LTA3LTA3In0seyJjb2RlIjoiQUMiLCJmYWxsYmFja0RhdGUiOiIyMDg5LTA3LTA3IiwicGFpZFVwVG8iOiIyMDg5LTA3LTA3In0seyJjb2RlIjoiRFBOIiwiZmFsbGJhY2tEYXRlIjoiMjA4OS0wNy0wNyIsInBhaWRVcFRvIjoiMjA4OS0wNy0wNyJ9LHsiY29kZSI6IlBTIiwiZmFsbGJhY2tEYXRlIjoiMjA4OS0wNy0wNyIsInBhaWRVcFRvIjoiMjA4OS0wNy0wNyJ9LHsiY29kZSI6IkdPIiwiZmFsbGJhY2tEYXRlIjoiMjA4OS0wNy0wNyIsInBhaWRVcFRvIjoiMjA4OS0wNy0wNyJ9LHsiY29kZSI6IkRNIiwiZmFsbGJhY2tEYXRlIjoiMjA4OS0wNy0wNyIsInBhaWRVcFRvIjoiMjA4OS0wNy0wNyJ9LHsiY29kZSI6IkNMIiwiZmFsbGJhY2tEYXRlIjoiMjA4OS0wNy0wNyIsInBhaWRVcFRvIjoiMjA4OS0wNy0wNyJ9LHsiY29kZSI6IlJTMCIsImZhbGxiYWNrRGF0ZSI6IjIwODktMDctMDciLCJwYWlkVXBUbyI6IjIwODktMDctMDcifSx7ImNvZGUiOiJSQyIsImZhbGxiYWNrRGF0ZSI6IjIwODktMDctMDciLCJwYWlkVXBUbyI6IjIwODktMDctMDcifSx7ImNvZGUiOiJSRCIsImZhbGxiYWNrRGF0ZSI6IjIwODktMDctMDciLCJwYWlkVXBUbyI6IjIwODktMDctMDcifSx7ImNvZGUiOiJQQyIsImZhbGxiYWNrRGF0ZSI6IjIwODktMDctMDciLCJwYWlkVXBUbyI6IjIwODktMDctMDcifSx7ImNvZGUiOiJSTSIsImZhbGxiYWNrRGF0ZSI6IjIwODktMDctMDciLCJwYWlkVXBUbyI6IjIwODktMDctMDcifSx7ImNvZGUiOiJXUyIsImZhbGxiYWNrRGF0ZSI6IjIwODktMDctMDciLCJwYWlkVXBUbyI6IjIwODktMDctMDcifSx7ImNvZGUiOiJEQiIsImZhbGxiYWNrRGF0ZSI6IjIwODktMDctMDciLCJwYWlkVXBUbyI6IjIwODktMDctMDcifSx7ImNvZGUiOiJEQyIsImZhbGxiYWNrRGF0ZSI6IjIwODktMDctMDciLCJwYWlkVXBUbyI6IjIwODktMDctMDcifSx7ImNvZGUiOiJSU1UiLCJmYWxsYmFja0RhdGUiOiIyMDg5LTA3LTA3IiwicGFpZFVwVG8iOiIyMDg5LTA3LTA3In1dLCJoYXNoIjoiMTI3OTY4NzcvMCIsImdyYWNlUGVyaW9kRGF5cyI6NywiYXV0b1Byb2xvbmdhdGVkIjpmYWxzZSwiaXNBdXRvUHJvbG9uZ2F0ZWQiOmZhbHNlfQ==-1iV7BA/baNqv0Q5yUnAphUmh66QhkDRX+qPL09ICuEicBqiPOBxmVLLCVUpkxhrNyfmOtat2LcHwcX/NHkYXdoW+6aS0S388xe1PV2oodiPBhFlEaOac42UQLgP4EidfGQSvKwC9tR1zL5b2CJPQKZ7iiHh/iKBQxP6OBMUP1T7j3Fe1rlxfYPc92HRZf6cO+C0+buJP5ERZkyIn5ZrVM4TEnWrRHbpL8SVNq4yqfc+NwoRzRSNC++81VDS3AXv9c91YeZJz6JXO7AokIk54wltr42FLNuKbozvB/HCxV9PA5vIiM+kZY1K0w5ytgxEYKqA87adA7R5xL/crpaMxHQ==-MIIElTCCAn2gAwIBAgIBCTANBgkqhkiG9w0BAQsFADAYMRYwFAYDVQQDDA1KZXRQcm9maWxlIENBMB4XDTE4MTEwMTEyMjk0NloXDTIwMTEwMjEyMjk0NlowaDELMAkGA1UEBhMCQ1oxDjAMBgNVBAgMBU51c2xlMQ8wDQYDVQQHDAZQcmFndWUxGTAXBgNVBAoMEEpldEJyYWlucyBzLnIuby4xHTAbBgNVBAMMFHByb2QzeS1mcm9tLTIwMTgxMTAxMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA5ndaik1GD0nyTdqkZgURQZGW+RGxCdBITPXIwpjhhaD0SXGa4XSZBEBoiPdY6XV6pOfUJeyfi9dXsY4MmT0D+sKoST3rSw96xaf9FXPvOjn4prMTdj3Ji3CyQrGWeQU2nzYqFrp1QYNLAbaViHRKuJrYHI6GCvqCbJe0LQ8qqUiVMA9wG/PQwScpNmTF9Kp2Iej+Z5OUxF33zzm+vg/nYV31HLF7fJUAplI/1nM+ZG8K+AXWgYKChtknl3sW9PCQa3a3imPL9GVToUNxc0wcuTil8mqveWcSQCHYxsIaUajWLpFzoO2AhK4mfYBSStAqEjoXRTuj17mo8Q6M2SHOcwIDAQABo4GZMIGWMAkGA1UdEwQCMAAwHQYDVR0OBBYEFGEpG9oZGcfLMGNBkY7SgHiMGgTcMEgGA1UdIwRBMD+AFKOetkhnQhI2Qb1t4Lm0oFKLl/GzoRykGjAYMRYwFAYDVQQDDA1KZXRQcm9maWxlIENBggkA0myxg7KDeeEwEwYDVR0lBAwwCgYIKwYBBQUHAwEwCwYDVR0PBAQDAgWgMA0GCSqGSIb3DQEBCwUAA4ICAQBonMu8oa3vmNAa4RQP8gPGlX3SQaA3WCRUAj6Zrlk8AesKV1YSkh5D2l+yUk6njysgzfr1bIR5xF8eup5xXc4/G7NtVYRSMvrd6rfQcHOyK5UFJLm+8utmyMIDrZOzLQuTsT8NxFpbCVCfV5wNRu4rChrCuArYVGaKbmp9ymkw1PU6+HoO5i2wU3ikTmRv8IRjrlSStyNzXpnPTwt7bja19ousk56r40SmlmC04GdDHErr0ei2UbjUua5kw71Qn9g02tL9fERI2sSRjQrvPbn9INwRWl5+k05mlKekbtbu2ev2woJFZK4WEXAd/GaAdeZZdumv8T2idDFL7cAirJwcrbfpawPeXr52oKTPnXfi0l5+g9Gnt/wfiXCrPElX6ycTR6iL3GC2VR4jTz6YatT4Ntz59/THOT7NJQhr6AyLkhhJCdkzE2cob/KouVp4ivV7Q3Fc6HX7eepHAAF/DpxwgOrg9smX6coXLgfp0b1RU2u/tUNID04rpNxTMueTtrT8WSskqvaJd3RH8r7cnRj6Y2hltkja82HlpDURDxDTRvv+krbwMr26SB/40BjpMUrDRCeKuiBahC0DCoU/4+ze1l94wVUhdkCfL0GpJrMSCDEK+XEurU18Hb7WT+ThXbkdl6VpFdHsRvqAnhR2g4b+Qzgidmuky5NUZVfEaZqV/g==
 ```
 
-![7](https://i.loli.net/2020/02/05/wvt7KP9Xl4FfOLE.png)
+![29543-7.png](https://i.loli.net/2020/02/19/v6bSPsywXKre1TV.png)

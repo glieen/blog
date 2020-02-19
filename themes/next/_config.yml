@@ -124,7 +124,8 @@ menu:
   categories: /categories/ || th
   tags: /tags/ || tags
   archives: /archives/ || archive
-  note: /note/ || book
+  notes: /notes/ || book
+  favorites: /favorites/ || star
   comment: https://leancloud.cn/dashboard/ || comment
   about: /about/ || user
   #schedule: /schedule/ || calendar
@@ -379,7 +380,7 @@ back2top:
 reading_progress:
   enable: true
   # Available values: top | bottom
-  position: bottom
+  position: top
   color: "#37c6c0"
   height: 3px
 
@@ -721,10 +722,10 @@ firestore:
 # Show Views / Visitors of the website / page with busuanzi.
 # Get more information on http://ibruce.info/2015/04/04/busuanzi
 busuanzi_count:
-  enable: false
-  total_visitors: true
+  enable: true
+  total_visitors: false
   total_visitors_icon: user
-  total_views: true
+  total_views: false
   total_views_icon: eye
   post_views: true
   post_views_icon: eye

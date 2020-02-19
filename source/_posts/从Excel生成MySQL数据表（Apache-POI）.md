@@ -1,5 +1,5 @@
 ---
-title: 从Excel生成MySQL数据表(Apache POI)
+title: 从Excel生成MySQL数据表（Apache POI）
 tags:
   - POI
 comments: true
@@ -113,9 +113,9 @@ public class Excel2MySQL {
 
 运行结果：
 
-![1](https://tvax4.sinaimg.cn/large/005tkHc2ly1g0t8hfi8igj30e305274k.jpg)
+![37360-1.jpg](https://i.loli.net/2020/02/19/tR7fNLV4la6F5jB.jpg)
 
-![2](https://tva1.sinaimg.cn/large/005tkHc2ly1g0t8jrqzz9j30hy0dymxj.jpg)
+![37360-2.jpg](https://i.loli.net/2020/02/19/HsoNPdLaXt4EKOx.jpg)
 
 SQL语句成功打印，数据表成功创建。
 

@@ -98,11 +98,11 @@ public class Client {
 
 ### 测试结果
 
-![1](https://tva2.sinaimg.cn/large/005tkHc2gy1fzmhpu7sivj30g204c3yl.jpg)
+![42501-1.jpg](https://i.loli.net/2020/02/19/sYPrOQogTJauCHj.jpg)
 
-![2](https://tvax4.sinaimg.cn/large/005tkHc2gy1fzmhq9ydikj30gw06imxk.jpg)
+![42501-2.jpg](https://i.loli.net/2020/02/19/cHAGlU3yEfKZ1gd.jpg)
 
-![3](https://i.loli.net/2020/01/19/mHGe4r5DgRbMTKa.jpg)
+![42501-3.jpg](https://i.loli.net/2020/02/19/zwoZOpIbYue69L3.jpg)
 
 ### 多线程处理
 

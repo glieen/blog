@@ -27,33 +27,33 @@ date: 2019-10-09 23:31:13
 
    准备一个容量大于4G的U盘，插入电脑，打开Rufus，在设备处会显示插入的U盘，然后点击选择，打开下载的Ubuntu镜像文件，分区类型建议设置为GPT，其他设置默认，然后单击开始，弹窗选择写入模式，默认即可，提示**会清除U盘所有数据，如有重要数据请先备份**，进度条跑完即制作完成。
 
-   ![1](https://tva3.sinaimg.cn/large/005tkHc2ly1g7t3f62rejj30bk0e7aat.jpg)
+   ![21868-1.jpg](https://i.loli.net/2020/02/19/IGXdjB8ROKLl2uC.jpg)
 
 ### 准备分区
 
 在Windows10下右键开始，选择磁盘管理，打开磁盘管理工具。
 
-![2](https://tvax4.sinaimg.cn/large/005tkHc2ly1g7t3nlitndj30pm0kqwg8.jpg)
+![21868-2.jpg](https://i.loli.net/2020/02/19/28OUnSPe9BdDuwz.jpg)
 
 这里我准备将F盘分50G出来用作安装Ubuntu，右键想分区的盘，选择压缩卷，输入分割的大小（注意单位是MB），点击压缩即可，即会多出一个大小为50G的未分配区块。
 
-![3](https://tva3.sinaimg.cn/large/005tkHc2ly1g7t3qfsx3sj30pm0kqdi3.jpg)
+![21868-3.jpg](https://i.loli.net/2020/02/19/p4qbB8JVX6jG9vr.jpg)
 
-![4](https://tva3.sinaimg.cn/large/005tkHc2ly1g7tjadaaeaj30pj037dft.jpg)
+![21868-4.jpg](https://i.loli.net/2020/02/19/Evd2kuWAUFyHfrh.jpg)
 
 ### 通过启动盘启动
 
 把制作好的启动盘插入电脑，进入电脑的BIOS系统修改电脑的启动顺序，将启动盘设置成第一启动，以我的电脑（暗影精灵4）为例，开机按F9即可切换启动扇区，不同的品牌的电脑有不同的设置方法，详情可以通过搜索引擎查询自己的电脑型号查看具体的设置操作。
 
-![5](https://tvax3.sinaimg.cn/large/005tkHc2ly1g7thvll1xaj33402c0b2a.jpg)
+![21868-5.jpg](https://i.loli.net/2020/02/19/HTtdDhGnK21wlrz.jpg)
 
 启动成功之后会有四个选项，第一个选项是试用Ubuntu，第二个选项是安装Ubuntu，剩下两个不用关注。
 
-![6](https://tva4.sinaimg.cn/large/005tkHc2ly1g7thwlk63pj32c0340kjm.jpg)
+![21868-6.jpg](https://i.loli.net/2020/02/19/gdloXGZJ8C5yOwT.jpg)
 
 这里我选择第一个试用Ubuntu，为了方便截图，当然直接安装也是可以的，稍等片刻后即进入Ubuntu的试用界面。
 
-![7](https://tva4.sinaimg.cn/large/005tkHc2ly1g7ti08ttjzj31hc0u0tk9.jpg)
+![21868-7.jpg](https://i.loli.net/2020/02/19/Ce85q6YGsL9gXpo.jpg)
 
 进入Ubuntu的试用桌面基本表示启动盘引导启动成功了。
 
@@ -63,57 +63,57 @@ date: 2019-10-09 23:31:13
 
 2. 选择语言，中文（简体），或者自己想要的语言；
 
-   ![8](https://tvax1.sinaimg.cn/large/005tkHc2ly1g7ti42uwgzj30qu0ftjrw.jpg)
+   ![21868-8.jpg](https://i.loli.net/2020/02/19/Ec4OLnYaXiusqST.jpg)
 
 3. 选择键盘布局，默认就可以了；
 
-   ![9](https://tva1.sinaimg.cn/large/005tkHc2ly1g7ti671nelj30o90h3q43.jpg)
+   ![21868-9.jpg](https://i.loli.net/2020/02/19/ubyG7Yjzx3J1QSs.jpg)
 
 4. 设置网络连接，这里不建议在安装的时候连接网络，如果网速慢的话将会影响安装速度，如果是有线网络的话建议先把网线拔掉；
 
-   ![10](https://tva2.sinaimg.cn/large/005tkHc2ly1g7ti77xduoj30o90h375t.jpg)
+   ![21868-10.jpg](https://i.loli.net/2020/02/19/C35UzNx7LSnmJf9.jpg)
 
 5. 选择安装的内容，使用最小安装就好了，没必要装那些多余的软件，以后需要用到再去安装；
 
-   ![11](https://tva2.sinaimg.cn/large/005tkHc2ly1g7tia3pqf8j30o90h3dhg.jpg)
+   ![21868-11.jpg](https://i.loli.net/2020/02/19/dsmS6iucLlAT4Cj.jpg)
 
 6. 选择安装方式，因为电脑已经安装了Windows10系统，如果要图简单的话，选择第一项，与Windows共存就好了，我喜欢自己调整分区，所以我使用的其他选项，**千万不要选择清除整个磁盘并安装Ubuntu**，那样会丢失所有硬盘里的数据；
 
-   ![12](https://tva1.sinaimg.cn/large/005tkHc2ly1g7ticc8k6qj30o90h376n.jpg)
+   ![21868-12.jpg](https://i.loli.net/2020/02/19/JnFp1k5VYeyWd7G.jpg)
 
 7. 硬盘的分区结构和大小预览，可以看到有一个大小50G左右空闲分区，这是在Windows下面预留出来的，这里我将它扩展成两个分区，一个4G大小的交换分区，用于Ubuntu系统休眠使用，剩下的分为一个EXT4主分区，挂在到`/`根目录下，关于分区，实在没有必要过于纠结挂载点，建议都挂载到根目录，**千万不要去修改其他非空闲的分区，格式化分区会丢失数据**，分区完成点击现在安装；
 
-   ![13](https://tva1.sinaimg.cn/large/005tkHc2ly1g7tif394w6j30nu0neace.jpg)
+   ![21868-13.jpg](https://i.loli.net/2020/02/19/lGg1EKCzrn8fx6w.jpg)
    *分区方式：单击选择要修改的分区，点击左下角的“+”，然后设置分区大小和分区格式，点击确定即可。*
-   ![14](https://tva3.sinaimg.cn/large/005tkHc2ly1g7timqck0bj30hw07mwfn.jpg)
+   ![21868-14.jpg](https://i.loli.net/2020/02/19/o2mrUuzHxkRMhas.jpg)
    
 8. 选择时区，中国的话默认选择上海就可以了；
 
-   ![15](https://tva1.sinaimg.cn/large/005tkHc2ly1g7tiptajwrj30nu0ne79u.jpg)
+   ![21868-15.jpg](https://i.loli.net/2020/02/19/7puSkBtUgIzrWKd.jpg)
 
 9. 设置电脑信息和用户信息，自行设置；
 
-   ![16](https://tvax2.sinaimg.cn/large/005tkHc2ly1g7tiqiqdumj30nu0nedh1.jpg)
+   ![21868-16.jpg](https://i.loli.net/2020/02/19/xgvZq7MmWhIH4Pe.jpg)
 
 10. 开始安装系统，等待几分钟即可安装成功；
 
-    ![17](https://tva2.sinaimg.cn/large/005tkHc2ly1g7tirgiob5j30kw0ftn1f.jpg)
+    ![21868-17.jpg](https://i.loli.net/2020/02/19/RdurE4XosJM5Pjz.jpg)
 
 11. 安装成功，重启电脑；
 
-    ![18](https://tvax1.sinaimg.cn/large/005tkHc2ly1g7tit5wdf5j30m004bdge.jpg)
+    ![21868-18.jpg](https://i.loli.net/2020/02/19/MiwZEF8hyICTQJp.jpg)
 
 12. 重启电脑时将U盘拔下，通常重启电脑之后，BIOS会默认启动Ubuntu的引导界面，如果没有启动到Ubuntu的引导界面，可以自行更改BIOS的启动设置，将Ubuntu设置成第一引导选项。引导界面有四个选项，第一个是正常启动Ubuntu系统，第二个是高级启动，第三个是启动Windows系统，第四个是进入电脑的BIOS设置。界面有10秒倒计时，如果没有更改启动选项则默认启动第一个，通过上下方向键可以更改启动选项，按回车键确定，通常默认启动第一个（正常启动Ubuntu）即可；
 
-    ![19](https://tvax1.sinaimg.cn/large/005tkHc2ly1g7tiueoiioj32c03407wi.jpg)
+    ![21868-19.jpg](https://i.loli.net/2020/02/19/frlS4wkbWdpZE1q.jpg)
 
 13. 稍等片刻就进入Ubuntu登录界面，选择安装系统时创建的用户，输入密码即可进入系统；
 
-    ![20](https://tvax1.sinaimg.cn/large/005tkHc2ly1g7tj0g1qnlj32c03401ky.jpg)
+    ![21868-20.jpg](https://i.loli.net/2020/02/19/UVoPRxA6iuk4f2a.jpg)
 
 14. 进入Ubuntu桌面，系统安装成功！
 
-    ![21](https://tvax1.sinaimg.cn/large/005tkHc2ly1g7tj2d7xb2j31hc0u07gh.jpg)
+    ![21868-21.jpg](https://i.loli.net/2020/02/19/1Olj8xsBP6zUiNp.jpg)
 
 ### 总结
 
