@@ -20,7 +20,7 @@ comments: false
 - [Nginx](https://nginx.org/)（高性能代理转发服务器）
 - [Navicat](https://www.navicat.com/)（可视化数据库管理工具）
 - [DBeaver](https://dbeaver.io/)（免费的跨平台数据库管理工具）
-- [NodeJS](https://nodejs.org/)（服务端JavaScript运行环境）
+- [Node.js](https://nodejs.org/)（服务端JavaScript运行环境）
 
 ### 常用软件
 
