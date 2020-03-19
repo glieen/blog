@@ -96,7 +96,7 @@ Java作为一门发展了多年的编程语言，拥有众多的开发者，我�
      * method3必须返回boolean值，其他方法无要求
      */
     for (method1(), method2(); method3(); method4(), method5()) {
-        method6();
+    	method6();
     }
     ```
 
@@ -132,4 +132,35 @@ Java作为一门发展了多年的编程语言，拥有众多的开发者，我�
 
 23. 使用关键字`new`创建对象的时候，JVM先分配空间并返回`this`引用，之后再使用引用去调用构造方法，JVM将`this`引用作为构造方法的第一个隐含参数传入，初始化对象，这也是为什么在构造方法中可以通过`this`调用其他方法的原因；
 
-24. 在Lambda表达式中使用的变量必须声明为final，Java8中无需声明是因为编译器做了隐含声明。
+24. 在Lambda表达式中使用的变量必须声明为final，Java8中无需声明是因为编译器做了隐含声明；
+
+25. 关于序列化：静态变量属于类，所以不参与序列化；如果成员变量是基础类型，则可直接序列化，如果成员变量是引用类型，引用类型也必须实现序列化接口，否则序列化时将会抛出异常；父类实现了序列化接口，那么子类无需实现也可以序列化；父类未实现序列化接口，子类实现序列化接口，则父类必须提供空构造器，否则反序列化会抛出异常，序列化的时候默认只会序列化子类拥有的成员变量，从父类继承的成员变量不会被序列化，但是可以通过重写序列化方法来序列化从父类继承下来的成员变量；
+
+    ```java
+    // 序列化方法
+    private void writeObject(ObjectOutputStream oos) throws IOException {
+    	// 调用默认的序列化方法，可以把非静态和非transient字段给序列化
+    	oos.defaultWriteObject();
+    	// 序列化其他成员变量
+    }
+    // 反序列化
+    private void readObject(ObjectInputStream ois) throws IOException,
+                ClassNotFoundException {
+    	// 调用默认的反序列化方法，可以把非静态和非transient字段给反序列化
+    	ois.defaultReadObject();
+    	// 反序列化其他成员变量
+    }
+    ```
+
+26. `final`修饰的非静态成员变量可以在构造方法中初始化。
+
+    ```java
+    public class Test {
+        final int i;
+    
+        Test() {
+            i = 1;
+        }
+    }
+    ```
+
