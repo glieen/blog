@@ -193,7 +193,16 @@ social:
   #YouTube: https://youtube.com/yourname || youtube
   #Instagram: https://instagram.com/yourname || instagram
   #Skype: skype:yourname?call|chat || skype
-  #RSS: /atom.xml || rss
+  RSS: atom.xml || rss
+
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+  order_by: -date
+  icon: https://i.loli.net/2020/02/25/CeJ2guvmMA6c9pS.jpg
+  autodiscovery: true
+  template:
 
 social_icons:
   enable: true
@@ -1027,7 +1036,6 @@ vendors:
   # Internal version: 1.0.0
   # canvas_ribbon: //cdn.jsdelivr.net/gh/theme-next/theme-next-canvas-ribbon@1/canvas-ribbon.js
   canvas_ribbon:
-
 # Assets
 css: css
 js: js

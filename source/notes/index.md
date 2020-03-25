@@ -40,4 +40,4 @@ MyBatis Plus分页查询，Mapper第一个入参为IPage，返回值为IPage，�
 
 MyBatis Plus自定义查询条件时，入参传入Wrapper接口实现类，且在SQL末尾加上`${ew.customSqlSegment}`就可以实现。
 
-MyBatis指定Mapper返回类型为Map时，添加泛型并不会生效，比如用Map<String,String>作为返回值，返回的数据中有Date时，类型依旧是时间类型，而不会转成String。
+MyBatis指定Mapper返回类型为Map时，添加泛型并不会生效，比如用`Map<String,String>`作为返回值，返回的数据中有Date时，类型依旧是时间类型，而不会转成String。

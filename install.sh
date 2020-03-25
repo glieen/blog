@@ -21,6 +21,7 @@ rm -rf source
 cd HexoBlog
 npm install hexo-generator-searchdb --save
 npm install hexo-abbrlink --save
+npm install hexo-generator-feed --save
 npm install hexo-deployer-git --save
 npm install hexo-symbols-count-time --save
 npm uninstall hexo-generator-index --save

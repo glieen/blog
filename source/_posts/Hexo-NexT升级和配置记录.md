@@ -213,6 +213,27 @@ links:
   Zalmon's Blog : https://zalmon.cn/
 ```
 
+#### RSS订阅
+
+生成订阅文件，用于RSS订阅更新获取最新的文章发布信息，需要安装插件启用该功能：[hexo-generator-feed](https://github.com/hexojs/hexo-generator-feed)。
+
+```bash
+npm install hexo-generator-feed --save
+```
+
+将以下的配置信息加入到主题的配置文件当中：
+
+```yml
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+  order_by: -date
+  icon: icon.png
+  autodiscovery: true
+  template:
+```
+
 #### 字数统计
 
 字数统计可以统计整站的字符数，每篇文章的字符数以及阅读时间，需要配合插件启用该功能：[hexo-symbols-count-time](https://github.com/theme-next/hexo-symbols-count-time)。

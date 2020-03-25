@@ -38,23 +38,14 @@ comments: false
 #### Windows
 
 - [Snipaste](https://zh.snipaste.com/)（强大的截图/贴图功能）
-
 - [Rufus](https://rufus.ie/)（镜像刻录/制作引导）
-
 - [Bandizip](https://cn.bandisoft.com/bandizip/)（简单好用的压缩/解压缩工具）
-
 - [Everything](https://www.voidtools.com/zh-cn/)（文件索引/即时搜索神器）
-
 - [Sandboxie](https://www.sandboxie.com/)（沙箱环境/垃圾软件克星）
-
 - [ShadowsocksR/SSR](https://github.com/shadowsocksrr/shadowsocksr-csharp/)（爬梯工具）
-
 - [格式工厂](http://www.pcgeshi.com/)（多种格式转换）
-
 - [ByPass](https://www.bypass.cn/)（分流抢票/抢候补）
-
 - [PanDownload](https://pandownload.com/)（百度云盘下载工具）
-
 - [FastCopy](https://fastcopy.jp/en/)（超快的文件复制）
 
 #### Linux

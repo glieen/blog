@@ -72,6 +72,14 @@ npm install hexo-deployer-git --save
 npm install hexo-symbols-count-time --save
 ```
 
+#### RSS订阅插件
+
+参考地址：[Github:hexo-generator-feed](https://github.com/hexojs/hexo-generator-feed)
+
+```bash
+npm install hexo-generator-feed --save
+```
+
 #### 文章置顶插件
 
 参考地址：[Github:hexo-generator-index-pin-top](https://github.com/netcan/hexo-generator-index-pin-top)
