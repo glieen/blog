@@ -20,7 +20,7 @@ U盘一个（大小8G及以上）
 
 ### 下载镜像
 
-去[官网](https://www.microsoft.com)或者[MSDN](https://msdn.itellyou.cn/)下载原版ISO镜像文件，以MSDN为例，打开链接，在左边导航栏【操作系统】列表中找到想要重装的系统版本，打开镜像列表，选择适合自己的镜像版本，2G以上内存推荐安装64位操作系统，复制ed2k链接，使用迅雷下载镜像文件即可，本教程使用的镜像文件如下：
+去[官网](https://www.microsoft.com/zh-cn/software-download/windows10)或者[MSDN](https://msdn.itellyou.cn/)下载原版ISO镜像文件，以MSDN为例，打开链接，在左边导航栏【操作系统】列表中找到想要重装的系统版本，打开镜像列表，选择适合自己的镜像版本，2G以上内存推荐安装64位操作系统，复制ed2k链接，使用迅雷下载镜像文件即可，本教程使用的镜像文件如下：
 
 ```
 文件名：cn_windows_10_consumer_editions_version_1809_updated_jan_2019_x64_dvd_34b4d4fb.iso

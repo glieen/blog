@@ -123,6 +123,7 @@ menu:
   categories: /categories/ || th
   tags: /tags/ || tags
   archives: /archives/ || archive
+  Java: /java/ || coffee
   notes: /notes/ || book
   favorites: /favorites/ || star
   comment: https://leancloud.cn/dashboard/ || comment
@@ -200,7 +201,6 @@ feed:
   path: atom.xml
   limit: 20
   order_by: -date
-  icon: https://i.loli.net/2020/02/25/CeJ2guvmMA6c9pS.jpg
   autodiscovery: true
   template:
 
@@ -767,7 +767,7 @@ local_search:
   # Unescape html strings to the readable one.
   unescape: false
   # Preload the search data when the page loads.
-  preload: false
+  preload: true
 
 # Swiftype Search API Key
 swiftype_key:

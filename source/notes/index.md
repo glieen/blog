@@ -41,3 +41,33 @@ MyBatis Plus分页查询，Mapper第一个入参为IPage，返回值为IPage，�
 MyBatis Plus自定义查询条件时，入参传入Wrapper接口实现类，且在SQL末尾加上`${ew.customSqlSegment}`就可以实现。
 
 MyBatis指定Mapper返回类型为Map时，添加泛型并不会生效，比如用`Map<String,String>`作为返回值，返回的数据中有Date时，类型依旧是时间类型，而不会转成String。
+
+### Windows时间显示到秒
+
+打开注册表编辑器，定位到
+
+`计算机\HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced`
+
+在右边新建一个DWORD(32位)值，命名为`ShowSecondsInSystemClock`，赋值为`1`，然后重新资源管理器就可以了。
+
+### Windows Redis压缩版服务安装
+
+定位到Redis解压文件目录下，打开Windows命令行，执行命令`redis-server.exe --service-install redis.windows.conf`就可以将Redis注册到Windows服务，同时可以在服务管理中配置服务开机自启动。
+
+### 配置Git代理
+
+因为国情因素，拉取Github的代码总是很慢，需要通过配置代理来提高下载速度，我使用的是SSR，可以用以下方式配置。
+
+```bash
+# 全局代理配置
+git config --global http.proxy 'http://127.0.0.1:1080'
+git config --global https.proxy 'http://127.0.0.1:1080'
+
+# 仅代理Github
+git config --global http.https://github.com.proxy http://127.0.0.1:1080
+git config --global https.https://github.com.proxy http://127.0.0.1:1080
+
+# 取消代理
+git config --global --unset http.proxy
+```
+

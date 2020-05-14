@@ -12,7 +12,7 @@ Java程序员，喜欢电影、音乐和动漫，致力于世界和平。
 
 与我交流，共同进步：
 
-🐙**Github:**[https://github.com/glieen](https://github.com/glieen)
+🐙**Github：**[https://github.com/glieen](https://github.com/glieen)
 
-📧**Gmail:**[glieen1995@gmail.com](mailto:glieen1995@gmail.com)
+📧**Gmail：**[glieen1995@gmail.com](mailto:glieen1995@gmail.com)
 

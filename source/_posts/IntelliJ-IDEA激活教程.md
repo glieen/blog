@@ -70,3 +70,7 @@ KNBB2QUUR1-eyJsaWNlbnNlSWQiOiJLTkJCMlFVVVIxIiwibGljZW5zZWVOYW1lIjoiZ2hib2tlIiwiY
 ```
 
 ![29543-7.png](https://i.loli.net/2020/02/19/v6bSPsywXKre1TV.png)
+
+### 解决弹窗
+
+使用解压缩软件提取激活补丁中的`important.txt`文件，文件位于`jetbrains-agent.jar -> META-INF -> important.txt`，将该文件放置于激活补丁相同目录下即可，重启IDEA不会再弹窗。

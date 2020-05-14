@@ -61,6 +61,7 @@ comments: false
 - [压缩图](https://www.yasuotu.com/)（图片在线处理）
 - [SmallPDF](https://smallpdf.com/cn/)（PDF在线处理）
 - [SM.MS](https://sm.ms/)（免费图床）
+- [OCR.Space](http://ocr.space/)（免费在线OCR）
 - [ProcessOn](https://www.processon.com/)（在线流程图/思维导图）
 - [临时邮箱](https://linshiyouxiang.net/)（一次性邮箱）
 - [接码号](https://jiemahao.com/)（临时手机号码）
@@ -87,18 +88,37 @@ comments: false
 
 ### IntelliJ IDEA插件
 - [Translation](https://plugins.jetbrains.com/plugin/8579-translation)（强大便捷的翻译插件）
+
 - [.ignore](https://plugins.jetbrains.com/plugin/7495--ignore)（版本控制忽略控制文件）
+
 - [JRebel for IntelliJ](https://plugins.jetbrains.com/plugin/4441-jrebel-for-intellij)（项目热部署插件）
+
 - [Lombok](https://plugins.jetbrains.com/plugin/6317-lombok)（Lombok支持插件）
+
 - [CodeGlance](https://plugins.jetbrains.com/plugin/7275-codeglance)（代码缩略图）
+
 - [GenerateAllSetter](https://plugins.jetbrains.com/plugin/9360-generateallsetter)（Setter生成器）
+
 - [Free MyBatis plugin](https://plugins.jetbrains.com/plugin/8321-free-mybatis-plugin)（Mybaits插件）
+
+- [MyBatis Log Plugin](https://plugins.jetbrains.com/plugin/10065-mybatis-log-plugin)（Mybatis提取SQL插件）
+
 - [MyBatisPlus](https://plugins.jetbrains.com/plugin/12670-mybatisplus)（MyBatisPlus增强插件/逆向生成工具）
+
 - [Maven Helper](https://plugins.jetbrains.com/plugin/7179-maven-helper)（处理Maven依赖）
+
+- [jclasslib Bytecode viewer](https://plugins.jetbrains.com/plugin/9248-jclasslib-bytecode-viewer)（Java字节码查看工具）
+
 - [GsonFormat](https://plugins.jetbrains.com/plugin/7654-gsonformat)（Json转Entity）
+
 - [Material Theme UI](https://plugins.jetbrains.com/plugin/8006-material-theme-ui)（主题管理）
+
 - [Easy Code](https://plugins.jetbrains.com/plugin/10954-easy-code)（数据库逆向工具）
+
 - [Codota](https://plugins.jetbrains.com/plugin/7638-codota)（AI智能提示）
+
 - [Auto filling Java call arguments](https://plugins.jetbrains.com/plugin/8638-auto-filling-java-call-arguments)（参数自动填充）
+
 - [Alibaba Java Coding Guidelines](https://plugins.jetbrains.com/plugin/10046-alibaba-java-coding-guidelines)（阿里巴巴代码规范检查）
+
 - [CamelCase](https://plugins.jetbrains.com/plugin/7160-camelcase)（快捷键转换驼峰命名）
