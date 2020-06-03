@@ -36,6 +36,8 @@ rename 's/test//' *
 
 使用MyBatis插入对象到数据库时，如果主键是由数据库生成，当插入完成时会将主键回写到对象中。
 
+MyBatis查询时，如果是查询单个值为空，则返回null，如果是查询列表为空，则返回空集合。
+
 MyBatis Plus分页查询，Mapper第一个入参为IPage，返回值为IPage，且SQL末尾不能加分号。
 
 MyBatis Plus自定义查询条件时，入参传入Wrapper接口实现类，且在SQL末尾加上`${ew.customSqlSegment}`就可以实现。
