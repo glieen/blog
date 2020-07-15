@@ -24,14 +24,14 @@ Spring两大核心为IoC和AOP，本篇文章旨在记录下在SpringBoot下如�
     <relativePath/>
 </parent>
 <dependencies>
-    <dependency>
-    	<groupId>org.springframework.boot</groupId>
-    	<artifactId>spring-boot-starter-web</artifactId>
-	</dependency>
-    <dependency>
+	<dependency>
 		<groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-aop</artifactId>
-     </dependency>
+		<artifactId>spring-boot-starter-web</artifactId>
+	</dependency>
+	<dependency>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-aop</artifactId>
+	</dependency>
 </dependencies>
 ```
 

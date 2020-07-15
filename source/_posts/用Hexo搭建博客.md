@@ -2,6 +2,7 @@
 title: 用Hexo搭建博客
 tags:
   - Hexo
+  - Blog
 categories: Hexo
 comments: true
 abbrlink: 23632

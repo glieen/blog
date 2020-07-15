@@ -6,38 +6,22 @@ comments: false
 ### 开发工具
 
 - [IntelliJ IDEA](https://www.jetbrains.com/idea/)（宇宙第一IDE）
-
 - [Eclipse](https://www.eclipse.org/)（Java开发IDE）
-
 - [Typora](https://www.typora.io/)（Markdown编辑器/所见即所得）
-
-- [OracleJDK](https://www.oracle.com/technetwork/java/javase/downloads/index.html)（Oracle家的JDK）
-
+- [OracleJDK](https://www.oracle.com/cn/java/technologies/javase-downloads.html)（Oracle家的JDK）
 - [OpenJDK](https://openjdk.java.net/)（开源的JDK）
-
 - [Git](https://git-scm.com/)（分布式版本控制）
-
 - [SubVersion](https://subversion.apache.org/)（集中式版本控制）
-
 - [Redis](https://redis.io/)（K-V内存数据库）
-
 - [MySQL](https://www.mysql.com/)（最流行的关系型数据库）
-
 - [XShell](https://www.netsarang.com/zh/xshell/)（简单好用的SSH客户端）
-
 - [Tomcat](http://tomcat.apache.org/)（Servlet Web服务器）
-
 - [Maven](https://maven.apache.org/)（项目构建工具）
-
 - [Nginx](https://nginx.org/)（高性能代理转发服务器）
-
 - [Navicat](https://www.navicat.com/)（可视化数据库管理工具）
-
 - [DBeaver](https://dbeaver.io/)（免费的跨平台数据库管理工具）
-
 - [Node.js](https://nodejs.org/)（服务端JavaScript运行环境）
-
-- [Luyten](https://github.com/deathmarine/Luyten)（强大的Java反编译软件）
+- [Luyten](https://github.com/deathmarine/Luyten/)（强大的Java反编译软件）
 
 ### 常用软件
 
@@ -104,38 +88,22 @@ comments: false
 - [微博图床](https://chrome.google.com/webstore/detail/%E5%BE%AE%E5%8D%9A%E5%9B%BE%E5%BA%8A/pinjkilghdfhnkibhcangnpmcpdpmehk)
 
 ### IntelliJ IDEA插件
+
 - [Translation](https://plugins.jetbrains.com/plugin/8579-translation)（强大便捷的翻译插件）
-
 - [.ignore](https://plugins.jetbrains.com/plugin/7495--ignore)（版本控制忽略控制文件）
-
 - [JRebel for IntelliJ](https://plugins.jetbrains.com/plugin/4441-jrebel-for-intellij)（项目热部署插件）
-
 - [Lombok](https://plugins.jetbrains.com/plugin/6317-lombok)（Lombok支持插件）
-
 - [CodeGlance](https://plugins.jetbrains.com/plugin/7275-codeglance)（代码缩略图）
-
 - [GenerateAllSetter](https://plugins.jetbrains.com/plugin/9360-generateallsetter)（Setter生成器）
-
 - [Free MyBatis plugin](https://plugins.jetbrains.com/plugin/8321-free-mybatis-plugin)（Mybaits插件）
-
 - [MyBatis Log Plugin](https://plugins.jetbrains.com/plugin/10065-mybatis-log-plugin)（Mybatis提取SQL插件）
-
 - [MyBatisPlus](https://plugins.jetbrains.com/plugin/12670-mybatisplus)（MyBatisPlus增强插件/逆向生成工具）
-
 - [Maven Helper](https://plugins.jetbrains.com/plugin/7179-maven-helper)（处理Maven依赖）
-
 - [jclasslib Bytecode viewer](https://plugins.jetbrains.com/plugin/9248-jclasslib-bytecode-viewer)（Java字节码查看工具）
-
 - [GsonFormat](https://plugins.jetbrains.com/plugin/7654-gsonformat)（Json转Entity）
-
 - [Material Theme UI](https://plugins.jetbrains.com/plugin/8006-material-theme-ui)（主题管理）
-
 - [Easy Code](https://plugins.jetbrains.com/plugin/10954-easy-code)（数据库逆向工具）
-
 - [Codota](https://plugins.jetbrains.com/plugin/7638-codota)（AI智能提示）
-
 - [Auto filling Java call arguments](https://plugins.jetbrains.com/plugin/8638-auto-filling-java-call-arguments)（参数自动填充）
-
 - [Alibaba Java Coding Guidelines](https://plugins.jetbrains.com/plugin/10046-alibaba-java-coding-guidelines)（阿里巴巴代码规范检查）
-
 - [CamelCase](https://plugins.jetbrains.com/plugin/7160-camelcase)（快捷键转换驼峰命名）

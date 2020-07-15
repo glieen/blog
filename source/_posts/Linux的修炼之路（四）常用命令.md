@@ -3,6 +3,7 @@ title: Linux的修炼之路（四）常用命令
 tags:
   - Linux
   - Ubuntu
+  - Shell
 comments: true
 categories: Linux
 abbrlink: 64236

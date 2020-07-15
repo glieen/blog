@@ -3,6 +3,7 @@ title: Java基本数据类型
 tags:
   - Java
   - 基础知识
+  - 数据类型
 categories: Java
 comments: true
 abbrlink: 31202

@@ -2,6 +2,8 @@
 title: 从Excel生成MySQL数据表（Apache POI）
 tags:
   - POI
+  - Excel
+  - Java
 comments: true
 categories: Java
 abbrlink: 37360
