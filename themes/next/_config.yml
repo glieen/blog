@@ -40,10 +40,9 @@ custom_file_path:
 # ---------------------------------------------------------------
 
 favicon:
-  small: https://i.loli.net/2020/02/25/CeJ2guvmMA6c9pS.jpg
-  medium: https://i.loli.net/2020/02/25/2y3a5zOXBmoKkWC.jpg
-  apple_touch_icon: https://i.loli.net/2020/02/25/2y3a5zOXBmoKkWC.jpg
-  safari_pinned_tab: https://i.loli.net/2020/02/25/2y3a5zOXBmoKkWC.jpg
+  small: https://i.loli.net/2020/07/16/lXw6RG9tApr78Wj.png
+  medium: https://i.loli.net/2020/07/16/zxNQEDMKCPhw6e3.png
+  apple_touch_icon: https://i.loli.net/2020/07/16/QZXNv6nTl3VtHM5.png
   #android_manifest: /images/manifest.json
   #ms_browserconfig: /images/browserconfig.xml
 
@@ -167,7 +166,7 @@ sidebar:
 # Sidebar Avatar
 avatar:
   # Replace the default image and set the url here.
-  url: https://i.loli.net/2020/02/25/bYC5pfTe3kW2IDA.jpg
+  url: https://i.loli.net/2020/07/16/QZXNv6nTl3VtHM5.png
   # If true, the avatar will be dispalyed in circle.
   rounded: false
   # If true, the avatar will be rotated with the cursor.
@@ -371,7 +370,7 @@ codeblock:
   # Code Highlight theme
   # Available values: normal | night | night eighties | night blue | night bright | solarized | solarized dark | galactic
   # See: https://github.com/chriskempson/tomorrow-theme
-  highlight_theme: normal
+  highlight_theme: galactic
   # Add copy button on codeblock
   copy_button:
     enable: true
