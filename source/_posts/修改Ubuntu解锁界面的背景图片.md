@@ -70,4 +70,4 @@ $ reboot
 
 ![8472-2.jpg](https://i.loli.net/2020/02/19/fLCPKhD6Jg27Bq9.jpg)
 
-> 原文链接：[Ubuntu18.04 更改登录界面默认背景图](https://zhuanlan.zhihu.com/p/36470249)
+> 参考链接：[Ubuntu18.04 更改登录界面默认背景图](https://zhuanlan.zhihu.com/p/36470249)

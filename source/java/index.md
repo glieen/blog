@@ -266,3 +266,4 @@ comments: true
 
 45. 移位操作`<<` `>>` `>>>`只适用于整型，无法对boolean和浮点型使用。作用于byte，short和char时，会发生类型提升，运算结果为int。
 
+
