@@ -34,7 +34,7 @@ comments: false
 - [坚果云](https://www.jianguoyun.com/)（文件同步/版本控制）
 - [网易云音乐](https://music.163.com/)（音乐播放器）
 - [VirtualBox](https://www.virtualbox.org/)（虚拟机环境）
-- [PicGo](https://github.com/Molunerfinn/PicGo)（图床上传工具）
+- [PicGo](https://github.com/Molunerfinn/PicGo/)（图床上传工具）
 
 #### Windows
 
@@ -46,7 +46,6 @@ comments: false
 - [ShadowsocksR/SSR](https://github.com/shadowsocksrr/shadowsocksr-csharp/)（爬梯工具）
 - [格式工厂](http://www.pcgeshi.com/)（多种格式转换）
 - [ByPass](https://www.bypass.cn/)（分流抢票/抢候补）
-- [PanDownload](https://pandownload.com/)（百度云盘下载工具）
 - [FastCopy](https://fastcopy.jp/en/)（超快的文件复制）
 
 #### Linux
@@ -57,7 +56,8 @@ comments: false
 
 ### 工具网站
 
-- [MSDN](https://msdn.itellyou.cn/)（Windows原版镜像下载）
+- [MSDN](https://msdn.itellyou.cn/)（Windows镜像下载）
+- [TechBench](https://tb.rg-adguard.net/)（Windows镜像下载）
 - [Linux Command](https://wangchujiang.com/linux-command/)（Linux命令速查）
 - [压缩图](https://www.yasuotu.com/)（图片在线处理）
 - [SmallPDF](https://smallpdf.com/cn/)（PDF在线处理）
@@ -75,67 +75,37 @@ comments: false
 ### Google Chrome插件
 
 - [划词翻译](https://chrome.google.com/webstore/detail/%E5%88%92%E8%AF%8D%E7%BF%BB%E8%AF%91/ikhdkkncnoglghljlkmcimlnlhkeamad)
-
 - [印象笔记剪藏](https://chrome.google.com/webstore/detail/evernote-web-clipper/pioclpoplcdbaefihamjohnefbikjilc)
-
 - [Google邮箱](https://chrome.google.com/webstore/detail/google-mail-checker/mihcahmgecmbnbcchbopgniflfhgnkff)
-
 - [网页截图](https://chrome.google.com/webstore/detail/awesome-screenshot-screen/nlipoenfbbikpbjkfpfillcgkoblgpmj)
-
 - [Adblock Plus](https://chrome.google.com/webstore/detail/adblock-plus-free-ad-bloc/cfhdojbkjhnklbpkdaibdccddilifddb)
-
 - [弹窗播放](https://chrome.google.com/webstore/detail/separate-window/cbgkkbaghihhnaeabfcmmglhnfkfnpon)
-
 - [视频嗅探](https://chrome.google.com/webstore/detail/flash-video-downloader/aiimdkdngfcipjohbjenkahhlhccpdbc)
-
 - [FeHelperJSON](https://chrome.google.com/webstore/detail/fehelperjson/pkgccpejnmalmdinmhkkfafefagiiiad)
-
 - [鼠标手势](https://chrome.google.com/webstore/detail/crxmouse-chrome-gestures/jlgkpaicikihijadgifklkbpdajbkhjo)
-
 - [Infinity Pro](https://chrome.google.com/webstore/detail/infinity-new-tab-pro/nnnkddnnlpamobajfibfdgfnbcnkgngh)
-
 - [购物党比价](https://chrome.google.com/webstore/detail/%E8%B4%AD%E7%89%A9%E5%85%9A%E8%87%AA%E5%8A%A8%E6%AF%94%E4%BB%B7%E5%B7%A5%E5%85%B7/jgphnjokjhjlcnnajmfjlacjnjkhleah)
-
 - [微博图床](https://chrome.google.com/webstore/detail/%E5%BE%AE%E5%8D%9A%E5%9B%BE%E5%BA%8A/pinjkilghdfhnkibhcangnpmcpdpmehk)
-
 - [Sourcegraph](https://chrome.google.com/webstore/detail/sourcegraph/dgjhfomjieaadpoljlnidmbgkdffpack)
 
 ### IntelliJ IDEA插件
 
 - [Translation](https://plugins.jetbrains.com/plugin/8579-translation)（强大便捷的翻译插件）
-
 - [.ignore](https://plugins.jetbrains.com/plugin/7495--ignore)（版本控制忽略控制文件）
-
 - [JRebel for IntelliJ](https://plugins.jetbrains.com/plugin/4441-jrebel-for-intellij)（项目热部署插件）
-
 - [Lombok](https://plugins.jetbrains.com/plugin/6317-lombok)（Lombok支持插件）
-
 - [CodeGlance](https://plugins.jetbrains.com/plugin/7275-codeglance)（代码缩略图）
-
 - [GenerateAllSetter](https://plugins.jetbrains.com/plugin/9360-generateallsetter)（Setter生成器）
-
 - [Free MyBatis plugin](https://plugins.jetbrains.com/plugin/8321-free-mybatis-plugin)（Mybaits插件）
-
 - [MyBatis Log Plugin](https://plugins.jetbrains.com/plugin/10065-mybatis-log-plugin)（Mybatis提取SQL插件）
-
 - [MyBatisPlus](https://plugins.jetbrains.com/plugin/12670-mybatisplus)（MyBatisPlus增强插件/逆向生成工具）
-
 - [Maven Helper](https://plugins.jetbrains.com/plugin/7179-maven-helper)（处理Maven依赖）
-
 - [jclasslib Bytecode viewer](https://plugins.jetbrains.com/plugin/9248-jclasslib-bytecode-viewer)（Java字节码查看工具）
-
 - [GsonFormat](https://plugins.jetbrains.com/plugin/7654-gsonformat)（Json转Entity）
-
 - [Material Theme UI](https://plugins.jetbrains.com/plugin/8006-material-theme-ui)（主题管理）
-
 - [Easy Code](https://plugins.jetbrains.com/plugin/10954-easy-code)（数据库逆向工具）
-
 - [Codota](https://plugins.jetbrains.com/plugin/7638-codota)（AI智能提示）
-
 - [Auto filling Java call arguments](https://plugins.jetbrains.com/plugin/8638-auto-filling-java-call-arguments)（参数自动填充）
-
 - [Alibaba Java Coding Guidelines](https://plugins.jetbrains.com/plugin/10046-alibaba-java-coding-guidelines)（阿里巴巴代码规范检查）
-
 - [CamelCase](https://plugins.jetbrains.com/plugin/7160-camelcase)（快捷键转换驼峰命名）
-
 - [Package Search](https://plugins.jetbrains.com/plugin/12507-package-search)（依赖包检索工具）

@@ -4,7 +4,7 @@ tags:
   - javap
   - Java
 comments: true
-categories: JVM
+categories: Java
 abbrlink: 7273
 date: 2019-01-17 15:38:27
 ---
