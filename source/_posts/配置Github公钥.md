@@ -3,7 +3,7 @@ title: 配置Github公钥
 tags:
   - Git
 comments: true
-categories: Git
+categories: 记录
 abbrlink: 57365
 date: 2019-02-14 16:44:33
 ---

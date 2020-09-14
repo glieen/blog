@@ -3,7 +3,7 @@ title: 用Hexo搭建博客
 tags:
   - Hexo
   - Blog
-categories: Hexo
+categories: 记录
 comments: true
 abbrlink: 23632
 date: 2018-08-21 15:43:27
