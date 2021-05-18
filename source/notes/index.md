@@ -50,7 +50,7 @@ MyBatis指定Mapper返回类型为Map时，添加泛型并不会生效，比如�
 
 `计算机\HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced`
 
-在右边新建一个DWORD(32位)值，命名为`ShowSecondsInSystemClock`，赋值为`1`，然后重新资源管理器就可以了。
+在右边新建一个DWORD(32位)值，命名为`ShowSecondsInSystemClock`，赋值为`1`，然后重启资源管理器就可以了。
 
 ### Windows Redis压缩版服务安装
 
@@ -71,4 +71,13 @@ git config --global https.https://github.com.proxy http://127.0.0.1:1080
 
 # 取消代理
 git config --global --unset http.proxy
+```
+
+### Windows10更新失败修复
+
+以管理员身份打开命令行，先后执行以下两行命令然后再进行系统更新。
+
+```powershell
+SFC -SCANNOW
+DISM -Online -Cleanup-image -Restorehealth
 ```

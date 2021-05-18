@@ -17,7 +17,7 @@ Ubuntu装好之后，折腾之路才刚刚开始，因为不是开箱即用，�
 
 *简单介绍下Linux中的文本编辑器`nano`，`ctrl + o`是保存，`ctrl + x`是退出。*
 
-``` bash
+```bash
 # 备份原软件源配置
 sudo mv /etc/apt/sources.list /etc/apt/sources.list.bak
 sudo nano /etc/apt/sources.list
@@ -25,7 +25,7 @@ sudo nano /etc/apt/sources.list
 
 将以下的网易软件源配置粘贴进编辑器并保存
 
-``` text
+```text
 deb http://mirrors.163.com/ubuntu/ bionic main restricted universe multiverse
 deb http://mirrors.163.com/ubuntu/ bionic-security main restricted universe multiverse
 deb http://mirrors.163.com/ubuntu/ bionic-updates main restricted universe multiverse
@@ -38,7 +38,7 @@ deb-src http://mirrors.163.com/ubuntu/ bionic-proposed main restricted universe 
 deb-src http://mirrors.163.com/ubuntu/ bionic-backports main restricted universe multiverse
 ```
 
-``` bash
+```bash
 # 更新软件源
 sudo apt update
 sudo apt upgrade
@@ -48,25 +48,25 @@ sudo apt upgrade
 
 - Electron-SSR
 
-  ``` bash
+  ```bash
   sudo dpkg -i $(wget https://github.com/shadowsocksrr/electron-ssr/releases/download/v0.2.7/electron-ssr-0.2.7.deb) 
   ```
 
 - Google Chrome
 
-  ``` bash
+  ```bash
   sudo dpkg -i $(wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb) 
   ```
   
 - 谷歌拼音
 
-  ``` bash
+  ```bash
   sudo apt install fcitx googlepinyin
   ```
 
 - 电源管理
 
-  ``` bash
+  ```bash
   sudo apt install tlp
   # 重启
   reboot
@@ -74,13 +74,13 @@ sudo apt upgrade
 
 - 网络工具
 
-  ``` bash
+  ```bash
   sudo apt install net-tools
   ```
 
 - 文本编辑器Kate
 
-  ``` bash
+  ```bash
   sudo apt install kate
   ```
   
@@ -88,50 +88,50 @@ sudo apt upgrade
 
   打开网易云音乐客户端[下载页面](https://music.163.com/#/download)，下载适用于Ubuntu的版本。
 
-  ``` bash
+  ```bash
   # xxx为具体的版本号
   sudo dpkg -i netease-cloud-music_1.2.1_amd64_ubuntu_xxx.deb
   ```
 
 - KeepassXC
 
-  ``` bash
+  ```bash
   sudo apt install keepassxc
   ```
 
 - 坚果云
 
-  ``` bash
+  ```bash
   sudo dpkg -i $(wget https://www.jianguoyun.com/static/exe/installer/ubuntu/nautilus_nutstore_amd64.deb) 
   ```
 
 - Git
 
-  ``` bash
+  ```bash
   sudo apt install git
   ```
 
 - Axel（多线程下载工具）
 
-  ``` bash
+  ```bash
   sudo apt install axel
   ```
 
 - Htop
 
-  ``` bash
+  ```bash
   sudo apt install htop
   ```
 
 - Sublime Text
 
-  ``` bash
+  ```bash
   sudo apt install sublime-text
   ```
 
 - NodeJS/npm/cnpm
 
-  ``` bash
+  ```bash
   curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
   sudo apt-get install -y nodejs
   sudo npm install -g cnpm --registry=https://registry.npm.taobao.org
@@ -139,31 +139,31 @@ sudo apt upgrade
 
 - Curl
 
-  ``` bash
+  ```bash
   sudo apt install curl
   ```
 
 - Yakuake（快捷下拉终端）
 
-  ``` bash
+  ```bash
   sudo apt install yakuake
   ```
 
 - Zsh
 
-  ``` bash
+  ```bash
   sudo apt install zsh
   ```
 
 - Tldr
 
-  ``` bash
+  ```bash
   sudo apt instal tldr
   ```
 
 - OpenJDK
 
-  ``` bash
+  ```bash
   sudo apt install openjdk-8-jdk
   ```
 
@@ -171,7 +171,7 @@ sudo apt upgrade
 
   打开IntelliJ IDEA[下载页面](https://www.jetbrains.com/idea/download/#section=linux)，下载压缩包。
 
-  ``` bash
+  ```bash
   # xxx为具体的版本号
   tar zxvf ideaIU-xxx.tar.gz
   # 进入执行文件目录
@@ -182,19 +182,19 @@ sudo apt upgrade
 
 - Maven
 
-  ``` bash
+  ```bash
   sudo apt install maven
   ```
 
 - MySQL
 
-  ``` bash
+  ```bash
   sudo apt install mysql-server mysql-client
   ```
   
 - Nginx
 
-  ``` bash
+  ```bash
   sudo apt install nginx
   ```
   
@@ -206,7 +206,7 @@ sudo apt upgrade
 
 打开项目地址[deepin-wine-ubuntu](https://github.com/wszqkzqk/deepin-wine-ubuntu/releases)，下载最新的发行包。
 
-``` bash
+```bash
 # xxx为具体的版本号
 tar zxvf deepin-wine-ubuntu-2.18-12-3.tar.gz
 # 执行安装脚本
@@ -217,7 +217,7 @@ tar zxvf deepin-wine-ubuntu-2.18-12-3.tar.gz
 
 在[阿里云Deepin软件源](https://mirrors.aliyun.com/deepin/pool/non-free/d/)想要安装的软件的安装包，然后执行安装命令即可安装。
 
-``` bash
+```bash
 # xxx为具体的安装包名
 sudo dpkg -i xxx.deb
 ```
@@ -226,7 +226,7 @@ sudo dpkg -i xxx.deb
 
 #### 开机打开小键盘
 
-``` bash
+```bash
 sudo -i
 su gdm -s /bin/bash
 gsettings set org.gnome.settings-daemon.peripherals.keyboard numlock-state 'on'
@@ -234,7 +234,7 @@ gsettings set org.gnome.settings-daemon.peripherals.keyboard numlock-state 'on'
 
 #### 将主目录中文名切换成英文
 
-``` bash
+```bash
 export LANG=en_US
 xdg-user-dirs-gtk-update
 # 弹窗提示是否将目录转换成英文，同意
@@ -275,7 +275,7 @@ git config --global https.https://github.com.proxy https://127.0.0.1:1080
 
 #### 命令行查单词
 
-``` bash
+```bash
 # word为具体要查的单词，支持中文/英文
 curl v2en.co/word
 sudo nano /usr/local/bin/fy
@@ -285,7 +285,7 @@ sudo chmod +x /usr/local/bin/fy
 fy word
 ```
 
-``` bash
+```bash
 #!/bin/bash
 # 查单词脚本
 v2() 
@@ -303,3 +303,47 @@ v2 $*
 %sudo	ALL=(ALL:ALL) NOPASSWD: ALL
 ```
 
+#### 安装中文字符集
+
+```bash
+sudo apt install language-pack-zh-hans
+export LANG=zh_CN.UTF-8
+export LC_ALL=zh_CN.UTF-8
+```
+
+#### 手动指定IP
+编辑位于`/etc/netplan/`目录下的`yml`文件，绑定网络配置，然后应用即可。
+
+```yaml
+network:
+  ethernets:
+    ens32:
+      addresses:
+      - 192.168.1.123/24
+      gateway4: 192.168.1.1
+      nameservers:
+        addresses:
+        - 119.29.29.29
+        - 223.5.5.5
+  version: 2
+```
+
+```bash
+# 应用网络配置
+sudo netplan apply
+```
+
+### 禁用IPv6
+
+编辑`/etc/sysctl.conf`文件，在文件末尾添加配置，然后应用即可。
+
+```properties
+net.ipv6.conf.all.disable_ipv6=1
+net.ipv6.conf.default.disable_ipv6=1
+net.ipv6.conf.lo.disable_ipv6=1
+```
+
+```bash
+# 应用配置
+sudo sysctl -p
+```

@@ -16,7 +16,7 @@ date: 2020-01-06 22:31:13
 
 数据库版本
 
-``` mysql
+```mysql
 SELECT
 	VERSION();
 +-----------+
@@ -28,7 +28,7 @@ SELECT
 
 表结构，创建一个学生成绩表，包含学生姓名，学科名和学科分数。
 
-``` mysql
+```mysql
 CREATE TABLE `test` (
 	`id` INT (11) NOT NULL AUTO_INCREMENT,
 	`name` VARCHAR (20) DEFAULT NULL,
@@ -40,7 +40,7 @@ CREATE TABLE `test` (
 
 插入数据
 
-``` mysql
+```mysql
 INSERT INTO test (name, course, score)
 VALUES
 	('张三', '语文', 80),
@@ -55,7 +55,7 @@ VALUES
 ```
 数据内容
 
-``` mysql
+```mysql
 SELECT
 	*
 FROM
@@ -81,7 +81,7 @@ FROM
 查询分组内的最大值（最小值），查询每门学科的最高成绩对应的学生姓名和分数。
 1. 使用自联结
 
-``` mysql
+```mysql
 SELECT
 	t1.course,
 	t1.name,
@@ -109,7 +109,7 @@ AND t1.score = t2.max;
 
 2. 使用关联子查询
 
-``` mysql
+```mysql
 SELECT
 	t1.course,
 	t1.name,
@@ -139,7 +139,7 @@ WHERE
 查询分组内的前（后）N个值，查询每门学科成绩最高的前两名对应的学生姓名和分数。
 1. 使用自联结
 
-``` mysql
+```mysql
 SELECT
 	t1.course,
 	t1.name,
@@ -170,7 +170,7 @@ ORDER BY
 
 2. 使用关联子查询
 
-``` mysql
+```mysql
 SELECT
 	t1.course,
 	t1.name,

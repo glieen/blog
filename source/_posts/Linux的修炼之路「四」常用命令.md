@@ -17,7 +17,7 @@ Linux是基于命令行的世界，想要熟练的使用，掌握和了解一些
 这里推荐一个网站和一个工具，对不了解的命令可以很快的找到它的快捷用法，相对于man文档来说要方便的多。
 - [Linux-Command](https://wangchujiang.com/linux-command/)（可以很快捷的查询命令的用法，就不多做介绍了）
 - [tldr](https://github.com/tldr-pages/tldr)
-``` bash
+```bash
 # Ubuntu安装tldr
 sudo apt install tldr
 # 其他系统安装tldr
@@ -46,21 +46,21 @@ more -10 ~/a.txt
 #### sudo
 以管理员权限执行，配置位于`/etc/sudoers`，输入密码后有五分钟有效期。
 示例：
-``` bash
+```bash
 # 检查软件源更新
 sudo apt update
 ```
 #### su
 用于切换当前用户身份到其他用户身份，需要输入切换用户的密码。
 示例：
-``` bash
+```bash
 # 切换到root用户
 su root
 ```
 #### cd
 进入某目录，`/`表示根目录，`~`表示当前用户的家目录，`.`表示当前所在目录，`..`表示上级目录。
 示例：
-``` bash
+```bash
 # 进入家目录
 cd ~
 ```
@@ -74,7 +74,7 @@ cd ~
 -R # 递归子目录
 ```
 示例：
-``` bash
+```bash
 # 以单列输出列出家目录下的所有文件
 ls -alh ~ 
 ```
@@ -82,7 +82,7 @@ ls -alh ~
 新建文件夹。
 示例：
 
-``` bash
+```bash
 # 在家目录下创建文件夹test
 mkdir ~/test
 ```
@@ -112,26 +112,26 @@ touch ~/test.txt
 -f # 如果存在同名文件直接覆盖
 ```
 示例：
-``` bash
+```bash
 # 将a.txt重命名为b.txt
 mv a.txt b.txt
 ```
 #### rm
 删除文件（夹）。
 常用参数：
-``` bash
+```bash
 -r # 递归删除子目录下的文件
 -f # 强制删除文件
 ```
 示例：
-``` bash
+```bash
 # 删除家目录下的a.txt
 rm ~/a.txt
 ```
 #### clear
 清除屏幕上的信息
 示例：
-``` bash
+```bash
 clear
 ```
 #### dpkg

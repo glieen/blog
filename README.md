@@ -4,12 +4,13 @@
 ### 拉取源文件
 
 ```bash
-git clone -b source https://github.com/glieen/HexoBlog.git
+git clone -b source https://github.com/glieen/blog.git
 ```
+
 ### 初始化Hexo
 
 ```bash
-hexo init HexoBlog
+hexo init blog
 ```
 
 ### 安装NexT主题
@@ -19,6 +20,7 @@ hexo init HexoBlog
 ```bash
 git clone https://github.com/theme-next/hexo-theme-next themes/next
 ```
+
 ### 安装文章搜索插件
 
 参考地址：[Github:hexo-generator-searchdb](https://github.com/theme-next/hexo-generator-searchdb)
@@ -75,6 +77,7 @@ npm install hexo-generator-index-pin-top --save
 ```bash
 git clone https://github.com/theme-next/theme-next-canvas-nest themes/next/source/lib/canvas-nest
 ```
+
 ### 安装音乐播放器插件（可选）
 
 参考地址：[Github:hexo-tag-aplayer](https://github.com/MoePlayer/hexo-tag-aplayer)

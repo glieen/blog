@@ -4,14 +4,15 @@ comments: false
 ---
 
 ### 个人信息
+
 - 姓名：郭洪军
-- 昵称：Glieen
 - 性别：男
 - 年龄：24
 - 居住地：成都
 - 期望职位：Java开发工程师
 
 ### 联系方式
+
 - 电话（微信）：[18280938728](tel:18280938728)
 - 邮箱：[glieen1995@gmail.com](mailto:glieen1995@gmail.com)
 - QQ：[1976835691](mqqwpa://im/chat?chat_type=wpa&uin=1976835692&version=1&src_type=web&web_src=oicqzone.com)

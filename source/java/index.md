@@ -127,7 +127,7 @@ comments: true
     System.out.println(s.split(",").length); // 4
     ```
 
-25. String的`split()`，`replace()`，`replaceAll()`方法是以正则表达式去匹配的，特殊字符需要转义，比如`replaceAll(".", "x")`会把所有的字符替换为`x`，正确用法应该为`replaceAll("\\.", "x")`。
+25. String的`split()`，`replaceAll()`方法是以正则表达式去匹配的，特殊字符需要转义，比如`replaceAll(".", "x")`会把所有的字符替换为`x`，正确用法应该为`replaceAll("\\.", "x")`。
 
 26. 子类可以继承父类的所有成员变量和成员方法，只是对于定义为私有的无法访问，构造方法不是类的成员，所以无法继承，静态方法也是可以被继承的，子类可以直接调用父类的非私有静态方法，比如常见的`main`方法。
 
@@ -261,9 +261,17 @@ comments: true
     2. 带标签的continue会到达标签的位置，并重新进入紧接在哪个标签后面的循环；
     3. 一般的break会中断并跳出当前循环；
     4. 带标签的break会中断并跳出标签所指的循环。
-    
+
+
 44. final类中的方法隐含为final方法，因为类无法被继承，自然方法就不能被重写；private方法也隐含为final，即使子类存在相同签名的方法，也不算是重写。
 
 45. 移位操作`<<` `>>` `>>>`只适用于整型，无法对boolean和浮点型使用。作用于byte，short和char时，会发生类型提升，运算结果为int。
 
+46. 局部变量使用之前必须初始化。
 
+    ```java
+    int i;
+    System.out.println(i); // compile error
+    int i = 1;
+    System.out.println(i);
+    ```
