@@ -104,7 +104,7 @@ comments: false
 - [Lombok](https://plugins.jetbrains.com/plugin/6317-lombok)（Lombok支持插件）
 - [CodeGlance](https://plugins.jetbrains.com/plugin/7275-codeglance)（代码缩略图）
 - [GenerateAllSetter](https://plugins.jetbrains.com/plugin/9360-generateallsetter)（Setter生成器）
-- [MyBatisX](https://plugins.jetbrains.com/plugin/10119-mybatisx)（Mybaits插件）
+- [MyBatisCodeHelperPro](https://plugins.jetbrains.com/plugin/9837-mybatiscodehelperpro)（Mybaits插件）
 - [MyBatis Log Plugin](https://plugins.jetbrains.com/plugin/10065-mybatis-log-plugin)（Mybatis提取SQL插件）
 - [Maven Helper](https://plugins.jetbrains.com/plugin/7179-maven-helper)（处理Maven依赖）
 - [jclasslib Bytecode viewer](https://plugins.jetbrains.com/plugin/9248-jclasslib-bytecode-viewer)（Java字节码查看工具）

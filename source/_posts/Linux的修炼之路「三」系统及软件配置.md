@@ -277,7 +277,7 @@ git config --global https.https://github.com.proxy https://127.0.0.1:1080
 
 ```bash
 # word为具体要查的单词，支持中文/英文
-curl v2en.co/word
+curl https://d.supjohn.com/word
 sudo nano /usr/local/bin/fy
 # 将以下查单词脚本复制保存
 sudo chmod +x /usr/local/bin/fy
@@ -288,11 +288,11 @@ fy word
 ```bash
 #!/bin/bash
 # 查单词脚本
-v2() 
+func() {
 	declare q="$*";
-	curl --user-agent curl "https://v2en.co/${q// /%20}";
+	curl --user-agent curl "https://d.supjohn.com/${q// /%20}";
 }
-v2 $*
+func $*
 ```
 
 #### sudo免密
@@ -333,7 +333,7 @@ network:
 sudo netplan apply
 ```
 
-### 禁用IPv6
+#### 禁用IPv6
 
 编辑`/etc/sysctl.conf`文件，在文件末尾添加配置，然后应用即可。
 

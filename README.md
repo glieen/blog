@@ -53,6 +53,15 @@ npm install hexo-deployer-git --save
 npm install hexo-symbols-count-time --save
 ```
 
+### 安装MathJax数学公式渲染
+
+参考地址：[Github:hexo-renderer-pandoc](https://github.com/wzpan/hexo-renderer-pandoc)
+
+```bash
+npm uninstall hexo-renderer-marked
+npm install hexo-renderer-pandoc
+```
+
 ### RSS订阅插件
 
 参考地址：[Github:hexo-generator-feed](https://github.com/hexojs/hexo-generator-feed)

@@ -81,3 +81,8 @@ git config --global --unset http.proxy
 SFC -SCANNOW
 DISM -Online -Cleanup-image -Restorehealth
 ```
+
+#### Windows下Docker挂载目录
+
+Docker挂载Windows下的目录要使用绝对路径，并且根目录要设置为`//`，如 ：`docker run -d -v //e/temp:/root/temp nginx`
+

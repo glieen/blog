@@ -15,7 +15,6 @@ comments: false
 
 - 电话（微信）：[18280938728](tel:18280938728)
 - 邮箱：[glieen1995@gmail.com](mailto:glieen1995@gmail.com)
-- QQ：[1976835691](mqqwpa://im/chat?chat_type=wpa&uin=1976835692&version=1&src_type=web&web_src=oicqzone.com)
 
 ### 教育经历
 
@@ -25,7 +24,7 @@ comments: false
 
 ### 工作经历
 
-**[成都红色剪刀科技有限公司](http://www.redjd.cn)**（2017年8月 - 至今）
+**成都红色剪刀科技有限公司**（2017年8月 - 至今）
 
 Java开发工程师丨技术产品部
 1. 负责部分业务需求分析和设计；
