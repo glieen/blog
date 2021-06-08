@@ -1,5 +1,5 @@
 ---
-title: Java中的数和位
+title: Java中的数与位
 comments: true
 tags:
   - 原码
@@ -11,8 +11,6 @@ abbrlink: 32034
 mathjax: true
 date: 2020-04-04 15:04:05
 ---
-
-
 
 世界上只有10种人，一种是认识二进制的，一种是不认识的。认识程序要从二进制开始，了解Java中的二进制计算规则也必不可少。
 
