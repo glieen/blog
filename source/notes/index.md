@@ -92,5 +92,5 @@ Docker挂载Windows下的目录要使用绝对路径，并且根目录要设置�
 
 **bashrc：**为每一个使用bash shell的用户初始化环境变量的文件，在Ubuntu下是bash.bashrc。因为用户可能使用多种shell，如：sh、bash、zsh等，当用户打开bash shell时，执行该文件，初始化bash环境变量，如代码补全，显示颜色等。同理，其他shell会有shrc、zshrc等文件。
 
-**~/.profile和~/.bashrc：**如果说，profile和bashrc是系统级别的环境变量，那么它们可以理解为用户级别的环境变量，它们只会对指定的登录用户生效。
+**\~/.profile和\~/.bashrc：**如果说，profile和bashrc是系统级别的环境变量，那么它们可以理解为用户级别的环境变量，它们只会对指定的登录用户生效。
 
