@@ -58,8 +58,10 @@ npm install hexo-symbols-count-time --save
 参考地址：[Github:hexo-renderer-pandoc](https://github.com/wzpan/hexo-renderer-pandoc)
 
 ```bash
-npm uninstall hexo-renderer-marked
-npm install hexo-renderer-pandoc
+npm uninstall hexo-renderer-marked --save
+npm install hexo-renderer-kramed --save
+# hexo-renderer-pandoc图片渲染有BUG，会将alt渲染成标题
+# 或者 npm install hexo-renderer-pandoc --save
 ```
 
 ### RSS订阅插件
