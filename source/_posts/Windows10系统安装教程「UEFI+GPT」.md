@@ -8,7 +8,7 @@ abbrlink: 43608
 date: 2019-01-21 09:35:36
 ---
 
-作为一个程序员，修电脑和装系统是必须要会的（手动狗头），因为总会有朋友来问我怎么重装系统，所以准备写一个教程，以后要是还有人来问我怎么重装，直接把本文链接怼到他脸上（哼哼），本教程使用的是UEFI+GPT安装Windows10。
+作为一个程序员，修电脑和装系统是必须要会的(￣y▽,￣)╭ ，本文记录下UEFI+GPT安装Windows10的过程。
 
 <!--more-->
 
@@ -20,7 +20,7 @@ U盘一个（大小8G及以上）
 
 ### 下载镜像
 
-去[官网](https://www.microsoft.com/zh-cn/software-download/windows10)或者[MSDN](https://msdn.itellyou.cn/)下载原版ISO镜像文件，以MSDN为例，打开链接，在左边导航栏【操作系统】列表中找到想要重装的系统版本，打开镜像列表，选择适合自己的镜像版本，2G以上内存推荐安装64位操作系统，复制ed2k链接，使用迅雷下载镜像文件即可，本教程使用的镜像文件如下：
+去[微软官网](https://www.microsoft.com/zh-cn/software-download/windows10)或者[MSDN](https://msdn.itellyou.cn/)下载原版ISO镜像文件，以MSDN为例，打开链接，在左边导航栏【操作系统】列表中找到想要重装的系统版本，打开镜像列表，选择适合自己的镜像版本，2G以上内存推荐安装64位操作系统，复制ed2k链接，使用迅雷下载镜像文件即可，本教程使用的镜像文件如下：
 
 ```
 文件名：cn_windows_10_consumer_editions_version_1809_updated_jan_2019_x64_dvd_34b4d4fb.iso
@@ -42,7 +42,7 @@ ed2k://|file|cn_windows_10_consumer_editions_version_1809_updated_jan_2019_x64_d
 
 4. 点击开始，工具即开始制作启动盘，**提醒：制作启动盘会清除U盘中的所有数据，请提前备份！**
 
-5. 进度条跑完后，恭喜你，启动盘制作成功了！关闭Rufus，准备重装系统吧。
+5. 进度条跑完后，启动盘就制作成功了！关闭Rufus，准备重装系统。
 
 ### 从启动盘启动
 
@@ -78,7 +78,7 @@ ed2k://|file|cn_windows_10_consumer_editions_version_1809_updated_jan_2019_x64_d
 
    ![43608-7.jpg](https://i.loli.net/2020/02/19/XZAQTmDrjFlevnH.jpg)
 
-4. 这里选择我没有产品密钥，装完系统之后再进行激活（KMS你懂的），进入操作系统版本选择
+4. 这里选择我没有产品密钥，可以装完系统之后再进行激活，进入操作系统版本选择
 
    ![43608-8.jpg](https://i.loli.net/2020/02/19/v4xRXJ5YOTIw73s.jpg)
 
@@ -94,7 +94,7 @@ ed2k://|file|cn_windows_10_consumer_editions_version_1809_updated_jan_2019_x64_d
 
    ![43608-11.jpg](https://i.loli.net/2020/02/19/WypMxfYKNEDbSh6.jpg)
 
-8. 到这里是最容易遇到问题的地方了，可能遇到所选磁盘不是GPT格式的分区，磁盘容量大小不足等等问题，只要你以上步骤都正确操作，硬盘是没有问题且大小合适的，那么接下来一系列步骤应该能解决大多数安装遇到的问题，按下键盘上的`Shift+F10`打开命令提示行
+8. 到这里是最容易遇到问题的地方了，可能遇到所选磁盘不是GPT格式的分区，磁盘容量大小不足等等问题，只要你以上步骤都正确操作，磁盘是没有问题且大小合适的，那么接下来一系列步骤应该能解决大多数安装遇到的问题，按下键盘上的`Shift+F10`打开命令提示行
 
    ![43608-12.jpg](https://i.loli.net/2020/02/19/T3Yc1PR5iEVOsId.jpg)
 
@@ -103,13 +103,13 @@ ed2k://|file|cn_windows_10_consumer_editions_version_1809_updated_jan_2019_x64_d
    ```powershell
    # 打开磁盘工具
    diskpart
-   # 列出硬盘
+   # 列出磁盘
    list disk
-   # 选择操作的硬盘，这里X是硬盘里的编号，你需要把系统装到哪个硬盘你就输入对应硬盘的编号
+   # 选择操作的磁盘，这里X是磁盘里的编号，你需要把系统装到哪个磁盘你就输入对应磁盘的编号
    select disk X
-   # 清除硬盘，这个操作会将整个硬盘的内容全部清除，如果有重要数据请一定提前备份
+   # 清除磁盘，这个操作会将整个磁盘的内容全部清除，如果有重要数据请一定提前备份
    clean
-   # 将硬盘装换成GPT分区格式
+   # 将磁盘装换成GPT分区格式
    convert gpt
    # 创建EFI分区，用来存放系统的引导文件，大小256M左右差不多够了
    create partition efi size = 256
@@ -123,7 +123,7 @@ ed2k://|file|cn_windows_10_consumer_editions_version_1809_updated_jan_2019_x64_d
 
    ![43608-13.jpg](https://i.loli.net/2020/02/19/ofkc8iWTItPSLGN.jpg)
 
-   操作完成之后右上角叉叉或者输入命令`exit`退出命令行
+   操作完成之后右上角关闭或者输入命令`exit`退出命令行
 
 10. 再次回到安装磁盘选择，点击刷新，就可以看到重新分区后的磁盘列表了
 
@@ -137,8 +137,4 @@ ed2k://|file|cn_windows_10_consumer_editions_version_1809_updated_jan_2019_x64_d
 
     ![43608-16.jpg](https://i.loli.net/2020/02/19/nc3YTPmpCLNRwax.jpg)
 
-13. 开始体验全新的Windows 10吧！！！
-
-### 总结
-
-遇到问题不要灰心，不要畏惧，善于利用百度/谷歌等搜索引擎！！！善于利用百度/谷歌等搜索引擎！！！善于利用百度/谷歌等搜索引擎！！！重要的事说三遍！！！
+13. 开始体验全新的Windows吧！

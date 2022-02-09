@@ -32,6 +32,7 @@ comments: false
 
 - [Google Chrome](https://www.google.com/intl/zh-CN/chrome/)（必备浏览器）
 - [ZeroTier](https://www.zerotier.com/)（网络穿透神器）
+- [WireGuard](https://www.wireguard.com/)（跨平台组网）
 - [Clash](https://github.com/Dreamacro/clash)（跨平台隧道工具）
 - [KeePass](https://keepass.info/)（密码生成/管理）
 - [TeamViewer](https://www.teamviewer.cn/)（远程控制）
@@ -41,6 +42,8 @@ comments: false
 - [VirtualBox](https://www.virtualbox.org/)（虚拟机环境）
 - [KeePassXC](https://keepassxc.org/)（密码管理）
 - [PicGo](https://github.com/Molunerfinn/PicGo/)（图床上传工具）
+- [frp](https://github.com/fatedier/frp/)（端口转发工具）
+- [Ventoy](https://github.com/ventoy/Ventoy/)（系统镜像制作）
 
 #### Windows
 
@@ -58,6 +61,8 @@ comments: false
 - [ByPass](https://www.bypass.cn/)（分流抢票/抢候补）
 - [FastCopy](https://fastcopy.jp/en/)（超快的文件复制）
 - [7-Zip](https://www.7-zip.org/)（高性能压缩/解压缩软件）
+- [CMWTAT_Digital_Edition](https://github.com/TGSAN/CMWTAT_Digital_Edition/)（Windows激活）
+- [barrier](https://github.com/debauchee/barrier/)（KVM工具）
 
 #### Linux
 
@@ -114,3 +119,4 @@ comments: false
 - [Alibaba Java Coding Guidelines](https://plugins.jetbrains.com/plugin/10046-alibaba-java-coding-guidelines)（阿里巴巴代码规范检查）
 - [CamelCase](https://plugins.jetbrains.com/plugin/7160-camelcase)（快捷键转换驼峰命名）
 - [Package Search](https://plugins.jetbrains.com/plugin/12507-package-search)（依赖包检索工具）
+- [RestfulTool](https://plugins.jetbrains.com/plugin/14280-restfultool)（URL接口查询和测试）

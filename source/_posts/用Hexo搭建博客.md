@@ -66,13 +66,13 @@ Git安装完成之后，右键菜单会多出bash终端的选项
 安装完成之后，接下来介绍几个简单的命令，用以编辑和启动Hexo。
 
 ```bash
-#编译博客
+# 编译博客
 hexo g
-#启动Hexo(-i绑定IP，-p绑定端口)
+# 启动Hexo(-i绑定IP，-p绑定端口)
 hexo s [-i] [-p]
-#清理编译文件
+# 清理编译文件
 hexo clean
-#新建文章
+# 新建文章
 hexo new [post] "postName"
 ```
 
@@ -93,19 +93,19 @@ Hexo启动成功即可访问Hexo绑定的IP和端口查看博客了，默认的U
 
 
 ```bash
-#简单介绍下目录构成
+# 简单介绍下目录构成
 public：博客的发布文件，最终生成的文件
 scaffolds：创建文章的模板，可以自定义创建格式
 source：文章的源代码文件，markdown文件
 themes：Hexo的主题目录
 _config.yml：Hexo的主配置文件
-#每个主题里面也有一个_config.yml，我们称之为主题配置文件，之后会讲到
+# 每个主题里面也有一个_config.yml，我们称之为主题配置文件，之后会讲到
 ```
 
 ### 发表文章
 
 ```bash
-#发表新文章
+# 发表新文章
 hexo new [post] "postName"
 ```
 
@@ -124,7 +124,7 @@ Hexo的文章编写是基于Markdown语法的，Markdown不过多介绍，想了
 安装 [hexo-deployer-git](https://github.com/hexojs/hexo-deployer-git)。
 
 ```bash
-$ npm install hexo-deployer-git --save
+npm install hexo-deployer-git --save
 ```
 
 修改配置。
@@ -152,7 +152,7 @@ Hexo默认的主题并不美观，得益于Hexo庞大的主题库，我们可以
 **获取主题：**在终端窗口下，定位到 Hexo 站点目录下。使用 `Git` checkout 代码：
 
 ```bash
-$ git clone https://github.com/iissnan/hexo-theme-next themes/next
+git clone https://github.com/iissnan/hexo-theme-next themes/next
 ```
 
 **使用主题：**与所有 Hexo 主题启用的模式一样。 当 克隆/下载 完成后，打开 站点配置文件， 找到 `theme` 字段，并将其值更改为 `next`。

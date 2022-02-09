@@ -140,7 +140,7 @@ Next内置4种内容布局，属性是`scheme`，默认使用的是`Muse`，我�
 
 ```yml
 # Schemes
-# scheme: Muse
+#scheme: Muse
 #scheme: Mist
 #scheme: Pisces
 scheme: Gemini
@@ -210,7 +210,7 @@ links_settings:
   title: 友链
   layout: block
 links:
-  前端小站：YmTonny : https://ymtonny.cn/
+  YmTonny : https://ymtonny.cn/
   Zalmon's Blog : https://zalmon.cn/
 ```
 

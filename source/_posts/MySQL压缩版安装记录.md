@@ -48,7 +48,7 @@ MySQL版本：MySQL 5.7.22 64位ZIP压缩版
 # 设置mysql客户端默认字符集
 default-character-set=utf8 
 [mysqld]
-#设置3306端口
+# 设置3306端口
 port = 3306 
 # 设置mysql的安装目录
 basedir="F:\Software\MySQL57"

@@ -23,19 +23,20 @@ sudo mv /etc/apt/sources.list /etc/apt/sources.list.bak
 sudo nano /etc/apt/sources.list
 ```
 
-将以下的网易软件源配置粘贴进编辑器并保存
+从中科大的软件源获取对应版本的配置：[USTC MIRRORS](https://mirrors.ustc.edu.cn/repogen/)
 
 ```text
-deb http://mirrors.163.com/ubuntu/ bionic main restricted universe multiverse
-deb http://mirrors.163.com/ubuntu/ bionic-security main restricted universe multiverse
-deb http://mirrors.163.com/ubuntu/ bionic-updates main restricted universe multiverse
-deb http://mirrors.163.com/ubuntu/ bionic-proposed main restricted universe multiverse
-deb http://mirrors.163.com/ubuntu/ bionic-backports main restricted universe multiverse
-deb-src http://mirrors.163.com/ubuntu/ bionic main restricted universe multiverse
-deb-src http://mirrors.163.com/ubuntu/ bionic-security main restricted universe multiverse
-deb-src http://mirrors.163.com/ubuntu/ bionic-updates main restricted universe multiverse
-deb-src http://mirrors.163.com/ubuntu/ bionic-proposed main restricted universe multiverse
-deb-src http://mirrors.163.com/ubuntu/ bionic-backports main restricted universe multiverse
+deb https://mirrors.ustc.edu.cn/ubuntu/ bionic main restricted universe multiverse
+deb-src https://mirrors.ustc.edu.cn/ubuntu/ bionic main restricted universe multiverse
+
+deb https://mirrors.ustc.edu.cn/ubuntu/ bionic-security main restricted universe multiverse
+deb-src https://mirrors.ustc.edu.cn/ubuntu/ bionic-security main restricted universe multiverse
+
+deb https://mirrors.ustc.edu.cn/ubuntu/ bionic-updates main restricted universe multiverse
+deb-src https://mirrors.ustc.edu.cn/ubuntu/ bionic-updates main restricted universe multiverse
+
+deb https://mirrors.ustc.edu.cn/ubuntu/ bionic-backports main restricted universe multiverse
+deb-src https://mirrors.ustc.edu.cn/ubuntu/ bionic-backports main restricted universe multiverse
 ```
 
 ```bash
@@ -208,7 +209,7 @@ sudo apt upgrade
 
 ```bash
 # xxx为具体的版本号
-tar zxvf deepin-wine-ubuntu-2.18-12-3.tar.gz
+tar zxvf deepin-wine-ubuntu-xxx.tar.gz
 # 执行安装脚本
 ./install.sh
 ```
@@ -273,28 +274,6 @@ git config --global http.https://github.com.proxy https://127.0.0.1:1080
 git config --global https.https://github.com.proxy https://127.0.0.1:1080
 ```
 
-#### 命令行查单词
-
-```bash
-# word为具体要查的单词，支持中文/英文
-curl https://d.supjohn.com/word
-sudo nano /usr/local/bin/fy
-# 将以下查单词脚本复制保存
-sudo chmod +x /usr/local/bin/fy
-# 可以使用fy脚本查单词，word为要查的单词
-fy word
-```
-
-```bash
-#!/bin/bash
-# 查单词脚本
-func() {
-	declare q="$*";
-	curl --user-agent curl "https://d.supjohn.com/${q// /%20}";
-}
-func $*
-```
-
 #### sudo免密
 
 修改`/etc/sudoers`文件，修改`%sudo`这一行，这样所有的sudo命令都可以免密使用。
@@ -311,7 +290,7 @@ export LANG=zh_CN.UTF-8
 export LC_ALL=zh_CN.UTF-8
 ```
 
-#### 手动指定IP
+#### 设置静态IP
 编辑位于`/etc/netplan/`目录下的`yml`文件，绑定网络配置，然后应用即可。
 
 ```yaml
