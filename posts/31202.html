@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.0.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://i.loli.net/2020/07/16/QZXNv6nTl3VtHM5.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://i.loli.net/2020/07/16/zxNQEDMKCPhw6e3.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://i.loli.net/2020/07/16/lXw6RG9tApr78Wj.png">
+  <link rel="mask-icon" href="https://i.loli.net/2020/07/16/QZXNv6nTl3VtHM5.png" color="#222">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"glieen.cn","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"valine","storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="Java是一种强类型语言，在声明变量的时必须指定数据类型。Java数据类型分为基本数据类型和引用类型，基本数据类型分为8种，也是我们编程中使用最频繁的类型，本篇文章简要介绍Java的八大数据类型。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java基本数据类型">
+<meta property="og:url" content="https://glieen.cn/posts/31202.html">
+<meta property="og:site_name" content="Glieen&#39;s Blog">
+<meta property="og:description" content="Java是一种强类型语言，在声明变量的时必须指定数据类型。Java数据类型分为基本数据类型和引用类型，基本数据类型分为8种，也是我们编程中使用最频繁的类型，本篇文章简要介绍Java的八大数据类型。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2018-08-31T02:59:52.000Z">
+<meta property="article:modified_time" content="2022-02-09T01:31:55.144Z">
+<meta property="article:author" content="Glieen">
+<meta property="article:tag" content="Java">
+<meta property="article:tag" content="基础知识">
+<meta property="article:tag" content="数据类型">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://glieen.cn/posts/31202.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>Java基本数据类型 | Glieen's Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="Glieen's Blog" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Glieen's Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">喜欢的话，就坚持吧。</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-java">
+
+    <a href="/java/" rel="section"><i class="fa fa-coffee fa-fw"></i>Java</a>
+
+  </li>
+        <li class="menu-item menu-item-notes">
+
+    <a href="/notes/" rel="section"><i class="fa fa-book fa-fw"></i>笔记</a>
+
+  </li>
+        <li class="menu-item menu-item-favorites">
+
+    <a href="/favorites/" rel="section"><i class="fa fa-star fa-fw"></i>收藏</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://glieen.cn/posts/31202.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://i.loli.net/2020/07/16/QZXNv6nTl3VtHM5.png">
+      <meta itemprop="name" content="Glieen">
+      <meta itemprop="description" content="Glieen's blog,record and share.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Glieen's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Java基本数据类型
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2018-08-31 10:59:52" itemprop="dateCreated datePublished" datetime="2018-08-31T10:59:52+08:00">2018-08-31</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>Java是一种强类型语言，在声明变量的时必须指定数据类型。Java数据类型分为基本数据类型和引用类型，基本数据类型分为8种，也是我们编程中使用最频繁的类型，本篇文章简要介绍Java的八大数据类型。</p>
+<span id="more"></span>
+<h3 id="八大数据类型一览"><a href="#八大数据类型一览" class="headerlink" title="八大数据类型一览"></a>八大数据类型一览</h3><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">类型名称</th>
+<th style="text-align:center">类型定义</th>
+<th style="text-align:center">占用大小</th>
+<th style="text-align:center">取值范围</th>
+<th style="text-align:center">默认值</th>
+<th style="text-align:center">封装类</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">boolean</td>
+<td style="text-align:center">布尔值，用作二元判断</td>
+<td style="text-align:center">Java规范中，没有明确指出boolean的大小。JVM规范中，boolean变量作为int处理，也就是4字节，boolean数组当做byte数组处理。</td>
+<td style="text-align:center">true,false</td>
+<td style="text-align:center">false</td>
+<td style="text-align:center">java.lang.Boolean</td>
+</tr>
+<tr>
+<td style="text-align:center">char</td>
+<td style="text-align:center">Unicode字符</td>
+<td style="text-align:center">2字节/16位</td>
+<td style="text-align:center"><code>\u0000</code> ~ <code>\uffff</code></td>
+<td style="text-align:center"><code>\u0000</code></td>
+<td style="text-align:center">java.lang.Character</td>
+</tr>
+<tr>
+<td style="text-align:center">byte</td>
+<td style="text-align:center">有符号整数</td>
+<td style="text-align:center">1字节/8位</td>
+<td style="text-align:center">-128 ~ 127</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">java.lang.Byte</td>
+</tr>
+<tr>
+<td style="text-align:center">short</td>
+<td style="text-align:center">有符号整数</td>
+<td style="text-align:center">2字节/16位</td>
+<td style="text-align:center">-32768 ~ 32767</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">java.lang.Short</td>
+</tr>
+<tr>
+<td style="text-align:center">int</td>
+<td style="text-align:center">有符号整数</td>
+<td style="text-align:center">4字节/32位</td>
+<td style="text-align:center">-2,147,483,648(-2^31) ~ 2,147,483,647(2^31-1)</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">java.lang.Integer</td>
+</tr>
+<tr>
+<td style="text-align:center">long</td>
+<td style="text-align:center">有符号整数</td>
+<td style="text-align:center">8字节/64位</td>
+<td style="text-align:center">-2^63 ~ 2^63-1</td>
+<td style="text-align:center">0L</td>
+<td style="text-align:center">java.lang.Long</td>
+</tr>
+<tr>
+<td style="text-align:center">float</td>
+<td style="text-align:center">单精度浮点数</td>
+<td style="text-align:center">4字节/32位</td>
+<td style="text-align:center">1.4E-45 ~ 3.4028235E38</td>
+<td style="text-align:center">0.0F</td>
+<td style="text-align:center">java.lang.Float</td>
+</tr>
+<tr>
+<td style="text-align:center">double</td>
+<td style="text-align:center">双精度浮点数</td>
+<td style="text-align:center">8字节/64位</td>
+<td style="text-align:center">4.9E-324 ~ 1.7976931348623157E308</td>
+<td style="text-align:center">0.0D</td>
+<td style="text-align:center">java.lang.Double</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>注意：</strong>在Java中，默认声明的小数是double类型，默认声明的整数是int类型。</p>
+<h3 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h3><p>整型、浮点型、字符型数据可以混合运算，运算中，不同类型的数据会转换成相同类型，然后进行运算。</p>
+<blockquote>
+<p>低 ———————————————————-&gt; 高</p>
+<p>byte,short,char—&gt;int—&gt;long—&gt;float—&gt;double</p>
+</blockquote>
+<p>从低级转到高级是自动类型转换，这是一种默认的转换，从高级转到低级需要强制类型转换，这么做可能会导致精度丢失。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">byte</span> <span class="variable">a</span> <span class="operator">=</span> <span class="number">111</span>;</span><br><span class="line"><span class="comment">// 自动类型转换</span></span><br><span class="line"><span class="type">int</span> <span class="variable">b</span> <span class="operator">=</span> a;</span><br><span class="line"><span class="type">int</span> <span class="variable">c</span> <span class="operator">=</span> <span class="number">128</span>;</span><br><span class="line"><span class="comment">// 强制类型转换导致精度丢失，因为byte类型是8位，最大值为127，所以当int强制转换为byte类型时，值128时候就会导致溢出，此处d实际值位-128</span></span><br><span class="line"><span class="type">byte</span> <span class="variable">d</span> <span class="operator">=</span> (<span class="type">byte</span>) c;</span><br><span class="line"><span class="type">double</span> <span class="variable">e</span> <span class="operator">=</span> <span class="number">1.23</span>;</span><br><span class="line"><span class="comment">// 浮点型强制转换为整型是舍弃小数部分而不是四舍五入</span></span><br><span class="line"><span class="type">int</span> <span class="variable">f</span> <span class="operator">=</span> (<span class="type">int</span>)e;</span><br></pre></td></tr></table></figure>
+<p>char类型转换为整型时会转为字符对应的ASCII码值。</p>
+<p>不能对boolean类型进行类型转换。</p>
+<h3 id="类型的自动提升"><a href="#类型的自动提升" class="headerlink" title="类型的自动提升"></a>类型的自动提升</h3><p>在基本类型的混合运算中，最后的结果类型会是参与运算的最高级的类型， 关于类型的自动提升，注意下面的规则。</p>
+<p>①所有的byte,short,char型的值将被提升为int型；</p>
+<p>②如果有一个操作数是long型，计算结果是long型；</p>
+<p>③如果有一个操作数是float型，计算结果是float型；</p>
+<p>④如果有一个操作数是double型，计算结果是double型；</p>
+<h3 id="整型的进制"><a href="#整型的进制" class="headerlink" title="整型的进制"></a>整型的进制</h3><p>Java中默认声明整型的进制为十进制，当然也可以通过特殊的表示方法表示常用的二进制，八进制和十六进制。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 十进制表示</span></span><br><span class="line"><span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">10</span>;</span><br><span class="line"><span class="comment">// 二进制表示</span></span><br><span class="line"><span class="type">int</span> <span class="variable">a</span> <span class="operator">=</span> <span class="number">0b1010</span>;</span><br><span class="line"><span class="comment">// 八进制表示</span></span><br><span class="line"><span class="type">int</span> <span class="variable">b</span> <span class="operator">=</span> <span class="number">01067</span>;</span><br><span class="line"><span class="comment">// 十六进制表示</span></span><br><span class="line"><span class="type">int</span> <span class="variable">c</span> <span class="operator">=</span> <span class="number">0x2afc</span>;</span><br></pre></td></tr></table></figure>
+<h3 id="转义字符"><a href="#转义字符" class="headerlink" title="转义字符"></a>转义字符</h3><p>Java中char类型包含一些特殊的转义字符，这些字符通常具有一些特殊的含义。</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">符号</th>
+<th style="text-align:center">字符含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>\n</code></td>
+<td style="text-align:center">换行 (0x0a)</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>\r</code></td>
+<td style="text-align:center">回车 (0x0d)</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>\f</code></td>
+<td style="text-align:center">换页符(0x0c)</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>\b</code></td>
+<td style="text-align:center">退格 (0x08)</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>\0</code></td>
+<td style="text-align:center">空字符 (0x20)</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>\s</code></td>
+<td style="text-align:center">字符串</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>\t</code></td>
+<td style="text-align:center">制表符</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>\&quot;</code></td>
+<td style="text-align:center">双引号</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>\&#39;</code></td>
+<td style="text-align:center">单引号</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>\\</code></td>
+<td style="text-align:center">反斜杠</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>\ddd</code></td>
+<td style="text-align:center">八进制字符 (ddd)</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>\uxxxx</code></td>
+<td style="text-align:center">16进制Unicode字符 (xxxx)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="包装类与自动拆装箱"><a href="#包装类与自动拆装箱" class="headerlink" title="包装类与自动拆装箱"></a>包装类与自动拆装箱</h3><p>八大数据类型都有其对应的包装类，参见类型一览表，包装类可以直接对其赋值（自动装箱），包装类可以直接参与运算（自动拆箱），包装类具有非常多的静态和普通方法，这扩展了基本类型的功能，这在平时的编码中会有很多的运用。</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/Java/" rel="tag"><i class="fa fa-tag"></i> Java</a>
+              <a href="/tags/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" rel="tag"><i class="fa fa-tag"></i> 基础知识</a>
+              <a href="/tags/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" rel="tag"><i class="fa fa-tag"></i> 数据类型</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/posts/23632.html" rel="prev" title="用Hexo搭建博客">
+      <i class="fa fa-chevron-left"></i> 用Hexo搭建博客
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/posts/4897.html" rel="next" title="列表循环问题">
+      列表循环问题 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%AB%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E4%B8%80%E8%A7%88"><span class="nav-number">1.</span> <span class="nav-text">八大数据类型一览</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2"><span class="nav-number">2.</span> <span class="nav-text">类型转换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B1%BB%E5%9E%8B%E7%9A%84%E8%87%AA%E5%8A%A8%E6%8F%90%E5%8D%87"><span class="nav-number">3.</span> <span class="nav-text">类型的自动提升</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B4%E5%9E%8B%E7%9A%84%E8%BF%9B%E5%88%B6"><span class="nav-number">4.</span> <span class="nav-text">整型的进制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BD%AC%E4%B9%89%E5%AD%97%E7%AC%A6"><span class="nav-number">5.</span> <span class="nav-text">转义字符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8C%85%E8%A3%85%E7%B1%BB%E4%B8%8E%E8%87%AA%E5%8A%A8%E6%8B%86%E8%A3%85%E7%AE%B1"><span class="nav-number">6.</span> <span class="nav-text">包装类与自动拆装箱</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Glieen"
+      src="https://i.loli.net/2020/07/16/QZXNv6nTl3VtHM5.png">
+  <p class="site-author-name" itemprop="name">Glieen</p>
+  <div class="site-description" itemprop="description">Glieen's blog,record and share.</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">28</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">33</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/glieen" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;glieen" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:glieen1995@gmail.com" title="E-Mail → mailto:glieen1995@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/atom.xml" title="RSS → &#x2F;atom.xml"><i class="fa fa-rss fa-fw"></i>RSS</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      友链
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://ymtonny.cn/" title="https:&#x2F;&#x2F;ymtonny.cn&#x2F;" rel="noopener" target="_blank">YmTonny</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://zalmon.cn/" title="https:&#x2F;&#x2F;zalmon.cn&#x2F;" rel="noopener" target="_blank">Zalmon's Blog</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://clearluv.com/" title="http:&#x2F;&#x2F;clearluv.com&#x2F;" rel="noopener" target="_blank">Clearluv</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+  <div class="beian"><a href="https://beian.miit.gov.cn/" rel="noopener" target="_blank">蜀ICP备18010705号 </a>
+  </div>
+
+<div class="copyright">
+  
+  &copy; 2018 – 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Glieen</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  
+  <script color='0,0,255' opacity='0.5' zIndex='-1' count='150' src="//cdn.jsdelivr.net/gh/theme-next/theme-next-canvas-nest@1/canvas-nest.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.1.0/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/velocity-animate@1/velocity.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/velocity-animate@1/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>

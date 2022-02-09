@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.0.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://i.loli.net/2020/07/16/QZXNv6nTl3VtHM5.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://i.loli.net/2020/07/16/zxNQEDMKCPhw6e3.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://i.loli.net/2020/07/16/lXw6RG9tApr78Wj.png">
+  <link rel="mask-icon" href="https://i.loli.net/2020/07/16/QZXNv6nTl3VtHM5.png" color="#222">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"glieen.cn","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"valine","storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="作为一个程序员，修电脑和装系统是必须要会的(￣y▽,￣)╭ ，本文记录下UEFI+GPT安装Windows10的过程。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Windows10系统安装教程「UEFI+GPT」">
+<meta property="og:url" content="https://glieen.cn/posts/43608.html">
+<meta property="og:site_name" content="Glieen&#39;s Blog">
+<meta property="og:description" content="作为一个程序员，修电脑和装系统是必须要会的(￣y▽,￣)╭ ，本文记录下UEFI+GPT安装Windows10的过程。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://i.loli.net/2020/02/19/XDWrIKNuBlYjhSz.jpg">
+<meta property="og:image" content="https://i.loli.net/2020/02/19/7f1WjhlVD9Q2mNR.jpg">
+<meta property="og:image" content="https://i.loli.net/2020/02/19/1eRY6Z4LbQzVC8O.jpg">
+<meta property="og:image" content="https://i.loli.net/2020/02/19/VAOk2fJsgdSXwLU.jpg">
+<meta property="og:image" content="https://i.loli.net/2020/02/19/hmyFMDIzAWYdaGp.jpg">
+<meta property="og:image" content="https://i.loli.net/2020/02/19/GsHqfB3pOaPAFL8.jpg">
+<meta property="og:image" content="https://i.loli.net/2020/02/19/XZAQTmDrjFlevnH.jpg">
+<meta property="og:image" content="https://i.loli.net/2020/02/19/v4xRXJ5YOTIw73s.jpg">
+<meta property="og:image" content="https://i.loli.net/2020/02/19/zQ9Dx5fZjcYCrn4.jpg">
+<meta property="og:image" content="https://i.loli.net/2020/02/19/LPbfHM5e8U7nFCG.jpg">
+<meta property="og:image" content="https://i.loli.net/2020/02/19/WypMxfYKNEDbSh6.jpg">
+<meta property="og:image" content="https://i.loli.net/2020/02/19/T3Yc1PR5iEVOsId.jpg">
+<meta property="og:image" content="https://i.loli.net/2020/02/19/ofkc8iWTItPSLGN.jpg">
+<meta property="og:image" content="https://i.loli.net/2020/02/19/WbUoC2DiYsgHm5E.jpg">
+<meta property="og:image" content="https://i.loli.net/2020/02/19/5uhqzSHmgyRonaW.jpg">
+<meta property="og:image" content="https://i.loli.net/2020/02/19/nc3YTPmpCLNRwax.jpg">
+<meta property="article:published_time" content="2019-01-21T01:35:36.000Z">
+<meta property="article:modified_time" content="2022-02-09T02:18:12.660Z">
+<meta property="article:author" content="Glieen">
+<meta property="article:tag" content="Windows">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2020/02/19/XDWrIKNuBlYjhSz.jpg">
+
+<link rel="canonical" href="https://glieen.cn/posts/43608.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>Windows10系统安装教程「UEFI+GPT」 | Glieen's Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="Glieen's Blog" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Glieen's Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">喜欢的话，就坚持吧。</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-java">
+
+    <a href="/java/" rel="section"><i class="fa fa-coffee fa-fw"></i>Java</a>
+
+  </li>
+        <li class="menu-item menu-item-notes">
+
+    <a href="/notes/" rel="section"><i class="fa fa-book fa-fw"></i>笔记</a>
+
+  </li>
+        <li class="menu-item menu-item-favorites">
+
+    <a href="/favorites/" rel="section"><i class="fa fa-star fa-fw"></i>收藏</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://glieen.cn/posts/43608.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://i.loli.net/2020/07/16/QZXNv6nTl3VtHM5.png">
+      <meta itemprop="name" content="Glieen">
+      <meta itemprop="description" content="Glieen's blog,record and share.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Glieen's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Windows10系统安装教程「UEFI+GPT」
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-01-21 09:35:36" itemprop="dateCreated datePublished" datetime="2019-01-21T09:35:36+08:00">2019-01-21</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%95%99%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">教程</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>作为一个程序员，修电脑和装系统是必须要会的(￣y▽,￣)╭ ，本文记录下UEFI+GPT安装Windows10的过程。</p>
+<span id="more"></span>
+<h3 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h3><p>电脑一台</p>
+<p>U盘一个（大小8G及以上）</p>
+<h3 id="下载镜像"><a href="#下载镜像" class="headerlink" title="下载镜像"></a>下载镜像</h3><p>去<a target="_blank" rel="noopener" href="https://www.microsoft.com/zh-cn/software-download/windows10">微软官网</a>或者<a target="_blank" rel="noopener" href="https://msdn.itellyou.cn/">MSDN</a>下载原版ISO镜像文件，以MSDN为例，打开链接，在左边导航栏【操作系统】列表中找到想要重装的系统版本，打开镜像列表，选择适合自己的镜像版本，2G以上内存推荐安装64位操作系统，复制ed2k链接，使用迅雷下载镜像文件即可，本教程使用的镜像文件如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">文件名：cn_windows_10_consumer_editions_version_1809_updated_jan_2019_x64_dvd_34b4d4fb.iso</span><br><span class="line">SHA1：61c07b037574454b88bcac7f5a571c042304c884</span><br><span class="line">文件大小：4.89GB</span><br><span class="line">发布时间：2019-01-16</span><br><span class="line">ed2k://|file|cn_windows_10_consumer_editions_version_1809_updated_jan_2019_x64_dvd_34b4d4fb.iso|5246148608|D93F5C49291A0B7AA888537954785DC3|/</span><br></pre></td></tr></table></figure>
+<h3 id="制作启动盘"><a href="#制作启动盘" class="headerlink" title="制作启动盘"></a>制作启动盘</h3><ol>
+<li><p>下载启动盘制作工具Rufus，官网地址：<a target="_blank" rel="noopener" href="https://rufus.ie/">Rufus</a></p>
+</li>
+<li><p>插入U盘</p>
+</li>
+<li><p>打开Rufus，选择设备，通常会自动选定插入的U盘，选择镜像文件，分区类型选择GPT，目标系统类型选择UFEFI，其他设置默认，如图所示：</p>
+<p><img src="https://i.loli.net/2020/02/19/XDWrIKNuBlYjhSz.jpg" alt="43608-1.jpg"></p>
+</li>
+<li><p>点击开始，工具即开始制作启动盘，<strong>提醒：制作启动盘会清除U盘中的所有数据，请提前备份！</strong></p>
+</li>
+<li><p>进度条跑完后，启动盘就制作成功了！关闭Rufus，准备重装系统。</p>
+</li>
+</ol>
+<h3 id="从启动盘启动"><a href="#从启动盘启动" class="headerlink" title="从启动盘启动"></a>从启动盘启动</h3><p>启动盘制作完毕后，不要拔出U盘，然后重启电脑，进入BIOS，各个品牌的主板（笔记本）进入BIOS的按键不一致，通常台式机是<code>Delete</code>，笔记本是<code>Esc</code>，<code>F2</code>，<code>F10</code>之类的，如果不对请查看主板（笔记本）说明书或者百度解决。</p>
+<p>以下我以我手头的笔记本电脑<strong>神舟战神K650D</strong>举例，通常大多数电脑设置基本都是一致的，不会有很大的差别，具体的BIOS设置请百度自己的电脑主板或笔记本型号。</p>
+<ol>
+<li><p>关闭安全启动，进入BIOS，找到Secure Boot选项，将其设置为关闭；</p>
+<p><img src="https://i.loli.net/2020/02/19/7f1WjhlVD9Q2mNR.jpg" alt="43608-2.jpg"></p>
+</li>
+<li><p>开启UEFI模式，在BIOS中找到Boot下的UEFI设置，将其设置为打开；</p>
+<p><img src="https://i.loli.net/2020/02/19/1eRY6Z4LbQzVC8O.jpg" alt="43608-3.jpg"></p>
+</li>
+<li><p>将U盘设置为第一启动项，U盘是以UEFI开头的就对了，把它移动到第一的位置；</p>
+<p><img src="https://i.loli.net/2020/02/19/VAOk2fJsgdSXwLU.jpg" alt="43608-4.jpg"></p>
+</li>
+<li><p>保存设置并重启电脑。</p>
+</li>
+</ol>
+<h3 id="系统安装"><a href="#系统安装" class="headerlink" title="系统安装"></a>系统安装</h3><ol>
+<li><p>如果上面的步骤都没有问题的话，那电脑重启应该可以进入到Win PE的安装界面了，像下面这样。</p>
+<p><img src="https://i.loli.net/2020/02/19/hmyFMDIzAWYdaGp.jpg" alt="43608-5.jpg"></p>
+</li>
+<li><p>点击下一步开始安装</p>
+<p><img src="https://i.loli.net/2020/02/19/GsHqfB3pOaPAFL8.jpg" alt="43608-6.jpg"></p>
+</li>
+<li><p>点击现在安装，进入到激活</p>
+<p><img src="https://i.loli.net/2020/02/19/XZAQTmDrjFlevnH.jpg" alt="43608-7.jpg"></p>
+</li>
+<li><p>这里选择我没有产品密钥，可以装完系统之后再进行激活，进入操作系统版本选择</p>
+<p><img src="https://i.loli.net/2020/02/19/v4xRXJ5YOTIw73s.jpg" alt="43608-8.jpg"></p>
+</li>
+<li><p>这里我选择家庭版为例，然后单击下一步，进入许可条款</p>
+<p><img src="https://i.loli.net/2020/02/19/zQ9Dx5fZjcYCrn4.jpg" alt="43608-9.jpg"></p>
+</li>
+<li><p>我接受许可条款打勾，单击下一步，进入安装选项</p>
+<p><img src="https://i.loli.net/2020/02/19/LPbfHM5e8U7nFCG.jpg" alt="43608-10.jpg"></p>
+</li>
+<li><p>因为是安装全新的系统，所以这里选择自定义，进入安装磁盘选择</p>
+<p><img src="https://i.loli.net/2020/02/19/WypMxfYKNEDbSh6.jpg" alt="43608-11.jpg"></p>
+</li>
+<li><p>到这里是最容易遇到问题的地方了，可能遇到所选磁盘不是GPT格式的分区，磁盘容量大小不足等等问题，只要你以上步骤都正确操作，磁盘是没有问题且大小合适的，那么接下来一系列步骤应该能解决大多数安装遇到的问题，按下键盘上的<code>Shift+F10</code>打开命令提示行</p>
+<p><img src="https://i.loli.net/2020/02/19/T3Yc1PR5iEVOsId.jpg" alt="43608-12.jpg"></p>
+</li>
+<li><p>根据提示输入以下的代码</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 打开磁盘工具</span></span><br><span class="line">diskpart</span><br><span class="line"><span class="comment"># 列出磁盘</span></span><br><span class="line">list disk</span><br><span class="line"><span class="comment"># 选择操作的磁盘，这里X是磁盘里的编号，你需要把系统装到哪个磁盘你就输入对应磁盘的编号</span></span><br><span class="line"><span class="built_in">select</span> disk X</span><br><span class="line"><span class="comment"># 清除磁盘，这个操作会将整个磁盘的内容全部清除，如果有重要数据请一定提前备份</span></span><br><span class="line">clean</span><br><span class="line"><span class="comment"># 将磁盘装换成GPT分区格式</span></span><br><span class="line">convert gpt</span><br><span class="line"><span class="comment"># 创建EFI分区，用来存放系统的引导文件，大小256M左右差不多够了</span></span><br><span class="line">create partition efi size = <span class="number">256</span></span><br><span class="line"><span class="comment"># 创建主分区，这是第一个主分区，我喜欢把系统装在这个分区里面，大小的话通常大于50G，因为我不喜欢在C盘放过多的文件和装软件，我这里分了50G</span></span><br><span class="line">create partition primary size = <span class="number">51200</span></span><br><span class="line"><span class="comment"># 创建主分区，这里省略了大小设置，就是默认将剩下的所有容量分到这个区，我喜欢把第二个分区用作D盘，装一些软件</span></span><br><span class="line">create partition primary</span><br></pre></td></tr></table></figure>
+<p>下面是具体的操作过程截图，<strong>慎重操作，注意备份数据</strong></p>
+<p><img src="https://i.loli.net/2020/02/19/ofkc8iWTItPSLGN.jpg" alt="43608-13.jpg"></p>
+<p>操作完成之后右上角关闭或者输入命令<code>exit</code>退出命令行</p>
+</li>
+<li><p>再次回到安装磁盘选择，点击刷新，就可以看到重新分区后的磁盘列表了</p>
+<p><img src="https://i.loli.net/2020/02/19/WbUoC2DiYsgHm5E.jpg" alt="43608-14.jpg"></p>
+</li>
+<li><p>选择为系统准备的分区，如图，我会选择<code>驱动器1分区2</code>然后单击下一步，系统开始安装，即将大功告成</p>
+<p><img src="https://i.loli.net/2020/02/19/5uhqzSHmgyRonaW.jpg" alt="43608-15.jpg"></p>
+</li>
+<li><p>等待进度条读完，然后会提示重启系统完成安装，点击重启就可以了，<strong>重启的时候记得把U盘给拔下来</strong>，系统可能会重启多次，重启完成之后会进入系统的启动设置，这些都是一些基础的设置，设置完成后就能进入系统</p>
+<p><img src="https://i.loli.net/2020/02/19/nc3YTPmpCLNRwax.jpg" alt="43608-16.jpg"></p>
+</li>
+<li><p>开始体验全新的Windows吧！</p>
+</li>
+</ol>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/Windows/" rel="tag"><i class="fa fa-tag"></i> Windows</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/posts/53229.html" rel="prev" title="SpringBoot全局异常处理">
+      <i class="fa fa-chevron-left"></i> SpringBoot全局异常处理
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/posts/42501.html" rel="next" title="初识Socket">
+      初识Socket <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%86%E5%A4%87"><span class="nav-number">1.</span> <span class="nav-text">准备</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD%E9%95%9C%E5%83%8F"><span class="nav-number">2.</span> <span class="nav-text">下载镜像</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%B6%E4%BD%9C%E5%90%AF%E5%8A%A8%E7%9B%98"><span class="nav-number">3.</span> <span class="nav-text">制作启动盘</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%8E%E5%90%AF%E5%8A%A8%E7%9B%98%E5%90%AF%E5%8A%A8"><span class="nav-number">4.</span> <span class="nav-text">从启动盘启动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85"><span class="nav-number">5.</span> <span class="nav-text">系统安装</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Glieen"
+      src="https://i.loli.net/2020/07/16/QZXNv6nTl3VtHM5.png">
+  <p class="site-author-name" itemprop="name">Glieen</p>
+  <div class="site-description" itemprop="description">Glieen's blog,record and share.</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">28</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">33</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/glieen" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;glieen" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:glieen1995@gmail.com" title="E-Mail → mailto:glieen1995@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/atom.xml" title="RSS → &#x2F;atom.xml"><i class="fa fa-rss fa-fw"></i>RSS</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      友链
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://ymtonny.cn/" title="https:&#x2F;&#x2F;ymtonny.cn&#x2F;" rel="noopener" target="_blank">YmTonny</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://zalmon.cn/" title="https:&#x2F;&#x2F;zalmon.cn&#x2F;" rel="noopener" target="_blank">Zalmon's Blog</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://clearluv.com/" title="http:&#x2F;&#x2F;clearluv.com&#x2F;" rel="noopener" target="_blank">Clearluv</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+  <div class="beian"><a href="https://beian.miit.gov.cn/" rel="noopener" target="_blank">蜀ICP备18010705号 </a>
+  </div>
+
+<div class="copyright">
+  
+  &copy; 2018 – 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Glieen</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  
+  <script color='0,0,255' opacity='0.5' zIndex='-1' count='150' src="//cdn.jsdelivr.net/gh/theme-next/theme-next-canvas-nest@1/canvas-nest.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.1.0/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/velocity-animate@1/velocity.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/velocity-animate@1/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>

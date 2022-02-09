@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.0.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://i.loli.net/2020/07/16/QZXNv6nTl3VtHM5.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://i.loli.net/2020/07/16/zxNQEDMKCPhw6e3.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://i.loli.net/2020/07/16/lXw6RG9tApr78Wj.png">
+  <link rel="mask-icon" href="https://i.loli.net/2020/07/16/QZXNv6nTl3VtHM5.png" color="#222">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"glieen.cn","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"valine","storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="Ubuntu装好之后，折腾之路才刚刚开始，因为不是开箱即用，还需要做一定的配置，装一些软件和工具，才能用的顺手。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux的修炼之路「三」系统及软件配置">
+<meta property="og:url" content="https://glieen.cn/posts/59832.html">
+<meta property="og:site_name" content="Glieen&#39;s Blog">
+<meta property="og:description" content="Ubuntu装好之后，折腾之路才刚刚开始，因为不是开箱即用，还需要做一定的配置，装一些软件和工具，才能用的顺手。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2019-10-16T07:55:15.000Z">
+<meta property="article:modified_time" content="2022-02-09T02:43:32.845Z">
+<meta property="article:author" content="Glieen">
+<meta property="article:tag" content="Linux">
+<meta property="article:tag" content="Ubuntu">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://glieen.cn/posts/59832.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>Linux的修炼之路「三」系统及软件配置 | Glieen's Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="Glieen's Blog" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Glieen's Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">喜欢的话，就坚持吧。</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-java">
+
+    <a href="/java/" rel="section"><i class="fa fa-coffee fa-fw"></i>Java</a>
+
+  </li>
+        <li class="menu-item menu-item-notes">
+
+    <a href="/notes/" rel="section"><i class="fa fa-book fa-fw"></i>笔记</a>
+
+  </li>
+        <li class="menu-item menu-item-favorites">
+
+    <a href="/favorites/" rel="section"><i class="fa fa-star fa-fw"></i>收藏</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://glieen.cn/posts/59832.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://i.loli.net/2020/07/16/QZXNv6nTl3VtHM5.png">
+      <meta itemprop="name" content="Glieen">
+      <meta itemprop="description" content="Glieen's blog,record and share.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Glieen's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Linux的修炼之路「三」系统及软件配置
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-10-16 15:55:15" itemprop="dateCreated datePublished" datetime="2019-10-16T15:55:15+08:00">2019-10-16</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>Ubuntu装好之后，折腾之路才刚刚开始，因为不是开箱即用，还需要做一定的配置，装一些软件和工具，才能用的顺手。</p>
+<span id="more"></span>
+<h3 id="配置软件源"><a href="#配置软件源" class="headerlink" title="配置软件源"></a>配置软件源</h3><p><em>简单介绍下Linux中的文本编辑器<code>nano</code>，<code>ctrl + o</code>是保存，<code>ctrl + x</code>是退出。</em></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 备份原软件源配置</span></span><br><span class="line">sudo <span class="built_in">mv</span> /etc/apt/sources.list /etc/apt/sources.list.bak</span><br><span class="line">sudo nano /etc/apt/sources.list</span><br></pre></td></tr></table></figure>
+<p>从中科大的软件源获取对应版本的配置：<a target="_blank" rel="noopener" href="https://mirrors.ustc.edu.cn/repogen/">USTC MIRRORS</a></p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">deb https://mirrors.ustc.edu.cn/ubuntu/ bionic main restricted universe multiverse</span><br><span class="line">deb-src https://mirrors.ustc.edu.cn/ubuntu/ bionic main restricted universe multiverse</span><br><span class="line"></span><br><span class="line">deb https://mirrors.ustc.edu.cn/ubuntu/ bionic-security main restricted universe multiverse</span><br><span class="line">deb-src https://mirrors.ustc.edu.cn/ubuntu/ bionic-security main restricted universe multiverse</span><br><span class="line"></span><br><span class="line">deb https://mirrors.ustc.edu.cn/ubuntu/ bionic-updates main restricted universe multiverse</span><br><span class="line">deb-src https://mirrors.ustc.edu.cn/ubuntu/ bionic-updates main restricted universe multiverse</span><br><span class="line"></span><br><span class="line">deb https://mirrors.ustc.edu.cn/ubuntu/ bionic-backports main restricted universe multiverse</span><br><span class="line">deb-src https://mirrors.ustc.edu.cn/ubuntu/ bionic-backports main restricted universe multiverse</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 更新软件源</span></span><br><span class="line">sudo apt update</span><br><span class="line">sudo apt upgrade</span><br></pre></td></tr></table></figure>
+<h3 id="常用软件"><a href="#常用软件" class="headerlink" title="常用软件"></a>常用软件</h3><ul>
+<li><p>Electron-SSR</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo dpkg -i $(wget https://github.com/shadowsocksrr/electron-ssr/releases/download/v0.2.7/electron-ssr-0.2.7.deb) </span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Google Chrome</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo dpkg -i $(wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb) </span><br></pre></td></tr></table></figure>
+</li>
+<li><p>谷歌拼音</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install fcitx googlepinyin</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>电源管理</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install tlp</span><br><span class="line"><span class="comment"># 重启</span></span><br><span class="line">reboot</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>网络工具</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install net-tools</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>文本编辑器Kate</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install kate</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>网易云音乐</p>
+<p>打开网易云音乐客户端<a target="_blank" rel="noopener" href="https://music.163.com/#/download">下载页面</a>，下载适用于Ubuntu的版本。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># xxx为具体的版本号</span></span><br><span class="line">sudo dpkg -i netease-cloud-music_1.2.1_amd64_ubuntu_xxx.deb</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>KeepassXC</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install keepassxc</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>坚果云</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo dpkg -i $(wget https://www.jianguoyun.com/static/exe/installer/ubuntu/nautilus_nutstore_amd64.deb) </span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Git</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install git</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Axel（多线程下载工具）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install axel</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Htop</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install htop</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Sublime Text</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install sublime-text</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>NodeJS/npm/cnpm</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -</span><br><span class="line">sudo apt-get install -y nodejs</span><br><span class="line">sudo npm install -g cnpm --registry=https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Curl</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install curl</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Yakuake（快捷下拉终端）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install yakuake</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Zsh</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install zsh</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Tldr</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt instal tldr</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>OpenJDK</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install openjdk-8-jdk</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>IntelliJ IDEA</p>
+<p>打开IntelliJ IDEA<a target="_blank" rel="noopener" href="https://www.jetbrains.com/idea/download/#section=linux">下载页面</a>，下载压缩包。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># xxx为具体的版本号</span></span><br><span class="line">tar zxvf ideaIU-xxx.tar.gz</span><br><span class="line"><span class="comment"># 进入执行文件目录</span></span><br><span class="line"><span class="built_in">cd</span> idea-IU-xxx/bin/</span><br><span class="line"><span class="comment"># 执行启动脚本</span></span><br><span class="line">./idea.sh</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Maven</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install maven</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>MySQL</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install mysql-server mysql-client</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Nginx</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install nginx</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="Deepin-Wine"><a href="#Deepin-Wine" class="headerlink" title="Deepin-Wine"></a>Deepin-Wine</h3><p>电脑上免不了要装上QQ/微信等国民应用，但是却只有WIndows/MacOS的版本，Linux没能得到适配。在Deepin团队的努力下，做了Deepin-Wine的兼容层，让这些软件可以很好的运行在Deepin系统中，后在社区大牛的开源精神下，又把Deepin-Wine移植到了Ubuntu，所以Ubuntu也可以利用Deep-Wine运行QQ/微信/迅雷等软件了。</p>
+<h4 id="安装Deepin-Wine"><a href="#安装Deepin-Wine" class="headerlink" title="安装Deepin-Wine"></a>安装Deepin-Wine</h4><p>打开项目地址<a target="_blank" rel="noopener" href="https://github.com/wszqkzqk/deepin-wine-ubuntu/releases">deepin-wine-ubuntu</a>，下载最新的发行包。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># xxx为具体的版本号</span></span><br><span class="line">tar zxvf deepin-wine-ubuntu-xxx.tar.gz</span><br><span class="line"><span class="comment"># 执行安装脚本</span></span><br><span class="line">./install.sh</span><br></pre></td></tr></table></figure>
+<h4 id="获取软件安装包"><a href="#获取软件安装包" class="headerlink" title="获取软件安装包"></a>获取软件安装包</h4><p>在<a target="_blank" rel="noopener" href="https://mirrors.aliyun.com/deepin/pool/non-free/d/">阿里云Deepin软件源</a>想要安装的软件的安装包，然后执行安装命令即可安装。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># xxx为具体的安装包名</span></span><br><span class="line">sudo dpkg -i xxx.deb</span><br></pre></td></tr></table></figure>
+<h3 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h3><h4 id="开机打开小键盘"><a href="#开机打开小键盘" class="headerlink" title="开机打开小键盘"></a>开机打开小键盘</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo -i</span><br><span class="line">su gdm -s /bin/bash</span><br><span class="line">gsettings <span class="built_in">set</span> org.gnome.settings-daemon.peripherals.keyboard numlock-state <span class="string">&#x27;on&#x27;</span></span><br></pre></td></tr></table></figure>
+<h4 id="将主目录中文名切换成英文"><a href="#将主目录中文名切换成英文" class="headerlink" title="将主目录中文名切换成英文"></a>将主目录中文名切换成英文</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> LANG=en_US</span><br><span class="line">xdg-user-dirs-gtk-update</span><br><span class="line"><span class="comment"># 弹窗提示是否将目录转换成英文，同意</span></span><br><span class="line"><span class="built_in">export</span> LANG=zh_CN</span><br><span class="line">reboot</span><br><span class="line"><span class="comment"># 弹窗提示是否将目录转换成中文，拒绝</span></span><br></pre></td></tr></table></figure>
+<h4 id="终端（tab）补全忽略大小写"><a href="#终端（tab）补全忽略大小写" class="headerlink" title="终端（tab）补全忽略大小写"></a>终端（tab）补全忽略大小写</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 家目录下执行</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&#x27;set completion-ignore-case on&#x27;</span> &gt;&gt; .inputrc</span><br></pre></td></tr></table></figure>
+<h4 id="oh-my-zsh"><a href="#oh-my-zsh" class="headerlink" title="oh-my-zsh"></a>oh-my-zsh</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 检查是否安装zsh，未安装则先安装</span></span><br><span class="line"><span class="built_in">cat</span> /etc/shells | grep zsh </span><br><span class="line"><span class="comment"># 安装oh-my-zsh</span></span><br><span class="line">sh -c <span class="string">&quot;<span class="subst">$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)</span>&quot;</span></span><br><span class="line"><span class="comment"># 修改zsh主题</span></span><br><span class="line">nano ~/.zshrc</span><br><span class="line"><span class="comment"># 修改这个位置的主题名即可，默认主题是robbyrussell</span></span><br><span class="line"><span class="comment"># ZSH_THEME=&quot;robbyrussell&quot;</span></span><br><span class="line"><span class="comment"># random是随机主题，推荐几套个人比较喜欢的主题：strug/ys/steeef/rkj-repos</span></span><br></pre></td></tr></table></figure>
+<h4 id="git代理"><a href="#git代理" class="headerlink" title="git代理"></a>git代理</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 访问github奇慢无比，所以根据需要加上代理</span></span><br><span class="line"><span class="comment"># 具体的代理端口号根据代理软件设置</span></span><br><span class="line">git config --global http.https://github.com.proxy https://127.0.0.1:1080</span><br><span class="line">git config --global https.https://github.com.proxy https://127.0.0.1:1080</span><br></pre></td></tr></table></figure>
+<h4 id="sudo免密"><a href="#sudo免密" class="headerlink" title="sudo免密"></a>sudo免密</h4><p>修改<code>/etc/sudoers</code>文件，修改<code>%sudo</code>这一行，这样所有的sudo命令都可以免密使用。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">%sudo  ALL=(ALL:ALL) NOPASSWD: ALL</span><br></pre></td></tr></table></figure>
+<h4 id="安装中文字符集"><a href="#安装中文字符集" class="headerlink" title="安装中文字符集"></a>安装中文字符集</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install language-pack-zh-hans</span><br><span class="line"><span class="built_in">export</span> LANG=zh_CN.UTF-8</span><br><span class="line"><span class="built_in">export</span> LC_ALL=zh_CN.UTF-8</span><br></pre></td></tr></table></figure>
+<h4 id="设置静态IP"><a href="#设置静态IP" class="headerlink" title="设置静态IP"></a>设置静态IP</h4><p>编辑位于<code>/etc/netplan/</code>目录下的<code>yml</code>文件，绑定网络配置，然后应用即可。</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">network:</span></span><br><span class="line">  <span class="attr">ethernets:</span></span><br><span class="line">    <span class="attr">ens32:</span></span><br><span class="line">      <span class="attr">addresses:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="number">192.168</span><span class="number">.1</span><span class="number">.123</span><span class="string">/24</span></span><br><span class="line">      <span class="attr">gateway4:</span> <span class="number">192.168</span><span class="number">.1</span><span class="number">.1</span></span><br><span class="line">      <span class="attr">nameservers:</span></span><br><span class="line">        <span class="attr">addresses:</span></span><br><span class="line">        <span class="bullet">-</span> <span class="number">119.29</span><span class="number">.29</span><span class="number">.29</span></span><br><span class="line">        <span class="bullet">-</span> <span class="number">223.5</span><span class="number">.5</span><span class="number">.5</span></span><br><span class="line">  <span class="attr">version:</span> <span class="number">2</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 应用网络配置</span></span><br><span class="line">sudo netplan apply</span><br></pre></td></tr></table></figure>
+<h4 id="禁用IPv6"><a href="#禁用IPv6" class="headerlink" title="禁用IPv6"></a>禁用IPv6</h4><p>编辑<code>/etc/sysctl.conf</code>文件，在文件末尾添加配置，然后应用即可。</p>
+<figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">net.ipv6.conf.all.disable_ipv6</span>=<span class="string">1</span></span><br><span class="line"><span class="attr">net.ipv6.conf.default.disable_ipv6</span>=<span class="string">1</span></span><br><span class="line"><span class="attr">net.ipv6.conf.lo.disable_ipv6</span>=<span class="string">1</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 应用配置</span></span><br><span class="line">sudo sysctl -p</span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/Linux/" rel="tag"><i class="fa fa-tag"></i> Linux</a>
+              <a href="/tags/Ubuntu/" rel="tag"><i class="fa fa-tag"></i> Ubuntu</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/posts/21868.html" rel="prev" title="Linux的修炼之路「二」Ubuntu的安装">
+      <i class="fa fa-chevron-left"></i> Linux的修炼之路「二」Ubuntu的安装
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/posts/64236.html" rel="next" title="Linux的修炼之路「四」常用命令">
+      Linux的修炼之路「四」常用命令 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E8%BD%AF%E4%BB%B6%E6%BA%90"><span class="nav-number">1.</span> <span class="nav-text">配置软件源</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6"><span class="nav-number">2.</span> <span class="nav-text">常用软件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deepin-Wine"><span class="nav-number">3.</span> <span class="nav-text">Deepin-Wine</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%89%E8%A3%85Deepin-Wine"><span class="nav-number">3.1.</span> <span class="nav-text">安装Deepin-Wine</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%8E%B7%E5%8F%96%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E5%8C%85"><span class="nav-number">3.2.</span> <span class="nav-text">获取软件安装包</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE"><span class="nav-number">4.</span> <span class="nav-text">环境配置</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BC%80%E6%9C%BA%E6%89%93%E5%BC%80%E5%B0%8F%E9%94%AE%E7%9B%98"><span class="nav-number">4.1.</span> <span class="nav-text">开机打开小键盘</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B0%86%E4%B8%BB%E7%9B%AE%E5%BD%95%E4%B8%AD%E6%96%87%E5%90%8D%E5%88%87%E6%8D%A2%E6%88%90%E8%8B%B1%E6%96%87"><span class="nav-number">4.2.</span> <span class="nav-text">将主目录中文名切换成英文</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BB%88%E7%AB%AF%EF%BC%88tab%EF%BC%89%E8%A1%A5%E5%85%A8%E5%BF%BD%E7%95%A5%E5%A4%A7%E5%B0%8F%E5%86%99"><span class="nav-number">4.3.</span> <span class="nav-text">终端（tab）补全忽略大小写</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#oh-my-zsh"><span class="nav-number">4.4.</span> <span class="nav-text">oh-my-zsh</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#git%E4%BB%A3%E7%90%86"><span class="nav-number">4.5.</span> <span class="nav-text">git代理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#sudo%E5%85%8D%E5%AF%86"><span class="nav-number">4.6.</span> <span class="nav-text">sudo免密</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E4%B8%AD%E6%96%87%E5%AD%97%E7%AC%A6%E9%9B%86"><span class="nav-number">4.7.</span> <span class="nav-text">安装中文字符集</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AE%E9%9D%99%E6%80%81IP"><span class="nav-number">4.8.</span> <span class="nav-text">设置静态IP</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%A6%81%E7%94%A8IPv6"><span class="nav-number">4.9.</span> <span class="nav-text">禁用IPv6</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Glieen"
+      src="https://i.loli.net/2020/07/16/QZXNv6nTl3VtHM5.png">
+  <p class="site-author-name" itemprop="name">Glieen</p>
+  <div class="site-description" itemprop="description">Glieen's blog,record and share.</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">28</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">33</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/glieen" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;glieen" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:glieen1995@gmail.com" title="E-Mail → mailto:glieen1995@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/atom.xml" title="RSS → &#x2F;atom.xml"><i class="fa fa-rss fa-fw"></i>RSS</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      友链
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://ymtonny.cn/" title="https:&#x2F;&#x2F;ymtonny.cn&#x2F;" rel="noopener" target="_blank">YmTonny</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://zalmon.cn/" title="https:&#x2F;&#x2F;zalmon.cn&#x2F;" rel="noopener" target="_blank">Zalmon's Blog</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://clearluv.com/" title="http:&#x2F;&#x2F;clearluv.com&#x2F;" rel="noopener" target="_blank">Clearluv</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+  <div class="beian"><a href="https://beian.miit.gov.cn/" rel="noopener" target="_blank">蜀ICP备18010705号 </a>
+  </div>
+
+<div class="copyright">
+  
+  &copy; 2018 – 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Glieen</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  
+  <script color='0,0,255' opacity='0.5' zIndex='-1' count='150' src="//cdn.jsdelivr.net/gh/theme-next/theme-next-canvas-nest@1/canvas-nest.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.1.0/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/velocity-animate@1/velocity.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/velocity-animate@1/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
